@@ -1,14 +1,20 @@
 /***************************************************************************
- * This software is based on liferay portal 6.1.1
+ * The Lecture2Go software is based on the liferay portal 6.1.1
  * http://www.liferay.com
  * 
+ * Lecture2Go http://lecture2go.uni-hamburg.de is an open source 
+ * platform for media management and distribution. Our goal is to 
+ * support the free access to knowledge because this is a component 
+ * of each democratic society. The open source software is aimed at 
+ * academic institutions and has to strengthen the blended learning.
  * 
- * Lecture2Go is open source platform for media management and distribution.
- * This software is continuously being developed and improved. 
- * For more information please visit http://lecture2go.uni-hamburg.de
+ * All Lecture2Go plugins are continuously being developed and improved.
+ *  
+ * For more details please visit http://lecture2go-demo.rrz.uni-hamburg.de
  * 
- * @Version 1.0
+ * @Autor Iavor Sturm
  * @Contact lecture2go-open-source@uni-hamburg.de
+ * @Version 1.0
  *  
  * Copyright (c) 2013 University of Hamburg
  * 
@@ -24,5 +30,4 @@
  * 
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
- * 
  ***************************************************************************/
