@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="lecture2go-src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.liferay.ide.eclipse.server.tomcat.runtimeClasspathProvider/Liferay v6.1 CE (Tomcat 7)">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="com.liferay.ide.eclipse.server.plugin.container/portlet">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/portal-6.1.1-ce-ga2"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/ant.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/commons-io.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/dwr.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/jsr173_api.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/spring-webmvc-portlet.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/spring-webmvc.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/spring.jar"/>
+	<classpathentry kind="lib" path="docroot/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="output" path="docroot/WEB-INF/classes"/>
+</classpath>
