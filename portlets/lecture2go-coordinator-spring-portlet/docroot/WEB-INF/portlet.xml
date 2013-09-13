@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+ 	
+ 	<portlet>
+		<description xml:lang="de">CoordinatorUserManagement</description>
+		<portlet-name>coordinatorUserManagement</portlet-name>
+		<display-name xml:lang="de">coordinatorUserManagement</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/coordinatorUserManagement.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Coordinator-User-Management</title>
+			<short-title>Coordinator-User-Management</short-title>
+			<keywords>coordinator, user, management</keywords>
+		</portlet-info>
+	</portlet>	
+ 	
+ 	<portlet>
+		<description xml:lang="de">CoordinatorLectureseriesManagement</description>
+		<portlet-name>coordinatorLectureseriesManagement</portlet-name>
+		<display-name xml:lang="de">coordinatorLectureseriesManagement</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/coordinatorLectureseriesManagement.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Coordinator-LectureseriesManagement</title>
+			<short-title>Coordinator-LectureseriesManagement</short-title>
+			<keywords>coordinator, lectureseries</keywords>
+		</portlet-info>
+	</portlet>
+	
+  	<portlet>
+		<description xml:lang="de">Coordinator-Facilities</description>
+		<portlet-name>coordinatorFacilities</portlet-name>
+		<display-name xml:lang="de">Coordinator-Facilities</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/coordinatorFacilities.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Coordinator-Facilities</title>
+			<short-title>Coordinator-Facilities</short-title>
+			<keywords>Coordinator, Facilities</keywords>
+		</portlet-info>
+	</portlet>
+
+  	<portlet>
+		<description xml:lang="de">Coordinator-MetaData</description>
+		<portlet-name>coordinatorMetaData</portlet-name>
+		<display-name xml:lang="de">Coordinator-MetaData</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/coordinatorMetaData.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Coordinator-MetaData</title>
+			<short-title>Coordinator-MetaData</short-title>
+			<keywords>Coordinator, MetaData</keywords>
+		</portlet-info>
+	</portlet>
+
+  	<portlet>
+		<description xml:lang="de">Coordinator-Segmente</description>
+		<portlet-name>coordinatorSegmentInput</portlet-name>
+		<display-name xml:lang="de">Coordinator-Segmente</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/coordinatorSegmentInput.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Coordinator-Segmente</title>
+			<short-title>Coordinator-Segmente</short-title>
+			<keywords>Coordinator, Segment, Eingabe</keywords>
+		</portlet-info>
+	</portlet>
+	
+</portlet-app>
