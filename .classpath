@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="portlets/lecture2go-src"/>
-	<classpathentry kind="src" path="tools/portlet_vaadin_tmpl/docroot/WEB-INF/src"/>
 	<classpathentry kind="lib" path="lib/activation.jar"/>
 	<classpathentry kind="lib" path="lib/ant-contrib.jar"/>
 	<classpathentry kind="lib" path="lib/antelope.jar"/>
@@ -125,5 +123,4 @@
 	<classpathentry kind="lib" path="tools/portlet_richfaces_tmpl/docroot/WEB-INF/lib/richfaces-core-impl-4.2.0.Final.jar"/>
 	<classpathentry kind="lib" path="tools/portlet_richfaces_tmpl/docroot/WEB-INF/lib/sac-1.3.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="portlets/lecture2go-user-spring-portlet/docroot/WEB-INF/classes"/>
 </classpath>
