@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+	
+	<portlet>
+		<description xml:lang="de">Metadata</description>
+		<portlet-name>producerMetaData</portlet-name>
+		<display-name xml:lang="de">Metadata</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/producerMetaData.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Metadata</title>
+			<short-title>Metadata</short-title>
+			<keywords>Producer, MetaData</keywords>
+		</portlet-info>
+	</portlet>
+ 
+  	<portlet>
+		<description xml:lang="de">Segments</description>
+		<portlet-name>producerSegmentInput</portlet-name>
+		<display-name xml:lang="de">Segments</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/producerSegmentInput.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Segments</title>
+			<short-title>Segments</short-title>
+			<keywords>Segments, Producer</keywords>
+		</portlet-info>
+	</portlet>
+
+  	<portlet>
+		<description xml:lang="de">Lecture series</description>
+		<portlet-name>producerLectureseries</portlet-name>
+		<display-name xml:lang="de">Lecture series</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/producerLectureseries.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Lecture series</title>
+			<short-title>Lecture series</short-title>
+			<keywords>Producer, Lecture series</keywords>
+		</portlet-info>
+	</portlet>
+
+  	<portlet>
+		<description xml:lang="de">Metadata input</description>
+		<portlet-name>producerMetaDataInput</portlet-name>
+		<display-name xml:lang="de">Metadata input</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/producerMetaDataInput.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Metadata input</title>
+			<short-title>Metadata input</short-title>
+			<keywords>Producer, Metadata input</keywords>
+		</portlet-info>
+	</portlet>
+
+  	<portlet>
+		<description xml:lang="de">Videodata input</description>
+		<portlet-name>producerVideoDataInput</portlet-name>
+		<display-name xml:lang="de">Videodata input</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/producerVideoDataInput.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Videodata input</title>
+			<short-title>Videodata input</short-title>
+			<keywords>Producer, Videodata input</keywords>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<description xml:lang="de">Lectureseries management</description>
+		<portlet-name>producerLectureseriesManagement</portlet-name>
+		<display-name xml:lang="de">Lectureseries management</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/producerLectureseriesManagement.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Lectureseries management</title>
+			<short-title>Lectureseries management</short-title>
+			<keywords>Producer, Lectureseries management</keywords>
+		</portlet-info>
+	</portlet>
+	
+</portlet-app>

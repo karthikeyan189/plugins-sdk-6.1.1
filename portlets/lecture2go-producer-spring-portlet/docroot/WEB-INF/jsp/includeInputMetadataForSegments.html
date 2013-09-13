@@ -1,0 +1,91 @@
+<form method="POST" action="<portlet:actionURL/>">
+	<c:if test="${model.chapter==true}">
+		<script>
+		    $(document).ready(function() {
+		    	$("p#iav").hide();
+		    });
+		</script>							
+		<spring:bind path="model.chapter">
+			${chapter}: <input id="hidr" type="radio" name="<c:out value="${status.expression}" />" value="1" checked="checked"/>
+			${comment}: <input  id="showr" type="radio" name="<c:out value="${status.expression}" />" value="0"/>				
+		</spring:bind>
+	</c:if>
+	<c:if test="${model.chapter==false}">
+		<script>
+		    $(document).ready(function() {
+		    	$("p#iav").show();
+		    });
+		</script>							
+		<spring:bind path="model.chapter">
+			${chapter}: <input id="hidr" type="radio" name="<c:out value="${status.expression}" />" value="1" />
+			${comment}: <input  id="showr" type="radio" name="<c:out value="${status.expression}" />" value="0" checked="checked"/>				
+		</spring:bind>
+	</c:if>
+										
+	<br/><br/>
+
+	<!-- Title Beginn -->
+	${shorttitle}:<em style="color:#F17B0D;">*</em>&nbsp;
+	<spring:bind path="model.title">
+		<font color="red">
+			<c:out value="${status.errorMessage}" />
+		</font>
+		<input type="text" maxlength="70" size=35
+		name="<c:out value="${status.expression}" />"
+		value="<c:out value="${model.title}" />" />
+	</spring:bind>			
+   	<!-- Title Ende -->	 
+				        	    
+   	<br/><br/>       
+				        	
+	<!-- Beginn start -->
+	${chapterbeginning}:<em style="color:#F17B0D;">*</em>
+			
+	<spring:bind path="model.timeStart">
+		<input type="text" id="timeStart" onclick="updateL2GoTimeForStart();" name="<c:out value="${status.expression}" />" value="<c:out value="${model.timeStart}" />"size="7" maxlength="7"readonly/>
+		<font color="red">
+			<c:out value="${status.errorMessage}" />
+		</font>
+	</spring:bind>
+	<!-- Beginn end -->
+							
+	&nbsp;
+	
+	<!-- End start -->						
+	${chapterend}:<em style="color:#F17B0D;">*</em>
+
+	<spring:bind path="model.timeEnd">
+		<input type="text" id="timeEnd" onclick="updateL2GoTimeForEnd();" name="<c:out value="${status.expression}" />" value="<c:out value="${model.timeEnd}" />"size="7" maxlength="7" readonly/>
+		<font color="red">
+			<c:out value="${status.errorMessage}" />
+		</font>
+	</spring:bind>
+	<!-- End end-->
+							  	
+	<br/><br/>
+	
+	<p id="iav">
+		<!-- description Beginn -->
+		<spring:bind path="model.description">
+			${text}:<em style="color:#F17B0D;">*</em>
+			<font color="red">
+				<c:out value="${status.errorMessage}" />
+			</font>							
+			<br />
+									
+			<textarea name="<c:out value="${status.expression}" />" cols="60" rows="5">${model.description}</textarea>
+		</spring:bind>
+		<!-- description Ende -->
+	</p>	
+
+	<div>
+        <input type="submit" value="${save}" />
+		<spring:bind path="model.action">
+			<input type="hidden" name="<c:out value="${status.expression}" />" value="create"/>
+		</spring:bind>
+		<input type="hidden" name="lectureseriesId" value="${model.lectureseriesId}">						
+		<input type="hidden" name="videoId" value="${model.video.id}">
+		<input type="hidden" name="currentSeite" value="${model.currentSeite}">
+		<input type="hidden" name="forward" value="false">
+	</div>
+</form>

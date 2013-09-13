@@ -1,0 +1,10 @@
+<br/>
+<em class="gray">${embedconditions}</em>
+<br/><br/>
+<form action="" name="embedForm" id="embedForm">
+	<div class="datarow">
+		<label class="gray"> ${embed} </label>
+		&nbsp;&nbsp;
+		<input id="embed_code" name="embed_code" title="${embedtitle}" type="text" value="&lt;iframe src='${model.domainURL}/lecture2go-theme/js/strobe/embed.html?src=${model.video.streamUrl}&poster=${model.video.image}' class='strobemediaplayback-video-player' type='text/html' width='500' height='250'&gt; &lt;/iframe&gt;" onclick="document.embedForm.embed_code.focus();document.embedForm.embed_code.select();" readonly />
+	</div>	
+</form>

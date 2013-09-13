@@ -1,0 +1,13 @@
+<!DOCTYPE dwr PUBLIC
+"-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN"
+    "http://getahead.org/dwr/dwr30.dtd">
+    
+<dwr>
+	<allow>
+		<create creator="new" javascript="FileUploadProgressListener">
+			<param name="class" value="de.uhh.l2g.upload.FileUploadProgressListener"></param>
+			<include method="getFileUploadStatus"></include>
+			<include method="remove"></include>
+		</create>
+	</allow>
+</dwr>

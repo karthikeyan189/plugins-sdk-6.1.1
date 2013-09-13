@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:util="http://www.springframework.org/schema/util"
+       
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+         http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="cache" value="true"/>
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+	<bean id="portletModeParameterHandlerMapping"
+      class="org.springframework.web.portlet.handler.PortletModeParameterHandlerMapping">
+    	<property name="portletModeParameterMap">
+        	<map>
+            	<entry key="view">
+                	<map>
+                    	<entry key="view" value-ref="producerLectureseriesManagementController"/>
+                    	<entry key="edit" value-ref="producerLectureseriesInputController"/>
+                	</map>
+            	</entry>
+         	</map>
+    	</property>
+        <property name="order" value="0"/>
+    </bean>		
+
+	<bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+		<property name="portletModeMap">
+			<map>
+				<entry key="view"><ref local="producerLectureseriesManagementController"/></entry>
+			</map>
+		</property>
+    	<property name="order" value="1"/>
+	</bean>
+	
+	<bean id="myFileSystemResource1" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.dao.xml"/>
+ 	</bean>
+
+	<bean id="myFileSystemResource2" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.util.xml"/>
+ 	</bean>
+ 	  		
+ 	<bean id="myDaoBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource1"/>
+ 	</bean>
+ 
+  	<bean id="myUtilBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource2"/>
+ 	</bean>
+ 	 				 	 	 	 	 	
+	<bean id="producerLectureseriesManagementController" class="de.uhh.l2g.controller.ProducerLectureseriesManagementController">
+ 		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+	</bean>  	
+ 	
+ 	<bean id="lectureseriesInputValidator" class="de.uhh.l2g.validator.LectureseriesInputValidator"/>  
+ 	 	 	 		
+	<bean id="producerLectureseriesInputController" class="de.uhh.l2g.controller.ProducerLectureseriesInputController">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="utilityBeanFactory" ref="myUtilBeanFactory"/>
+		<property name="commandName" value="model"/>
+		<property name="commandClass" value="de.uhh.l2g.model.AdminLectureseriesInputModel"/>
+		<property name="formView" value="lectureseriesInput"/>
+		<property name="successView" value="lectureseriesShow"/>	
+        <property name="validator" ref="lectureseriesInputValidator" />  
+        <property name="renderParameters">
+        	<list>
+        		<value>action</value>
+        	</list>
+        </property>  
+	</bean> 
+
+</beans>

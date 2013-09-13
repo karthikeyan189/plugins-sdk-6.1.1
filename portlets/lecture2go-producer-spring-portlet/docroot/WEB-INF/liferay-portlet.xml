@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_1_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		 <portlet-name>producerVideoDataInput</portlet-name>
+		 <header-portal-javascript>/lecture2go-producer-spring-portlet/dwr/util.js</header-portal-javascript>
+		 <header-portal-javascript>/lecture2go-producer-spring-portlet/dwr/engine.js</header-portal-javascript>
+		 <header-portal-javascript>/lecture2go-producer-spring-portlet/dwr/interface/FileUploadProgressListener.js</header-portal-javascript>
+	</portlet>	
+</liferay-portlet-app>

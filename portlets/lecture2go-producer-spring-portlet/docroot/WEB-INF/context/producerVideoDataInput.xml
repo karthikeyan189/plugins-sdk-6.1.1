@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="cache" value="true"/>
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	<bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+		<property name="portletModeMap">
+			<map>
+				<entry key="view"><ref local="producerVideoDataInputEditController"/></entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="portletMultipartResolver" class= "de.uhh.l2g.upload.MyCommonsPortletMultipartResolver">
+		<property name="maxUploadSize" value="9999999999" />
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+	</bean>
+
+	<bean id="myCommonsFileUploadSupport" class= "de.uhh.l2g.upload.MyCommonsFileUploadSupport"/>
+
+ 	<bean id="myFileSystemResource1" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.dao.xml"/>
+ 	</bean>
+ 
+   	<bean id="myFileSystemResource2" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.util.xml"/>
+ 	</bean>
+
+ 	<bean id="myDaoBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource1"/>
+ 	</bean>
+ 
+  	<bean id="myUtilityBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource2"/>
+ 	</bean> 
+ 		 		 	
+	<bean id="producerVideoDataInputEditController" class="de.uhh.l2g.controller.ProducerVideoDataInputEditController">
+ 		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+ 		<property name="utilityBeanFactory" ref="myUtilityBeanFactory"/>
+		<property name="commandName" value="model"/>
+		<property name="commandClass" value="de.uhh.l2g.model.ProducerVideoDataInputEditModel"/>
+		<property name="formView" value="producerVideoDataInputEdit"/>
+		<property name="successView" value="producerVideoDataInputEdit"/>
+		<property name="validator">  
+           <bean class="de.uhh.l2g.validator.ProducerVideoDataInputEditValidator"/>  
+        </property>
+	</bean> 			
+</beans>

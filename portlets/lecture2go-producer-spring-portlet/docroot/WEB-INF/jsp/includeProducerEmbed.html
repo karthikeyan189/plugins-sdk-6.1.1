@@ -1,0 +1,17 @@
+<br/>
+<em class="gray">${embedconditions}</em>
+<br/><br/>
+<form action="" name="embedForm" id="embedForm">
+	<c:if test="${model.video.url!=null}">
+		<div class="datarow">
+			<label class="gray">${urladdress} </label>
+			&nbsp;&nbsp;
+			<input id="embed_code3" name="embed_code3" title="${urladdresstitle}" type="text" value="${model.video.url}" onclick="document.embedForm.embed_code3.focus();document.embedForm.embed_code3.select();" readonly />
+		</div>
+	</c:if>
+	<div class="datarow">
+		<label class="gray"> ${embed} </label>
+		&nbsp;&nbsp;
+		<input id="embed_code" name="embed_code" title="${embedtitle}" type="text" value="&lt;iframe src='${model.domainURL}/lecture2go-theme/js/strobe/embed.html?src=${model.video.streamUrl}&poster=${model.video.image}' class='strobemediaplayback-video-player' type='text/html' width='500' height='250'&gt; &lt;/iframe&gt;" onclick="document.embedForm.embed_code.focus();document.embedForm.embed_code.select();" readonly />
+	</div>	
+</form>

@@ -1,0 +1,30 @@
+<!-- license begin -->
+<em>License:</em><em style="color:#F17B0D;">*</em>
+<spring:bind path="model.license">
+	<font color="red">
+	     <c:out value="${status.errorMessage}" />
+	</font>
+</spring:bind>
+
+<br/><br/>
+				
+<div id="verysmallbox">
+	<spring:bind path="model.license">
+	    <c:choose>
+	      <c:when test="${model.license=='ccbyncsa'}"><input type="radio" name="license" value="ccbyncsa" checked="checked"/></c:when>
+		      <c:otherwise><input type="radio" name="license" value="ccbyncsa"/></c:otherwise>
+	    </c:choose>						
+	</spring:bind>
+</div>
+
+<div id="verysmallbox">
+	<img src="/lecture2go-theme/images/l2go/by-nc-sa-88x31.png"/>
+</div>
+
+<div id="verysmallbox">
+	<em>by-nc-sa</em>
+</div>
+
+<div id="verysmallbox">		
+	${byncsa}
+</div>
