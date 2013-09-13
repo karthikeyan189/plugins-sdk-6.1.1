@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 5.1.0//EN" "http://www.liferay.com/dtd/liferay-display_5_1_0.dtd">
+
+<display>
+	<category name="Lecture2Go-Administrator">
+		<portlet id="adminLectureseriesManagement"/>
+		<portlet id="adminUserManagement"></portlet>
+		<portlet id="adminProducerManagement" />
+		<portlet id="adminFacilitiesTree1" />
+        <portlet id="adminStreamer"></portlet>
+        <portlet id="threadStatus" />
+	</category>
+</display>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="cache" value="true"/>
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+	<bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+		<property name="portletModeMap">
+			<map>
+				<entry key="view"><ref local="adminFacilitiesController"/></entry>
+			</map>
+		</property>
+	</bean>
+ 	 	
+ 	<bean id="myFileSystemResource1" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.dao.xml"/>
+ 	</bean>
+  			
+ 	<bean id="myDaoBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource1"/>
+ 	</bean>
+ 	
+ 	<!-- view mode begin -->
+	<bean id="adminFacilitiesController" class="de.uhh.l2g.controller.AdminFacilitiesController">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="commandName" value="model"/>
+		<property name="commandClass" value="de.uhh.l2g.model.AdminFacilitiesModel"/>
+		<property name="lectureseriesRootId" value="1"/>
+		<property name="tree" value="tree1"/>
+		<property name="validator" ref="adminFacilitiesValidator" />  
+	</bean> 
+	<!-- view mode end -->
+	
+	<bean id="adminFacilitiesValidator" class="de.uhh.l2g.validator.AdminFacilitiesValidator"/>  
+</beans>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:util="http://www.springframework.org/schema/util"
+       
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+         http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="cache" value="true"/>
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+	<bean id="portletModeParameterHandlerMapping"
+      class="org.springframework.web.portlet.handler.PortletModeParameterHandlerMapping">
+    	<property name="portletModeParameterMap">
+        	<map>
+            	<entry key="view">
+                	<map>
+                    	<entry key="view" value-ref="adminLectureseriesManagementController"/>
+                    	<entry key="viewproducers" value-ref="adminProducerManagementController"/>
+                    	<entry key="edit" value-ref="adminLectureseriesInputController"/>
+                    	<entry key="delete" value-ref="deleteLectureseriesController"/>
+                		<entry key="approval" value-ref="approvalLectureseriesController"/>
+                	</map>
+            	</entry>
+         	</map>
+    	</property>
+        <property name="order" value="0"/>
+    </bean>		
+
+	<bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+		<property name="portletModeMap">
+			<map>
+				<entry key="view"><ref local="adminLectureseriesManagementController"/></entry>
+			</map>
+		</property>
+    	<property name="order" value="1"/>
+	</bean>
+ 	 	 	 		 		
+	<bean id="adminLectureseriesInputModel" class="de.uhh.l2g.model.AdminLectureseriesInputModel"/>
+ 	
+ 	<bean id="adminLectureseriesInputValidator" class="de.uhh.l2g.validator.AdminLectureseriesInputValidator"/>  
+
+	<bean id="adminLectureseriesManagementController" class="de.uhh.l2g.controller.AdminLectureseriesManagementController">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="listView" value="adminLectureseriesManagement"/>	
+        <property name="detailView" value="adminLectureseriesShow"/>	
+	</bean> 
+	
+	<bean id="deleteLectureseriesController" class="de.uhh.l2g.controller.AdminDeleteLectureseriesController">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+	    <property name="successView" value="adminLectureseriesManagement"/>	
+    </bean> 
+	
+	<bean id="approvalLectureseriesController" class="de.uhh.l2g.controller.AdminApprovalLectureseriesController">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+	    <property name="successView" value="adminLectureseriesManagement"/>	
+    </bean> 
+     	 	 	 		
+	<bean id="adminLectureseriesInputController" class="de.uhh.l2g.controller.AdminLectureseriesInputController">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="commandName" value="model"/>
+		<property name="commandClass" value="de.uhh.l2g.model.AdminLectureseriesInputModel"/>
+		<property name="formView" value="adminLectureseriesInput"/>
+		<property name="successView" value="adminLectureseriesShow"/>	
+        <property name="validator" ref="adminLectureseriesInputValidator" />  
+        <property name="renderParameters">
+        	<list>
+        		<value>action</value>
+        	</list>
+        </property>  
+	</bean> 
+	
+	<bean id="adminProducerManagementController" class="de.uhh.l2g.controller.AdminProducerManagementController">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="listView" value="adminProducerManagement"/>	
+        <property name="detailView" value="adminProducerShow"/>	
+	</bean> 
+
+ 	<bean id="myFileSystemResource1" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.dao.xml"/>
+ 	</bean>
+ 		
+ 	<bean id="myDaoBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource1"/>
+ 	</bean>	
+
+ 	<bean id="myFileSystemResource2" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.util.xml"/>
+ 	</bean>
+</beans>

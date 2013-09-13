@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+
+	<portlet>
+		<description xml:lang="de">AdminStreamer</description>
+		<portlet-name>adminStreamer</portlet-name>
+		<display-name xml:lang="de">adminStreamer</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/adminStreamer.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Admin-Streamer</title>
+			<short-title>Admin-Streamer</short-title>
+			<keywords>admin, streamer</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description xml:lang="de">AdminUserManagement</description>
+		<portlet-name>adminUserManagement</portlet-name>
+		<display-name xml:lang="de">adminUserManagement</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/adminUserManagement.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Admin-User-Management</title>
+			<short-title>Admin-User-Management</short-title>
+			<keywords>admin, user, management</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description xml:lang="de">AdminFacilitiesTree1</description>
+		<portlet-name>adminFacilitiesTree1</portlet-name>
+		<display-name xml:lang="de">adminFacilitiesTree1</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/adminFacilitiesTree1.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Admin-Facilities-Tree1</title>
+			<short-title>Admin-Facilities-Tree1</short-title>
+			<keywords>l2go_admin, facilities, tree1</keywords>
+		</portlet-info>
+	</portlet>
+	  	
+	<portlet>
+		<description xml:lang="de">AdminLectureseriesManagement</description>
+		<portlet-name>adminLectureseriesManagement</portlet-name>
+		<display-name xml:lang="de">adminLectureseriesManagement</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/adminLectureseriesManagement.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Admin-LectureseriesManagement</title>
+			<short-title>Admin-LectureseriesManagement</short-title>
+			<keywords>l2go_admin, lectureseries</keywords>
+		</portlet-info>
+	</portlet>
+
+	<portlet>
+		<description xml:lang="de">AdminThreadControl</description>
+		<portlet-name>threadStatus</portlet-name>
+		<display-name xml:lang="de">AdminThreadControl</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/adminThreadStatus.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>ThreadStatus</title>
+			<short-title>ThreadStatus</short-title>
+			<keywords>Thread, Status</keywords>
+		</portlet-info>
+	</portlet>
+	
+</portlet-app>

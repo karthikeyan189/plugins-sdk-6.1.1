@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:util="http://www.springframework.org/schema/util"
+       
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+         http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="cache" value="true"/>
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+	<bean id="portletModeParameterHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeParameterHandlerMapping">
+    	<property name="portletModeParameterMap">
+        	<map>
+            	<entry key="view">
+                	<map>
+                    	<entry key="viewallusers" value-ref="adminUserManagementController"/>
+                		<entry key="approvalproducer" value-ref="adminApprovalProducer"/>
+                		<entry key="approvalcoordinator" value-ref="adminApprovalCoordinator"/>
+                	</map>
+            	</entry>
+         	</map>
+    	</property>
+        <property name="order" value="0"/>
+    </bean>		
+
+	<bean id="portletModeHandlerMapping" class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+		<property name="portletModeMap">
+			<map>
+				<entry key="view"><ref local="adminUserManagementController"/></entry>
+			</map>
+		</property>
+    	<property name="order" value="1"/>
+	</bean>
+ 		
+ 	<bean id="adminApprovalProducerValidator" class="de.uhh.l2g.validator.AdminApprovalProducerValidator"/> 
+ 	
+ 	<bean id="adminApprovalCoordinatorValidator" class="de.uhh.l2g.validator.AdminApprovalCoordinatorValidator"/> 
+ 	
+	<bean id="adminApprovalProducer" class="de.uhh.l2g.action.AdminApprovalProducer">
+		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="utilityBeanFactory" ref="myUtilityBeanFactory"/>
+		<property name="commandName" value="model"/>
+		<property name="commandClass" value="de.uhh.l2g.model.AdminUserManagementModel"/>
+		<property name="formView" value="adminProducerDetails"/>
+		<property name="successView" value="adminProducerDetails"/>
+		<property name="validator" ref="adminApprovalProducerValidator" />  
+		<property name="l2goProducerRoleId" value="11021" />
+	</bean>
+	
+	<bean id="adminApprovalCoordinator" class="de.uhh.l2g.action.AdminApprovalCoordinator">
+ 		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="utilityBeanFactory" ref="myUtilityBeanFactory"/>
+		<property name="commandName" value="model"/>
+		<property name="commandClass" value="de.uhh.l2g.model.AdminUserManagementModel"/>
+		<property name="formView" value="adminCoordinatorDetails"/>
+		<property name="successView" value="adminCoordinatorDetails"/>
+		<property name="validator" ref="adminApprovalCoordinatorValidator" />  
+		<property name="l2goCoordinatorRoleId" value="11019" />
+	</bean>
+	
+	<bean id="adminUserManagementController" class="de.uhh.l2g.controller.AdminUserManagementController">
+ 		<property name="daoBeanFactory" ref="myDaoBeanFactory"/>
+		<property name="utilityBeanFactory" ref="myUtilityBeanFactory"/>
+		<property name="commandName" value="model"/>
+		<property name="commandClass" value="de.uhh.l2g.model.AdminUserManagementModel"/>
+		<property name="l2goProducerRoleId" value="11021" />
+		<property name="l2goCoordinatorRoleId" value="11019" />
+		<property name="l2goAdministratorRoleId" value="11020" />
+		<property name="l2goStudentRoleId" value="11022" />
+				
+        <property name="renderParameters">
+        	<list>
+        		<value>action</value>
+        	</list>
+        </property> 
+        
+        <property name="l2goRoles" ref="l2goRoles" /> 
+	</bean> 
+
+	<util:properties id="l2goRoles">
+		<prop key="11020">L2Go-Admin</prop>
+		<prop key="11019">Coordinator</prop>
+		<prop key="11021">Producer</prop>
+		<prop key="11022">Student</prop>
+	</util:properties>
+		
+ 	<bean id="myFileSystemResource1" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.dao.xml"/>
+ 	</bean>
+
+   	<bean id="myFileSystemResource2" class="org.springframework.core.io.ClassPathResource">
+ 		<constructor-arg value="de.uhh.l2g.util.xml"/>
+ 	</bean>
+ 	 		
+ 	<bean id="myDaoBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource1"/>
+ 	</bean>
+ 
+ 	<bean id="myUtilityBeanFactory" class="org.springframework.beans.factory.xml.XmlBeanFactory">
+ 		<constructor-arg ref="myFileSystemResource2"/>
+ 	</bean>	 			
+</beans>
