@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+
+  	<portlet>
+		<description xml:lang="de">Lectures</description>
+		<portlet-name>guestLectureseries</portlet-name>
+		<display-name xml:lang="de">Lectures</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/guestLectureseries.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Lectures</title>
+			<short-title>Lectures</short-title>
+			<keywords>Guest, Lectures</keywords>
+		</portlet-info>
+	</portlet>
+	
+	<portlet>
+		<description xml:lang="de">Videos</description>
+		<portlet-name>guestVideos</portlet-name>
+		<display-name xml:lang="de">Videos</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/guestVideo.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Video</title>
+			<short-title>Video</short-title>
+			<keywords>Guest, Video</keywords>
+		</portlet-info>
+	</portlet>
+	
+  	<portlet>
+		<description xml:lang="de">Search</description>
+		<portlet-name>guestSearch</portlet-name>
+		<display-name xml:lang="de">Guest-Search</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/guestSearch.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Search</title>
+			<short-title>Search</short-title>
+			<keywords>Guest, Search</keywords>
+		</portlet-info>
+	</portlet>
+	
+</portlet-app>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_1_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		 <portlet-name>guestLectureseries</portlet-name>
+		 <friendly-url-mapper-class>de.uhh.l2g.util.GuestLectureseriesFriendlyURLMapper</friendly-url-mapper-class>
+		 <instanceable>false</instanceable>
+		 <private-request-attributes>false</private-request-attributes>
+		 <header-portal-javascript>/lecture2go-theme/js/qrc.js</header-portal-javascript>
+		 <header-portal-javascript>/lecture2go-guest-spring-portlet/dwr/engine.js</header-portal-javascript>
+		 <header-portal-javascript>/lecture2go-guest-spring-portlet/dwr/util.js</header-portal-javascript>
+		 <header-portal-javascript>/lecture2go-guest-spring-portlet/dwr/interface/EmailManager.js</header-portal-javascript>
+	</portlet>	
+</liferay-portlet-app>
