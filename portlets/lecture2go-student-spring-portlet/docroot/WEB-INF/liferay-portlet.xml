@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.1.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_1_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		 <portlet-name>student</portlet-name>
+		 <friendly-url-mapper-class>de.uhh.l2g.util.StudentFriendlyURLMapper</friendly-url-mapper-class>
+		 <instanceable>false</instanceable>
+		 <private-request-attributes>false</private-request-attributes>
+	</portlet>	
+</liferay-portlet-app>

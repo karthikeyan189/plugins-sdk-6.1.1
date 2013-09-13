@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+
+  	<portlet>
+		<description xml:lang="de">Student</description>
+		<portlet-name>student</portlet-name>
+		<display-name xml:lang="de">Student</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/student.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Student</title>
+			<short-title>Student</short-title>
+			<keywords>student</keywords>
+		</portlet-info>
+	</portlet>
+
+  	<portlet>
+		<description xml:lang="de">Student Metadata</description>
+		<portlet-name>studentMetaData</portlet-name>
+		<display-name xml:lang="de">Student Metadata</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/context/studentMetaData.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en_US</supported-locale>
+		<supported-locale>de_DE</supported-locale>
+		<resource-bundle>de.uhh.l2g.resources.Resource</resource-bundle>
+		<portlet-info>
+			<title>Student Metadata</title>
+			<short-title>Student Metadata</short-title>
+			<keywords>student, chapter, comment</keywords>
+		</portlet-info>
+	</portlet>	
+</portlet-app>

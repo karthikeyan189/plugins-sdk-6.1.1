@@ -1,0 +1,66 @@
+<form method="POST" action="<portlet:actionURL/>">
+	<spring:bind path="model.chapter">
+		<input type="hidden" name="<c:out value="${status.expression}" />" value="0" />			
+	</spring:bind>
+
+	<!-- Title Beginn -->
+	${shorttitle}:<em style="color:#F17B0D;">*</em>&nbsp;
+	<spring:bind path="model.title">
+		<font color="red">
+			<c:out value="${status.errorMessage}" />
+		</font>
+		<input type="text" maxlength="30" size=35 name="<c:out value="${status.expression}" />" value="<c:out value="${model.title}" />" />
+	</spring:bind>			
+ 	<!-- Title Ende -->	 
+	
+	<br/><br/>
+				        	
+	<!-- Beginn start -->
+	${chapterbeginning}:<em style="color:#F17B0D;">*</em>
+			
+	<spring:bind path="model.timeStart">
+		<input type="text" id="timeStart" onclick="updateL2GoTimeForStart();" name="<c:out value="${status.expression}" />" value="<c:out value="${model.timeStart}" />"size="7" maxlength="7"readonly/>
+		<font color="red">
+			<c:out value="${status.errorMessage}" />
+		</font>
+	</spring:bind>
+	<!-- Beginn end -->
+							
+	&nbsp;
+	
+	<!-- End start -->						
+	${chapterend}:<em style="color:#F17B0D;">*</em>
+
+	<spring:bind path="model.timeEnd">
+		<input type="text" id="timeEnd" onclick="updateL2GoTimeForEnd();" name="<c:out value="${status.expression}" />" value="<c:out value="${model.timeEnd}" />"size="7" maxlength="7" readonly/>
+		<font color="red">
+			<c:out value="${status.errorMessage}" />
+		</font>
+	</spring:bind>
+	<!-- End end -->
+							  	
+	<br/><br/>
+	
+	<!-- description Beginn -->
+	<spring:bind path="model.description">
+		${comment}:<em style="color:#F17B0D;">*</em>
+		<font color="red">
+			<c:out value="${status.errorMessage}" />
+		</font>							
+		<br />
+		<textarea name="<c:out value="${status.expression}" />" cols="60" rows="5">${model.description}</textarea>
+	</spring:bind>
+	<!-- description Ende -->	
+	
+	<br/><br/>
+	
+	<div>
+        <input type="submit" value="${save}" />
+		<spring:bind path="model.action">
+			<input type="hidden" name="<c:out value="${status.expression}" />" value="create"/>
+		</spring:bind>
+		<input type="hidden" name="videoId" value="${model.videoId}">
+		<input type="hidden" name="currentSeite" value="${model.currentSeite}">
+		<input type="hidden" name="forward" value="false">
+	</div>
+</form>
