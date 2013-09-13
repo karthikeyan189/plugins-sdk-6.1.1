@@ -1,0 +1,30 @@
+<div id="metadata">
+	<div id="description">
+		<c:if test="${model.lectureseries.instructorsString==''}">
+			${model.metadata.creator}
+		</c:if>
+		<c:if test="${model.lectureseries.instructorsString>''}">
+			${model.lectureseries.instructorsString}
+		</c:if>
+	</div>
+	<em class="title">${model.video.title}</em>
+		
+	<a href="${model.domainURL}/rss/${model.lectureseries.id}.mp4.xml" title="${mp4abo}" target="_blank">
+	 	<img height="15" width="15" src="/lecture2go-theme/images/l2go/mp4-rss.png"/>&nbsp;&nbsp;${videofeed} 
+	</a> <em class="gray">${videofeedinfo}</em><br><br>
+	           	
+	<a href="${model.domainURL}/rss/${model.lectureseries.id}.mp3.xml" title="${audiofeedtitle}" target="_blank">
+	    <img height="15" width="15" src="/lecture2go-theme/images/l2go/mp3-rss.png"/>&nbsp;&nbsp;${audiofeed} 
+	</a> <em class="gray">${audiofeedinfo}</em><br><br>
+	           	
+	<a href="${model.domainURL}/rss/${model.lectureseries.id}.m4v.xml" title="${mobilefeedtitle}" target="_blank">
+	     <img height="15" width="15" src="/lecture2go-theme/images/l2go/m4v-rss.png"/>&nbsp;&nbsp;${mobilefeed} 
+	</a> <em class="gray">${mobilefeedinfo}</em><br><br>
+	           	
+	<a href="${model.domainURL}/rss/${model.lectureseries.id}.m4a.xml" title="${m4aabo}" target="_blank">
+	     <img height="15" width="15" src="/lecture2go-theme/images/l2go/m4a-rss.png"/>&nbsp;&nbsp;${m4afeed} 
+	</a> <em class="gray">${m4afeedinfo}</em>
+	
+	<br><br>
+	<em class="smallitalic"> ${feedinfo} <a href="/faq#podcasting" title="${moreinfotexttitle}" target="_blank">${moreinfotext}</a></em>
+</div>

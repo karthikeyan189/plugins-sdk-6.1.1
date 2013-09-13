@@ -1,0 +1,56 @@
+<c:if test="${model.mobileDevice=='true'}"><div id="dsCC" style="overflow-x: hidden; overflow-y:auto;"></c:if>
+<c:if test="${model.mobileDevice=='false'}"><div id="dsCC" style="overflow-x: hidden; overflow-y:auto; height:290px;"></c:if>
+	<div id="iframe">
+			<c:forEach items="${model.segmentList}" var="segment" varStatus="status">
+				<c:if test="${segment.chapter==true}">
+					<div class="chaptertile" >
+						<a><iavst begin='${segment.start}' end='${segment.end}'><img class="imgsmall" title="${playthischapter}" src="${segment.image}"></iavst></a>
+						<span style="font-size:10px;" class="gray">${chapter} ${segment.number}</span> - <span style="font-size:8px;">${segment.start}</span><br/>
+						<a><iavst class="white" begin='${segment.start}' end='${segment.end}'><span style="font-size:11px;">${segment.title}</span></iavst></a>
+					</div>
+				</c:if>	
+ 				
+				<c:if test="${segment.chapter==false}">
+					<div class="commenttile">
+							<div>
+								<b id="pf1_${status.count}">
+									<input type="image" height="10" width="10" src="/lecture2go-theme/images/l2go/commentOff.png" title="${commenton}" alt="${commenton}" id="showr${status.count}"/>
+								</b>
+								<b id="pf2_${status.count}">
+								  	<input type="image" height="10" width="10" src="/lecture2go-theme/images/l2go/commentOn.png" title="${commentoff}" alt="${commentoff}" id="hidr${status.count}"/>
+								</b>
+								<span style="font-size:8px;">${segment.start}</span> 										
+								<a><iavst class="white" begin='${segment.start}' end='${segment.end}'><span style="font-size:11px;">${segment.title}</span></iavst></a>
+							</div>
+								
+							<c:if test="${segment.description!=''}">
+								<b id="iav${status.count}">
+									<span style="font-size:10px;">
+										<div id="description">
+											<em>${segment.description}</em>
+										</div>												
+									</span>
+								</b>
+								<script>
+									$("#hidr${status.count}").click(function () {
+										   $("b#pf2_${status.count}").hide();
+										   $("b#pf1_${status.count}").show();
+										   $("b#iav${status.count}").hide();
+									 });
+									$("#showr${status.count}").click(function () {
+										   $("b#pf1_${status.count}").hide();
+										   $("b#pf2_${status.count}").show();									    
+										   $("b#iav${status.count}").show();
+									});
+									$(function() {
+										   $("b#pf2_${status.count}").show();
+										   $("b#pf1_${status.count}").hide();
+										   $("b#iav${status.count}").show();
+									});
+								</script>								
+							</c:if>																						
+					</div>
+				</c:if>	
+			</c:forEach>
+	</div>
+</div>

@@ -1,0 +1,87 @@
+<div id="metadata">
+	<div id="description">
+		<c:if test="${model.lectureseries.instructorsString==''}">
+	  		${model.metadata.creator}
+	  	</c:if>
+		<c:if test="${model.lectureseries.instructorsString>''}">
+	  		${model.lectureseries.instructorsString}
+	  	</c:if>
+	</div>
+	<em class="title">${model.video.title}</b></em>
+
+	<!-- Facebook Twitter Google+ -->
+	<div class="sharetile">
+		<p class="tileheading">${socialmedia}</p>
+		<div id="socialshareprivacy"></div>
+	</div>
+
+	<script type="text/javascript">
+		$('#socialshareprivacy').socialSharePrivacy({
+			services : {
+				gplus : {
+					status : 'on'
+				}
+			}
+		});
+	</script>
+	
+	<form name="embedForm" id="embedForm">
+		<!-- citation2go allowed -->
+		<c:if test="${model.video.citation2go==1}">
+			<c:if test="${model.clipStartTime==null && model.clipEndTime==null}">
+				<div class="sharetile">
+				<p class="tileheading">${citation2go}</p>
+					<div id="c2g">
+						<ul>
+							<li>
+								<label style="color: #C2C2C2; font-size: 11px;">${citationstart}</label>
+								<input type="text" id="clipStartTime" onclick="updateL2GoTimeForStart();" title="${citation2gosetstartpoint}" name="<c:out value="${status.expression}" />" value="${click}" size="5" maxlength="7" readonly/>
+							</li>
+							<li>
+								<label style="color: #C2C2C2; font-size: 11px;">${citationend}</label>
+								<input type="text" id="clipEndTime" onclick="updateL2GoTimeForEnd();" title="${citation2gosetendpoint}" name="<c:out value="${status.expression}" />" value="${click}" size="5" maxlength="7" readonly/>
+							</li>
+							<li>
+								<label style="color: #C2C2C2; font-size: 11px;">${url}</label>
+								<input type="text" id="zitat" name="embed_code5" title="${citation2gotitle}" value="" onclick="document.embedForm.embed_code5.focus();document.embedForm.embed_code5.select();" readonly />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</c:if>
+		</c:if>
+		<!-- citation2go allowed end-->
+
+		<c:if test="${model.URL!=null}">
+			<div class="sharetile">
+				<p class="tileheading">${links}</p>
+				<div id="urls">
+					<ul>
+						<li>
+							<label style="color: #C2C2C2; font-size: 11px;">${url} </label>
+							<input id="embed_code3" name="embed_code3" title="${urladdresstitle}" type="text" value="${model.URL}"
+								onclick="document.embedForm.embed_code3.focus();document.embedForm.embed_code3.select();" readonly />
+						</li>
+						<li>
+							<label style="color: #C2C2C2; font-size: 11px;">${embed} </label>
+							<input id="embed_code" name="embed_code" title="${embedtitle}" type="text"
+								value="&lt;iframe src='${model.domainURL}/lecture2go-theme/js/strobe/embed.html?src=${model.video.streamUrl}&poster=${model.video.image}' class='strobemediaplayback-video-player' type='text/html' width='500' height='250'&gt; &lt;/iframe&gt;"
+								onclick="document.embedForm.embed_code.focus();document.embedForm.embed_code.select();" readonly />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</c:if>
+	</form>
+
+	<c:if test="${!model.mobileDevice}">
+		<div id="qr">
+			<canvas id="qrcanv"></canvas>
+		</div>		
+	</c:if>	
+	
+	<div class="clear"></div>
+	<br/>
+	<em class="smallitalic">${embedconditions}</em>
+</div>
+

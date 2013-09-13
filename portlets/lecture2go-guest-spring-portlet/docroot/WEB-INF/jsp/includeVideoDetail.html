@@ -1,0 +1,40 @@
+<!-- metadata beginn-->
+<div id="metadata">
+
+	<div id="description">
+		<c:if test="${model.lectureseries.instructorsString==''}">
+			${model.metadata.creator}
+		</c:if>
+		<c:if test="${model.lectureseries.instructorsString>''}">
+			${model.lectureseries.instructorsString}
+		</c:if>
+	</div>
+	<em class="title"><b>${model.video.title}</b></em>
+	
+	<c:if test="${model.metadata.description!='' || model.license!=''}">
+		<div id="videoDetails">${model.metadata.description}</div>
+		
+		<c:if test="${model.license!=''}">
+			<c:if test="${model.licenseByNcNd=='ccbyncnd'}">
+				<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/"	target="_blank">
+					<img src="/lecture2go-theme/images/l2go/by-nc-nd-88x31.png" 
+					title="${byncndlicense}" alt="${byncndlicense}" />
+				</a>
+			</c:if>
+			<c:if test="${model.licenseByNcSa=='ccbyncsa'}">
+				<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"	target="_blank">
+					<img src="/lecture2go-theme/images/l2go/by-nc-sa-88x31.png"
+					title="${byncsalicense}" alt="${byncsalicense}" />
+				</a>
+			</c:if>
+			<c:if test="${model.licenseUhhL2go=='uhhl2go'}">
+				<a href="/lizenz" target="_blank">
+					<img height="30" src="/lecture2go-theme/images/l2go/l2go-lizenz-88x31.png"
+					title="${lecture2golicense}" alt="${lecture2golicense}" />
+				</a>
+			</c:if>
+		</c:if>
+	</c:if>
+
+</div>
+<!-- metadata end -->
