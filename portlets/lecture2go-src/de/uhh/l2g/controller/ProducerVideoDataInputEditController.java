@@ -609,8 +609,7 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 		File originalFile = new File(L2goPropsUtil.get("lecture2go.media.repository") + "/" + model.getHost().getName() + "/" + model.getProducer().getHomeDir() + "/" + preffix + ".mp4");
 
 		// delete image
-		File jpg = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + preffix + ".jpg");
-		jpg.delete();
+		((ProzessManager)getUtilityBeanFactory().getBean("prozessManager")).deleteThumbnails(video);
 
 		// delete segments
 		List<Mark> segmentList = ((SegmentDao)getDaoBeanFactory().getBean("segmentDao")).getSegmentsByVideoId(video.getId());

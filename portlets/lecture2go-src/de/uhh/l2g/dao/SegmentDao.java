@@ -338,13 +338,18 @@ public class SegmentDao extends JdbcDaoSupport implements ISegmentDao {
 				objectSegment.setNumber(counter);
 			}
 
-			// generate thumbnail
-			if (thumbNail.isFile()) objectSegment.setImage("/" + "images" + "/" + objectVideo.getId() + "_" + sec + ".jpg");
-			else {
-				((FFmpegManager)getUtilityBeanFactory().getBean("ffmgepManager")).createThumbnail(objectVideo, strt, L2goPropsUtil.get("lecture2go.images.system.path"));
-				if (!thumbNail.isFile()) {
-					objectSegment.setImage(L2goPropsUtil.get("lecture2go.theme.root.path") + "/" +"images" + "/" + "l2go" + "/" + "noimage.jpg");
-				}
+			// generate thumbs
+			// for audio 
+			if (objectVideo.getUploadType().equals("audio")){
+				objectSegment.setImage(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_small.png");
+			}
+			// for video
+			if (objectVideo.getUploadType().equals("video")){
+				if (thumbNail.isFile()) objectSegment.setImage("/" + "images" + "/" + objectVideo.getId() + "_" + sec + ".jpg");
+				else {
+					((FFmpegManager)getUtilityBeanFactory().getBean("ffmgepManager")).createThumbnail(objectVideo, strt, L2goPropsUtil.get("lecture2go.images.system.path"));
+					if (!thumbNail.isFile()) objectSegment.setImage(L2goPropsUtil.get("lecture2go.theme.root.path") + "/" +"images" + "/" + "l2go" + "/" + "noimage.jpg");
+				}				
 			}
 		}
 	}

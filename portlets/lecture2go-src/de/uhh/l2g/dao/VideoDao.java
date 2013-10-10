@@ -1264,30 +1264,54 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 			try{
 				// image
 				String image ="";
+				String imageSmall ="";
+				String imageMedium ="";
 				String videoPfad="";
 				
 				if (objectVideo.isOpenaccess()){
 					videoPfad = L2goPropsUtil.get("lecture2go.media.repository") + "/" + objectHost.getServerRoot() + "/" + objectProducer.getHomeDir() + "/" + objectVideo.getFilename();
 					image = objectVideo.getPreffix() + ".jpg";
+					imageSmall = objectVideo.getPreffix() + "_s.jpg";
+					imageMedium = objectVideo.getPreffix() + "_m.jpg";
 				}else{
 					videoPfad = L2goPropsUtil.get("lecture2go.media.repository") + "/" + objectHost.getServerRoot() + "/" + objectProducer.getHomeDir() + "/" +  objectVideo.getSecureFilename();
 					image = objectVideo.getSPreffix()+ ".jpg";
+					imageSmall = objectVideo.getSPreffix() + "_s.jpg";
+					imageMedium = objectVideo.getSPreffix() + "_m.jpg";
 				}
 				
+				//thumbnails
 				File im = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + image);
+				File imS = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + imageSmall);
+				File imM = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + imageMedium);
+				
 				File videoFile = new File(videoPfad);
 				
-				if (!im.isFile() && videoFile.isFile()) {
-					// thumbnail
+				if (!((FFmpegManager) getUtilityBeanFactory().getBean("ffmgepManager")).thumbnailsExists(objectVideo) && videoFile.isFile()) {
 					String thumbnailLocation = L2goPropsUtil.get("lecture2go.images.system.path") + "/" + image;
 					((FFmpegManager) getUtilityBeanFactory().getBean("ffmgepManager")).createThumbnail(videoPfad, thumbnailLocation);
 				}
 
 				// set thumbnail
-				if (im.isFile()) objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + image);
-				else {
-					if (objectVideo.getUploadType().equals("audio")) objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_big.png");
-					else objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path")  + "/images/l2go/noimage.jpg");
+				//if audio file
+				if (objectVideo.getUploadType().equals("audio")){
+					objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_big.png");
+					objectVideo.setImageSmall(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_small.png");
+					objectVideo.setImageMedium(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_medium.png");
+				}
+				
+				//is video
+				if (objectVideo.getUploadType().equals("video")){
+					if (im.isFile() && imS.isFile() && imM.isFile()){
+						objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + image);
+						objectVideo.setImageSmall(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + imageSmall);
+						objectVideo.setImageMedium(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + imageMedium);
+					}else {
+						String noImg = L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path")  + "/images/l2go/noimage.jpg";
+						objectVideo.setImage(noImg);
+						objectVideo.setImageSmall(noImg);
+						objectVideo.setImageMedium(noImg);
+					}
 				}
 				
 				// date
