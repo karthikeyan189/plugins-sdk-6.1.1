@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -51,12 +51,20 @@ public class MetadataDao extends JdbcDaoSupport implements IMetadataDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IMetadataDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 		//
 	}
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IMetadataDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
 	 */
 	public void deleteById(int id) {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -65,6 +73,11 @@ public class MetadataDao extends JdbcDaoSupport implements IMetadataDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IMetadataDao#getAll()
+	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Metadata> getAll() {
@@ -75,6 +88,12 @@ public class MetadataDao extends JdbcDaoSupport implements IMetadataDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IMetadataDao#getById(int)
 	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Metadata> getById(int id) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -83,6 +102,29 @@ public class MetadataDao extends JdbcDaoSupport implements IMetadataDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IMetadataDao#create(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 */
+	/**
+	 * Creates the.
+	 *
+	 * @param urlid the urlid
+	 * @param format the format
+	 * @param type the type
+	 * @param language the language
+	 * @param title the title
+	 * @param subject the subject
+	 * @param coverage the coverage
+	 * @param description the description
+	 * @param creator the creator
+	 * @param publisher the publisher
+	 * @param contributor the contributor
+	 * @param rightsHolder the rights holder
+	 * @param rights the rights
+	 * @param provenance the provenance
+	 * @param source the source
+	 * @param relation the relation
+	 * @param audience the audience
+	 * @param instructionalMethod the instructional method
+	 * @param date the date
 	 */
 	public void create(String urlid, String format, String type, String language, String title, String subject, String coverage, String description, String creator, String publisher, String contributor, String rightsHolder, String rights, String provenance, String source, String relation, String audience, String instructionalMethod, String date) {
 		JdbcTemplate insert = new JdbcTemplate(this.getDataSource());

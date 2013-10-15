@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -52,7 +52,7 @@ public class UserModel extends Page {
 	/**
 	 * Sets the middle name.
 	 *
-	 * @param mittelname the middle name
+	 * @param mittelname the new middle name
 	 */
 	public void setMiddleName(String mittelname) {
 		this.middleName = mittelname;
@@ -73,7 +73,7 @@ public class UserModel extends Page {
 	/**
 	 * Sets the first name.
 	 *
-	 * @param firstName the first name
+	 * @param firstName the new first name
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -94,7 +94,7 @@ public class UserModel extends Page {
 	/**
 	 * Sets the family name.
 	 *
-	 * @param familyName the family name
+	 * @param familyName the new family name
 	 */
 	public void setFamilyName(String familyName) {
 		this.familyName = familyName;
