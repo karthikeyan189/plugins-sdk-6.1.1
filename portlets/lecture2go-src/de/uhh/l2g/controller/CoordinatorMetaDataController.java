@@ -38,6 +38,11 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.portlet.ModelAndView;

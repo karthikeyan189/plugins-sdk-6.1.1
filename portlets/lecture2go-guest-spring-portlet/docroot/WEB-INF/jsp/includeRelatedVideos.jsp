@@ -7,8 +7,8 @@
 			<a href="<portlet:renderURL><portlet:param name="videoId" value="${video.id}"/><portlet:param name="facultyId" value="${model.facultyId}"/><portlet:param name="subFacility1Id" value="${model.subFacility1Id}"/><portlet:param name="subFacility2Id" value="${model.subFacility2Id}"/><portlet:param name="lectureseriesId" value="${model.lectureseriesId}"/><portlet:param name="method" value="get"/></portlet:renderURL>">
 				<div class="img">
 					<c:choose>
-						<c:when test="${model.video.id==video.id}"><img class="imgsmallhit" src="${video.imageSmall}"/></c:when>
-						<c:otherwise><img class="imgsmall" src="${video.imageSmall}"/></c:otherwise>
+						<c:when test="${model.video.id==video.id}"><img class="imgsmallhit" src="${video.image}"/></c:when>
+						<c:otherwise><img class="imgsmall" src="${video.image}"/></c:otherwise>
 					</c:choose>
 				</div>					
 			</a>

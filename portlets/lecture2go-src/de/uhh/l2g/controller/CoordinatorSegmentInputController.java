@@ -36,6 +36,7 @@ import java.io.File;
 import java.util.List;
 import java.util.ListIterator;
 
+import javax.portlet.PortletRequest;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.xml.XmlBeanFactory;

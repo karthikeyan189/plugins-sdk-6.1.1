@@ -36,6 +36,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ListIterator;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.PortletRequest;
+
 import org.springframework.beans.BeansException;
 
 import de.uhh.l2g.beans.Facility;

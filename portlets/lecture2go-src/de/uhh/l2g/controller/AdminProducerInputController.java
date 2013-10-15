@@ -37,6 +37,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletRequest;
+
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.util.Assert;

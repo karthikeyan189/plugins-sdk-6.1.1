@@ -34,7 +34,11 @@ package de.uhh.l2g.util;
 
 import java.util.Map;
 
-import com.liferay.faces.bridge.container.liferay.LiferayPortletURL;
+import javax.portlet.PortletMode;
+
+import com.liferay.portal.kernel.portlet.BaseFriendlyURLMapper;
+import com.liferay.portal.kernel.portlet.LiferayPortletURL;
+import com.liferay.portal.kernel.util.Validator;
 
 /**
  * The Class StudentFriendlyURLMapper.

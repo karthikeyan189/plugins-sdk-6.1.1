@@ -39,13 +39,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import org.omg.CORBA.SystemException;
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletRequest;
+
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.util.Assert;
 import org.springframework.validation.BindException;
 import org.springframework.web.portlet.bind.PortletRequestUtils;
 import org.springframework.web.portlet.mvc.SimpleFormController;
+
+import com.liferay.portal.SystemException;
+import com.liferay.portal.kernel.json.JSONArray;
+import com.liferay.util.Autocomplete;
 
 import de.uhh.l2g.beans.Coordinator;
 import de.uhh.l2g.beans.Facility;
@@ -57,10 +64,10 @@ import de.uhh.l2g.dao.FacilityDao;
 import de.uhh.l2g.dao.LectureseriesDao;
 import de.uhh.l2g.dao.ProducerDao;
 import de.uhh.l2g.model.AdminLectureseriesInputModel;
-import de.uhh.l2g.util.EmailManager;
 import de.uhh.l2g.util.Htaccess;
 import de.uhh.l2g.util.HtmlManager;
 import de.uhh.l2g.util.L2goPropsUtil;
+import de.uhh.l2g.util.EmailManager;
 
 /**
  * The Class CoordinatorLectureseriesInputController.

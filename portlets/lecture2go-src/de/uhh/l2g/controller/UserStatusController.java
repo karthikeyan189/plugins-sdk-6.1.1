@@ -32,6 +32,8 @@
  ***************************************************************************/
 package de.uhh.l2g.controller;
 
+import javax.portlet.PortletRequest;
+
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.web.portlet.mvc.SimpleFormController;

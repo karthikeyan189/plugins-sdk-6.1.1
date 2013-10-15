@@ -602,8 +602,8 @@ a:hover {
 
 #qrcanv {
     position: absolute;
-    width: 130px;
-    height: 130px;
+    width: 96px;
+    height: 96px;
     left: 544px;
     top: 2px;
     -moz-transition: all 0.3s ease 0s;
@@ -1158,20 +1158,6 @@ div.download {
 	padding: 10px;
 	width: 45px;
 	text-align: center;
-}
-
-div.download input {
-    background: none repeat scroll 0 0 transparent;
-    border: medium none;
-    cursor: pointer;
-    display: inline;
-    font-weight: normal;
-    padding: 0;
-}
-
-div.download input:hover {
-    background: none repeat scroll 0 0 transparent;
-    text-decoration: underline;
 }
 
 div.chaptertile {

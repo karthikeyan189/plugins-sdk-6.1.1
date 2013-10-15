@@ -3808,18 +3808,6 @@ div.download {
   width: 45px;
   text-align: center; }
 
-div.download input {
-  background: none repeat scroll 0 0 transparent;
-  border: medium none;
-  cursor: pointer;
-  display: inline;
-  font-weight: normal;
-  padding: 0; }
-
-div.download input:hover {
-  background: none repeat scroll 0 0 transparent;
-  text-decoration: underline; }
-
 div.chaptertile {
   background: none repeat scroll 0 0 #202020;
   border-bottom: 1px solid #000000;
@@ -3978,9 +3966,6 @@ div.datarow div.formtitle {
   width: 150px;
   text-align: right;
   display: inline-block; }
-
-div.datarow input#inputSemester {
-  margin-left: 159px; }
 
 div.box {
   float: left;

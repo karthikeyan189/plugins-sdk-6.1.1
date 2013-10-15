@@ -1,27 +1,24 @@
 <div id="metadata">
-		
 		<!-- closedaccess start -->
 		<c:if test="${model.video.openaccess==false}">
 			<div id="downloads">
 				<c:if test="${model.video.mp4File!=null}">
 					<div class="download">
 						<form method="post" action='${model.downloadServerURL}/download/getFile'>
-							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/film_gr.png" title="${videodownload}" alt="${videodownload}" /> 
-							<br>
-							<input type="submit" value="${mp4video}"/>
-							<input type="hidden" name="l2g" value="${model.video.id}"> 
-							<input type="hidden" name="type" value="video">
+							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/film_gr.png" title="${videodownload}" alt="${videodownload}" /> <input type="hidden" name="l2g"
+								value="${model.video.id}"> <input type="hidden" name="type" value="video"><br> <input type="image" class="dateilink"
+								src="/lecture2go-theme/images/l2go/mp4link_a.png" title="${videodownload}" alt="${videodownload}" /> <input type="hidden" name="l2g" value="${model.video.id}"> <input
+								type="hidden" name="type" value="video">
 						</form>
 					</div>
 				</c:if>
 				<c:if test="${model.video.mp3File!=null}">
 					<div class="download">
 						<form method="post" action='${model.downloadServerURL}/download/getFile'>
-							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/mp3_gr.png" title="${audiodownload}" alt="${audiodownload}" /> 
-							<br> 
-							<input type="submit" value="${mp3audio}"/>
-							<input type="hidden" name="l2g" value="${model.video.id}"> 
-							<input type="hidden" name="type" value="audio">
+							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/mp3_gr.png" title="${audiodownload}" alt="${audiodownload}" /> <input type="hidden" name="l2g"
+								value="${model.video.id}"> <input type="hidden" name="type" value="audio"><br> <input type="image" class="dateilink"
+								src="/lecture2go-theme/images/l2go/mp3link_a.png" title="${audiodownload}" alt="${audiodownload}" /> <input type="hidden" name="l2g" value="${model.video.id}"> <input
+								type="hidden" name="type" value="audio">
 						</form>
 					</div>
 				</c:if>
@@ -29,11 +26,10 @@
 				<c:if test="${model.video.pdfFile!=null}">
 					<div class="download">
 						<form method="post" action='${model.downloadServerURL}/download/getFile'>
-							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/pdf_gr.png" title="${pdfdownload}" alt="${pdfdownload}" /> 
-							<br> 
-							<input type="submit" value="${pdftext}"/>
-							<input type="hidden" name="l2g" value="${model.video.id}"> 
-							<input type="hidden" name="type" value="text">
+							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/pdf_gr.png" title="${pdfdownload}" alt="${pdfdownload}" /> <input type="hidden" name="l2g"
+								value="${model.video.id}"> <input type="hidden" name="type" value="text"><br> <input type="image" class="dateilink"
+								src="/lecture2go-theme/images/l2go/pdflink_a.png" title="${pdfdownload}" alt="${pdfdownload}" /> <input type="hidden" name="l2g" value="${model.video.id}"> <input
+								type="hidden" name="type" value="text">
 						</form>
 					</div>
 				</c:if>
@@ -41,11 +37,10 @@
 				<c:if test="${model.video.m4vFile!=null}">
 					<div class="download">
 						<form method="post" action='${model.downloadServerURL}/download/getFile'>
-							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/ipod_gr.png" title="${m4vdownload}" alt="${m4vdownload}" /> 
-							<br> 
-							<input type="submit" value="${m4vvideo}"/>
-							<input type="hidden" name="l2g" value="${model.video.id}"> 
-							<input type="hidden" name="type" value="ipod">
+							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/ipod_gr.png" title="${m4vdownload}" alt="${m4vdownload}" /> <input type="hidden" name="l2g"
+								value="${model.video.id}"> <input type="hidden" name="type" value="ipod"><br> <input type="image" class="dateilink"
+								src="/lecture2go-theme/images/l2go/m4vlink_a.png" title="${m4vdownload}" alt="${m4vdownload}" /> <input type="hidden" name="l2g" value="${model.video.id}"> <input
+								type="hidden" name="type" value="ipod">
 						</form>
 					</div>
 				</c:if>
@@ -53,11 +48,10 @@
 				<c:if test="${model.video.m4aFile!=null}">
 					<div class="download">
 						<form method="post" action='${model.downloadServerURL}/download/getFile'>
-							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/m4a_gr.png" title="${m4adownload}" alt="${m4adownload}" /> 
-							<br> 
-							<input type="submit" value="${m4aaudio}"/>
-							<input type="hidden" name="l2g" value="${model.video.id}"> 
-							<input type="hidden" name="type" value="m4a">
+							<input type="image" class="dateibilder" src="/lecture2go-theme/images/l2go/m4a_gr.png" title="${m4adownload}" alt="${m4adownload}" /> <input type="hidden" name="l2g"
+								value="${model.video.id}"> <input type="hidden" name="type" value="m4a"><br> <input type="image" class="dateilink"
+								src="/lecture2go-theme/images/l2go/m4alink_a.png" title="${m4adownload}" alt="${m4adownload}" /> <input type="hidden" name="l2g" value="${model.video.id}"> <input
+								type="hidden" name="type" value="m4a">
 						</form>
 					</div>
 				</c:if>

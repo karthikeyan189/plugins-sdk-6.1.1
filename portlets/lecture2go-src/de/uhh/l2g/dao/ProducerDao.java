@@ -39,6 +39,8 @@ import java.util.ListIterator;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
+import com.liferay.portal.service.UserLocalServiceUtil;
+
 import de.uhh.l2g.beans.Producer;
 import de.uhh.l2g.beans.ProducerLRInfo;
 import de.uhh.l2g.util.PaginationResultProducer;

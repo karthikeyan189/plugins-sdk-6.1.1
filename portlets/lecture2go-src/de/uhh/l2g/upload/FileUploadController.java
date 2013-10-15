@@ -35,6 +35,10 @@ package de.uhh.l2g.upload;
 import java.io.File;
 import java.io.IOException;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletRequest;
+
 import org.springframework.validation.BindException;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.portlet.mvc.SimpleFormController;

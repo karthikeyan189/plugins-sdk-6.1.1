@@ -34,6 +34,9 @@ package de.uhh.l2g.action;
 
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.PortletRequest;
+
 import de.uhh.l2g.beans.Video;
 import de.uhh.l2g.dao.FacilityDao;
 import de.uhh.l2g.dao.VideoDao;

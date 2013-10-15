@@ -194,10 +194,3 @@
 <c:set var="commentoff" value='<%= resource.getString("comment-off") %>'/>
 <c:set var="playchapter" value='<%= resource.getString("play-chapter") %>'/>
 <c:set var="wrongpassword" value='<%= resource.getString("wrong-password") %>'/>	
-
-<c:set var="mp4video" value='<%= resource.getString("mp4-video") %>'/>
-<c:set var="mp3audio" value='<%= resource.getString("mp3-audio") %>'/>
-<c:set var="m4vvideo" value='<%= resource.getString("m4v-video") %>'/>
-<c:set var="m4aaudio" value='<%= resource.getString("m4a-audio") %>'/>
-<c:set var="pdftext" value='<%= resource.getString("pdf-text") %>'/>
-

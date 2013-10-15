@@ -35,6 +35,7 @@ package de.uhh.l2g.controller;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import javax.portlet.PortletRequest;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.xml.XmlBeanFactory;

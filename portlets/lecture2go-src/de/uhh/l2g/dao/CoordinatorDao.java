@@ -38,6 +38,8 @@ import java.util.ListIterator;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
+import com.liferay.portal.service.UserLocalServiceUtil;
+
 import de.uhh.l2g.beans.Coordinator;
 
 

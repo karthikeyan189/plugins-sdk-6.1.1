@@ -32,9 +32,15 @@
  ***************************************************************************/
 package de.uhh.l2g.controller;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.web.portlet.bind.PortletRequestUtils;
 import org.springframework.web.portlet.mvc.AbstractController;
+
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 
 import de.uhh.l2g.dao.LectureseriesDao;
 

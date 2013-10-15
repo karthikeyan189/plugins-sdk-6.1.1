@@ -35,6 +35,10 @@ package de.uhh.l2g.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.xml.XmlBeanFactory;

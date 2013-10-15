@@ -1,0 +1,7 @@
+/bin
+portlets/lecture2go-admin-spring-portlet/docroot/WEB-INF/classes
+portlets/lecture2go-coordinator-spring-portlet/docroot/WEB-INF/classes
+portlets/lecture2go-guest-spring-portlet/docroot/WEB-INF/classes
+portlets/lecture2go-producer-spring-portlet/docroot/WEB-INF/classes
+portlets/lecture2go-student-spring-portlet/docroot/WEB-INF/classes
+portlets/lecture2go-user-spring-portlet/docroot/WEB-INF/classes

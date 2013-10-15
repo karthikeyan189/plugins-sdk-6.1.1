@@ -32,6 +32,8 @@
  ***************************************************************************/
 package de.uhh.l2g.model;
 
+import com.liferay.portal.model.User;
+
 import de.uhh.l2g.beans.Coordinator;
 import de.uhh.l2g.util.L2goPropsUtil;
 

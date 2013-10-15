@@ -35,12 +35,15 @@ package de.uhh.l2g.dao;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Map;
 
-import javax.management.relation.Role;
-
-import org.omg.CORBA.SystemException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.model.Role;
+import com.liferay.portal.service.UserLocalServiceUtil;
 
 import de.uhh.l2g.beans.User;
 

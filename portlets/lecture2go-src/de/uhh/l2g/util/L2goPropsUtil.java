@@ -32,6 +32,7 @@
  ***************************************************************************/
 package de.uhh.l2g.util;
 
+import com.liferay.portal.kernel.util.PortalClassInvoker;
 
 /**
  * The Class L2goPropsUtil.

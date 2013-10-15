@@ -34,6 +34,8 @@ package de.uhh.l2g.upload;
 
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+
 import org.apache.commons.fileupload.FileUpload;
 import org.apache.commons.fileupload.FileUploadBase;
 import org.apache.commons.fileupload.FileUploadException;

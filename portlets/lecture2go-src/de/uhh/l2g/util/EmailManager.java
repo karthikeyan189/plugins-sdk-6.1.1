@@ -35,6 +35,9 @@ package de.uhh.l2g.util;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 
+import com.liferay.util.mail.MailEngine;
+import com.liferay.util.mail.MailEngineException;
+
 /**
  * The Class MailManager.
  */

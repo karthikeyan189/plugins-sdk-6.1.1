@@ -40,6 +40,10 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.ResourceBundle;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletRequest;
+
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.util.Assert;
@@ -57,10 +61,10 @@ import de.uhh.l2g.dao.FacilityDao;
 import de.uhh.l2g.dao.LectureseriesDao;
 import de.uhh.l2g.dao.ProducerDao;
 import de.uhh.l2g.model.AdminLectureseriesInputModel;
-import de.uhh.l2g.util.EmailManager;
 import de.uhh.l2g.util.Htaccess;
 import de.uhh.l2g.util.HtmlManager;
 import de.uhh.l2g.util.L2goPropsUtil;
+import de.uhh.l2g.util.EmailManager;
 ;
 
 

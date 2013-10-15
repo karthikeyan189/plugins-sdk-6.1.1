@@ -37,6 +37,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletRequest;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.util.Assert;

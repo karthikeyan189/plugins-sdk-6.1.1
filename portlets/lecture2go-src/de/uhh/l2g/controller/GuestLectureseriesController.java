@@ -34,15 +34,21 @@ package de.uhh.l2g.controller;
 
 import java.util.NoSuchElementException;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.omg.CORBA.SystemException;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.validation.BindException;
 import org.springframework.web.portlet.ModelAndView;
 import org.springframework.web.portlet.mvc.AbstractFormController;
 
-import com.liferay.compat.portal.util.PortalUtil;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.model.User;
+import com.liferay.portal.util.PortalUtil;
 
 import de.uhh.l2g.action.GuestLectureseriesDetail;
 import de.uhh.l2g.action.GuestLectureseriesList;

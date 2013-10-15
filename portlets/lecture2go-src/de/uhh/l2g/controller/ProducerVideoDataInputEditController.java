@@ -41,6 +41,9 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletRequest;
 import javax.xml.stream.XMLStreamException;
 
 import org.apache.commons.fileupload.portlet.PortletFileUpload;
@@ -609,7 +612,8 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 		File originalFile = new File(L2goPropsUtil.get("lecture2go.media.repository") + "/" + model.getHost().getName() + "/" + model.getProducer().getHomeDir() + "/" + preffix + ".mp4");
 
 		// delete image
-		((ProzessManager)getUtilityBeanFactory().getBean("prozessManager")).deleteThumbnails(video);
+		File jpg = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + preffix + ".jpg");
+		jpg.delete();
 
 		// delete segments
 		List<Mark> segmentList = ((SegmentDao)getDaoBeanFactory().getBean("segmentDao")).getSegmentsByVideoId(video.getId());

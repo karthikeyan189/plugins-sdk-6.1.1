@@ -32,6 +32,10 @@
  ***************************************************************************/
 package de.uhh.l2g.controller;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletRequest;
+
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.validation.BindException;

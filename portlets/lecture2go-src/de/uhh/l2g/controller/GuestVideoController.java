@@ -34,6 +34,10 @@ package de.uhh.l2g.controller;
 
 import java.io.IOException;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.xml.XmlBeanFactory;

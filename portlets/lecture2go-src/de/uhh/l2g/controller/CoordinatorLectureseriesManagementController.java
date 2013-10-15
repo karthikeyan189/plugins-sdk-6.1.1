@@ -38,6 +38,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.web.portlet.ModelAndView;
 import org.springframework.web.portlet.bind.PortletRequestUtils;

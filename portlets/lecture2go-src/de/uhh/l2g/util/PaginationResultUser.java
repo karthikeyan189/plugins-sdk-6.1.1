@@ -34,6 +34,8 @@ package de.uhh.l2g.util;
 
 import java.util.List;
 
+import javax.portlet.PortletRequest;
+
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.web.portlet.bind.PortletRequestUtils;
 

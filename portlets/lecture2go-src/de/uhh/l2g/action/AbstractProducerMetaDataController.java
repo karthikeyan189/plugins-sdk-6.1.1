@@ -34,6 +34,9 @@ package de.uhh.l2g.action;
 
 import java.util.List;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.RenderRequest;
+
 import org.springframework.validation.BindException;
 
 import de.uhh.l2g.beans.Factory;

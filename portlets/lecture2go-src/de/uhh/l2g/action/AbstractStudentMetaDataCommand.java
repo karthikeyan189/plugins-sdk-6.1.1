@@ -36,6 +36,9 @@ import java.io.File;
 import java.util.List;
 import java.util.ListIterator;
 
+import javax.portlet.ActionRequest;
+import javax.portlet.PortletRequest;
+
 import org.springframework.validation.BindException;
 
 import de.uhh.l2g.beans.Factory;
