@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -43,7 +43,7 @@ private boolean interrupted=true;
 	/**
 	 * Checks if is interrupted.
 	 *
-	 * @return true, if checks if is interrupted
+	 * @return true, if is interrupted
 	 */
 	public boolean isInterrupted() {
 		return interrupted;
@@ -52,7 +52,7 @@ private boolean interrupted=true;
 	/**
 	 * Sets the interrupted.
 	 *
-	 * @param interrupted the interrupted
+	 * @param interrupted the new interrupted
 	 */
 	public void setInterrupted(boolean interrupted) {
 		this.interrupted = interrupted;

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -49,6 +49,13 @@ public class VideoHitsPerDayComparator implements Comparator<Video> {
 
 	/* (non-Javadoc)
 	 * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
+	 */
+	/**
+	 * Compare.
+	 *
+	 * @param v1 the v1
+	 * @param v2 the v2
+	 * @return the int
 	 */
 	public int compare(Video v1, Video v2) {
 		

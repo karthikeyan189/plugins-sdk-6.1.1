@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -53,7 +53,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time hhb.
 	 *
-	 * @param timeHHB the time hhb
+	 * @param timeHHB the new time hhb
 	 */
 	public void setTimeHHB(String timeHHB) {
 		this.timeHHB = timeHHB;
@@ -71,7 +71,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time mmb.
 	 *
-	 * @param timeMMB the time mmb
+	 * @param timeMMB the new time mmb
 	 */
 	public void setTimeMMB(String timeMMB) {
 		this.timeMMB = timeMMB;
@@ -89,7 +89,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time ssb.
 	 *
-	 * @param timeSSB the time ssb
+	 * @param timeSSB the new time ssb
 	 */
 	public void setTimeSSB(String timeSSB) {
 		this.timeSSB = timeSSB;
@@ -107,7 +107,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time mme.
 	 *
-	 * @param timeMME the time mme
+	 * @param timeMME the new time mme
 	 */
 	public void setTimeMME(String timeMME) {
 		this.timeMME = timeMME;
@@ -125,7 +125,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time hhe.
 	 *
-	 * @param timeHHE the time hhe
+	 * @param timeHHE the new time hhe
 	 */
 	public void setTimeHHE(String timeHHE) {
 		this.timeHHE = timeHHE;
@@ -143,7 +143,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time sse.
 	 *
-	 * @param timeSSE the time sse
+	 * @param timeSSE the new time sse
 	 */
 	public void setTimeSSE(String timeSSE) {
 		this.timeSSE = timeSSE;
@@ -161,7 +161,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time hh.
 	 *
-	 * @param timeHH the time hh
+	 * @param timeHH the new time hh
 	 */
 	public void setTimeHH(String timeHH) {
 		this.timeHH = timeHH;
@@ -179,7 +179,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time mm.
 	 *
-	 * @param timeMM the time mm
+	 * @param timeMM the new time mm
 	 */
 	public void setTimeMM(String timeMM) {
 		this.timeMM = timeMM;
@@ -197,7 +197,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time ss.
 	 *
-	 * @param timeSS the time ss
+	 * @param timeSS the new time ss
 	 */
 	public void setTimeSS(String timeSS) {
 		this.timeSS = timeSS;
@@ -215,7 +215,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time.
 	 *
-	 * @param time the time
+	 * @param time the new time
 	 */
 	public void setTime(String time) {
 		this.time = time;
@@ -233,7 +233,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the duration.
 	 *
-	 * @param duration the duration
+	 * @param duration the new duration
 	 */
 	public void setDuration(String duration) {
 		this.duration = duration;
@@ -242,7 +242,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Checks if is chapter.
 	 *
-	 * @return true, if checks if is chapter
+	 * @return true, if is chapter
 	 */
 	public boolean isChapter() {
 		return chapter;
@@ -251,7 +251,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the chapter.
 	 *
-	 * @param chapter the chapter
+	 * @param chapter the new chapter
 	 */
 	public void setChapter(boolean chapter) {
 		this.chapter = chapter;
@@ -259,6 +259,11 @@ public class StudentModel extends GuestModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Objects#getSegmentList()
+	 */
+	/**
+	 * Gets the segment list.
+	 *
+	 * @return the segment list
 	 */
 	@Override
 	public List<Mark> getSegmentList() {
@@ -268,6 +273,11 @@ public class StudentModel extends GuestModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Objects#setSegmentList(java.util.List)
 	 */
+	/**
+	 * Sets the segment list.
+	 *
+	 * @param segmentList the new segment list
+	 */
 	@Override
 	public void setSegmentList(List<Mark> segmentList) {
 		this.segmentList = segmentList;
@@ -276,6 +286,11 @@ public class StudentModel extends GuestModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getDomainURL()
 	 */
+	/**
+	 * Gets the domain url.
+	 *
+	 * @return the domain url
+	 */
 	@Override
 	public String getDomainURL() {
 		return domainURL;
@@ -283,6 +298,11 @@ public class StudentModel extends GuestModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setDomainURL(java.lang.String)
+	 */
+	/**
+	 * Sets the domain url.
+	 *
+	 * @param domainURL the new domain url
 	 */
 	@Override
 	public void setDomainURL(String domainURL) {
@@ -301,7 +321,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the current segment timepoint.
 	 *
-	 * @param currentSegmentTimepoint the current segment timepoint
+	 * @param currentSegmentTimepoint the new current segment timepoint
 	 */
 	public void setCurrentSegmentTimepoint(String currentSegmentTimepoint) {
 		this.currentSegmentTimepoint = currentSegmentTimepoint;
@@ -382,7 +402,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the id.
 	 *
-	 * @param l the id
+	 * @param l the new id
 	 */
 	public void setId(long l) {
 		this.id = l;
@@ -400,7 +420,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the id num.
 	 *
-	 * @param idNum the id num
+	 * @param idNum the new id num
 	 */
 	public void setIdNum(String idNum) {
 		this.idNum = idNum;
@@ -418,7 +438,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the screen name.
 	 *
-	 * @param screenName the screen name
+	 * @param screenName the new screen name
 	 */
 	public void setScreenName(String screenName) {
 		this.screenName = screenName;
@@ -436,7 +456,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the first name.
 	 *
-	 * @param firstName the first name
+	 * @param firstName the new first name
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -454,7 +474,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the last name.
 	 *
-	 * @param lastName the last name
+	 * @param lastName the new last name
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
@@ -472,7 +492,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the email address.
 	 *
-	 * @param emailAddress the email address
+	 * @param emailAddress the new email address
 	 */
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
@@ -484,7 +504,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Checks if is student authenticated.
 	 *
-	 * @return true, if checks if is student authenticated
+	 * @return true, if is student authenticated
 	 */
 	public boolean isStudentAuthenticated() {
 		return studentAuthenticated;
@@ -505,7 +525,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the secure url.
 	 *
-	 * @param secureUrl the secure url
+	 * @param secureUrl the new secure url
 	 */
 	public void setSecureUrl(String secureUrl) {
 		this.secureUrl = secureUrl;
@@ -517,7 +537,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Checks if is pwd check.
 	 *
-	 * @return true, if checks if is pwd check
+	 * @return true, if is pwd check
 	 */
 	public boolean isPwdCheck() {
 		return pwdCheck;
@@ -526,7 +546,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the student authenticated.
 	 *
-	 * @param studentAuthenticated the student authenticated
+	 * @param studentAuthenticated the new student authenticated
 	 */
 	public void setStudentAuthenticated(boolean studentAuthenticated) {
 		this.studentAuthenticated = studentAuthenticated;
@@ -535,7 +555,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the pwd check.
 	 *
-	 * @param pwdCheck the pwd check
+	 * @param pwdCheck the new pwd check
 	 */
 	public void setPwdCheck(boolean pwdCheck) {
 		this.pwdCheck = pwdCheck;
@@ -556,7 +576,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time start.
 	 *
-	 * @param timeStart the time start
+	 * @param timeStart the new time start
 	 */
 	public void setTimeStart(String timeStart) {
 		this.timeStart = timeStart;
@@ -577,7 +597,7 @@ public class StudentModel extends GuestModel {
 	/**
 	 * Sets the time end.
 	 *
-	 * @param timeEnd the time end
+	 * @param timeEnd the new time end
 	 */
 	public void setTimeEnd(String timeEnd) {
 		this.timeEnd = timeEnd;

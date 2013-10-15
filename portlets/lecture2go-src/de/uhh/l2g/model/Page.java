@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -60,7 +60,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the portlet request.
 	 *
-	 * @param portletRequest the portlet request
+	 * @param portletRequest the new portlet request
 	 */
 	public void setPortletRequest(PortletRequest portletRequest) {
 		this.portletRequest = portletRequest;
@@ -81,7 +81,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the current seite.
 	 *
-	 * @param currentSeite the current seite
+	 * @param currentSeite the new current seite
 	 */
 	public void setCurrentSeite(int currentSeite) {
 		this.currentSeite = currentSeite;
@@ -112,7 +112,7 @@ public class Page extends Objects {
 	private Map<String, String> filters;
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new page.
 	 */
 	public Page() {
 		filters = new HashMap<String, String>();
@@ -131,7 +131,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the number result pages.
 	 *
-	 * @param numberResultPages the number result pages
+	 * @param numberResultPages the new number result pages
 	 */
 	public void setNumberResultPages(int numberResultPages) {
 		this.numberResultPages = numberResultPages;
@@ -149,7 +149,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the current page number.
 	 *
-	 * @param currentPageNumber the current page number
+	 * @param currentPageNumber the new current page number
 	 */
 	public void setCurrentPageNumber(int currentPageNumber) {
 		this.currentPageNumber = currentPageNumber;
@@ -167,7 +167,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the page range first.
 	 *
-	 * @param pageRangeFirst the page range first
+	 * @param pageRangeFirst the new page range first
 	 */
 	public void setPageRangeFirst(int pageRangeFirst) {
 		this.pageRangeFirst = pageRangeFirst;
@@ -185,7 +185,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the page range last.
 	 *
-	 * @param pageRangeLast the page range last
+	 * @param pageRangeLast the new page range last
 	 */
 	public void setPageRangeLast(int pageRangeLast) {
 		this.pageRangeLast = pageRangeLast;
@@ -201,36 +201,36 @@ public class Page extends Objects {
 	}
 
 	/**
-	 * Sets the has next.
+	 * Sets the checks for next.
 	 *
-	 * @param hasNext the checks for next
+	 * @param hasNext the new checks for next
 	 */
 	public void setHasNext(boolean hasNext) {
 		this.hasNext = hasNext;
 	}
 
 	/**
-	 * Checks if is has next.
+	 * Checks if is checks for next.
 	 *
-	 * @return true, if checks if is has next
+	 * @return true, if is checks for next
 	 */
 	public boolean isHasNext() {
 		return hasNext;
 	}
 
 	/**
-	 * Sets the has prev.
+	 * Sets the checks for prev.
 	 *
-	 * @param hasPrev the checks for prev
+	 * @param hasPrev the new checks for prev
 	 */
 	public void setHasPrev(boolean hasPrev) {
 		this.hasPrev = hasPrev;
 	}
 
 	/**
-	 * Checks if is has prev.
+	 * Checks if is checks for prev.
 	 *
-	 * @return true, if checks if is has prev
+	 * @return true, if is checks for prev
 	 */
 	public boolean isHasPrev() {
 		return hasPrev;
@@ -239,7 +239,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the page size.
 	 *
-	 * @param pageSize the page size
+	 * @param pageSize the new page size
 	 */
 	public void setPageSize(int pageSize) {
 		this.pageSize = pageSize;
@@ -288,7 +288,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the remote user id.
 	 *
-	 * @param remoteUserId the remote user id
+	 * @param remoteUserId the new remote user id
 	 */
 	public void setRemoteUserId(Integer remoteUserId) {
 		this.remoteUserId = remoteUserId;
@@ -310,7 +310,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the url id.
 	 *
-	 * @param urlId the url id
+	 * @param urlId the new url id
 	 */
 	public void setUrlId(String urlId) {
 		this.urlId = urlId;
@@ -332,7 +332,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the number of pages.
 	 *
-	 * @param numberOfPages the number of pages
+	 * @param numberOfPages the new number of pages
 	 */
 	public void setNumberOfPages(List<?> numberOfPages) {
 		this.numberOfPages = numberOfPages;
@@ -345,7 +345,7 @@ public class Page extends Objects {
 	/**
 	 * Checks if is action request.
 	 *
-	 * @return true, if checks if is action request
+	 * @return true, if is action request
 	 */
 	public boolean isActionRequest() {
 		return actionRequest;
@@ -354,7 +354,7 @@ public class Page extends Objects {
 	/**
 	 * Sets the action request.
 	 *
-	 * @param actionRequest the action request
+	 * @param actionRequest the new action request
 	 */
 	public void setActionRequest(boolean actionRequest) {
 		this.actionRequest = actionRequest;

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -39,7 +39,15 @@ import org.apache.commons.fileupload.ProgressListener;
 
 
 /**
- * The Class FileUploadProgressListener.
+ * The listener interface for receiving fileUploadProgress events.
+ * The class that is interested in processing a fileUploadProgress
+ * event implements this interface, and the object created
+ * with that class is registered with a component using the
+ * component's <code>addFileUploadProgressListener<code> method. When
+ * the fileUploadProgress event occurs, that object's appropriate
+ * method is invoked.
+ *
+ * @see FileUploadProgressEvent
  */
 public class FileUploadProgressListener implements ProgressListener {
 	
@@ -76,7 +84,7 @@ public class FileUploadProgressListener implements ProgressListener {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -94,14 +102,14 @@ public class FileUploadProgressListener implements ProgressListener {
 	/**
 	 * Sets the content length.
 	 *
-	 * @param contentLength the content length
+	 * @param contentLength the new content length
 	 */
 	public void setContentLength(long contentLength) {
 		this.contentLength = contentLength;
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new file upload progress listener.
 	 *
 	 * @param id the id
 	 * @param contentLength the content length
@@ -113,7 +121,7 @@ public class FileUploadProgressListener implements ProgressListener {
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new file upload progress listener.
 	 */
 	public FileUploadProgressListener() {
 	}
@@ -142,6 +150,13 @@ public class FileUploadProgressListener implements ProgressListener {
 	
 	/* (non-Javadoc)
 	 * @see org.apache.commons.fileupload.ProgressListener#update(long, long, int)
+	 */
+	/**
+	 * Update.
+	 *
+	 * @param bytesRead the bytes read
+	 * @param contentLength the content length
+	 * @param items the items
 	 */
 	public void update(long bytesRead, long contentLength, int items) {
 		// update bytesTransferred and fileSize (if required) every 10 KB is

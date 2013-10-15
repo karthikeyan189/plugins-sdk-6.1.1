@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -86,7 +86,7 @@ public class CoordinatorMetaDataController extends AbstractFormController{
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -107,7 +107,7 @@ public class CoordinatorMetaDataController extends AbstractFormController{
 	/**
 	 * Sets the utility bean factory.
 	 *
-	 * @param utilityBeanFactory the utility bean factory
+	 * @param utilityBeanFactory the new utility bean factory
 	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory) {
 		this.utilityBeanFactory = utilityBeanFactory;
@@ -119,6 +119,15 @@ public class CoordinatorMetaDataController extends AbstractFormController{
 	 * processFormSubmission(javax.portlet.ActionRequest,
 	 * javax.portlet.ActionResponse, java.lang.Object,
 	 * org.springframework.validation.BindException)
+	 */
+	/**
+	 * Process form submission.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected void processFormSubmission(ActionRequest request, ActionResponse response, Object command, BindException errors) throws Exception {
@@ -157,6 +166,16 @@ public class CoordinatorMetaDataController extends AbstractFormController{
 	 * javax.portlet.RenderResponse, java.lang.Object,
 	 * org.springframework.validation.BindException)
 	 */
+	/**
+	 * Render form submission.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
+	 * @return the model and view
+	 * @throws Exception the exception
+	 */
 	@Override
 	protected ModelAndView renderFormSubmission(RenderRequest request, RenderResponse response, Object command, BindException errors) throws Exception {
 		ModelAndView mv = new ModelAndView();
@@ -182,6 +201,15 @@ public class CoordinatorMetaDataController extends AbstractFormController{
 	 * org.springframework.web.portlet.mvc.AbstractFormController#showForm(javax
 	 * .portlet.RenderRequest, javax.portlet.RenderResponse,
 	 * org.springframework.validation.BindException)
+	 */
+	/**
+	 * Show form.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param errors the errors
+	 * @return the model and view
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected ModelAndView showForm(RenderRequest request, RenderResponse response, BindException errors) throws Exception {

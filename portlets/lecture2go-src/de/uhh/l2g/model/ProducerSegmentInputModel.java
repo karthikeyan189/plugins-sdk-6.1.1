@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -43,7 +43,7 @@ public class ProducerSegmentInputModel extends ProducerMetaDataModel {
 	/**
 	 * Checks if is permitted to segment.
 	 *
-	 * @return true, if checks if is permitted to segment
+	 * @return true, if is permitted to segment
 	 */
 	public boolean isPermittedToSegment() {
 		return permittedToSegment;
@@ -52,7 +52,7 @@ public class ProducerSegmentInputModel extends ProducerMetaDataModel {
 	/**
 	 * Sets the permitted to segment.
 	 *
-	 * @param permittedToSegment the permitted to segment
+	 * @param permittedToSegment the new permitted to segment
 	 */
 	public void setPermittedToSegment(boolean permittedToSegment) {
 		this.permittedToSegment = permittedToSegment;

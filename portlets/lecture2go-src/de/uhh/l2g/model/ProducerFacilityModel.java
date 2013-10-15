@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -65,7 +65,7 @@ public class ProducerFacilityModel extends UserStatusModel {
 	/**
 	 * Sets the all faculties.
 	 *
-	 * @param allFaculties the all faculties
+	 * @param allFaculties the new all faculties
 	 */
 	public void setAllFaculties(List<Facility> allFaculties) {
 		this.allFacultiesAsList = allFaculties;
@@ -93,7 +93,7 @@ public class ProducerFacilityModel extends UserStatusModel {
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new producer facility model.
 	 */
 	public ProducerFacilityModel() {
 
@@ -101,6 +101,11 @@ public class ProducerFacilityModel extends UserStatusModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Objects#setFaculty(de.uhh.l2g.beans.Facility)
+	 */
+	/**
+	 * Sets the faculty.
+	 *
+	 * @param faculty the new faculty
 	 */
 	@Override
 	public void setFaculty(Facility faculty) {
@@ -110,6 +115,11 @@ public class ProducerFacilityModel extends UserStatusModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Objects#getFaculty()
 	 */
+	/**
+	 * Gets the faculty.
+	 *
+	 * @return the faculty
+	 */
 	@Override
 	public Facility getFaculty() {
 		return faculty;
@@ -118,7 +128,7 @@ public class ProducerFacilityModel extends UserStatusModel {
 	/**
 	 * Sets the producer.
 	 *
-	 * @param producer the producer
+	 * @param producer the new producer
 	 */
 	public void setProducer(ProducerLRInfo producer) {
 		this.producer = producer;
@@ -126,6 +136,11 @@ public class ProducerFacilityModel extends UserStatusModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Objects#getProducer()
+	 */
+	/**
+	 * Gets the producer.
+	 *
+	 * @return the producer
 	 */
 	public ProducerLRInfo getProducer() {
 		return producer;

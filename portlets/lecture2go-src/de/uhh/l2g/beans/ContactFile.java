@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -71,7 +71,7 @@ public class ContactFile {
 	/**
 	 * Sets the title.
 	 *
-	 * @param title the title
+	 * @param title the new title
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -89,7 +89,7 @@ public class ContactFile {
 	/**
 	 * Sets the video list.
 	 *
-	 * @param videoList the video list
+	 * @param videoList the new video list
 	 */
 	public void setVideoList(List<Video> videoList) {
 		this.videoList = videoList;
@@ -116,7 +116,7 @@ public class ContactFile {
 	/**
 	 * Sets the container format.
 	 *
-	 * @param containerFormat the container format
+	 * @param containerFormat the new container format
 	 */
 	public void setContainerFormat(String containerFormat) {
 		this.containerFormat = containerFormat;
@@ -134,7 +134,7 @@ public class ContactFile {
 	/**
 	 * Sets the url.
 	 *
-	 * @param url the url
+	 * @param url the new url
 	 */
 	public void setUrl(String url) {
 		this.url = url;
@@ -152,7 +152,7 @@ public class ContactFile {
 	/**
 	 * Sets the aufloesung.
 	 *
-	 * @param resolution the aufloesung
+	 * @param resolution the new aufloesung
 	 */
 	public void setAufloesung(String resolution) {
 		this.resolution = resolution;
@@ -170,7 +170,7 @@ public class ContactFile {
 	/**
 	 * Sets the duration.
 	 *
-	 * @param duration the duration
+	 * @param duration the new duration
 	 */
 	public void setDuration(int duration) {
 		this.duration = duration;
@@ -188,7 +188,7 @@ public class ContactFile {
 	/**
 	 * Sets the streamer.
 	 *
-	 * @param streamer the streamer
+	 * @param streamer the new streamer
 	 */
 	public void setStreamer(String streamer) {
 		this.streamer = streamer;
@@ -206,7 +206,7 @@ public class ContactFile {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -224,7 +224,7 @@ public class ContactFile {
 	/**
 	 * Sets the contact file.
 	 *
-	 * @param contactFile the contact file
+	 * @param contactFile the new contact file
 	 */
 	public void setContactFile(MultipartFile contactFile) {
 		this.contactFile = contactFile;

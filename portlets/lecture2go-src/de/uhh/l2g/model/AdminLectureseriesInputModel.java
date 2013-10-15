@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -87,7 +87,7 @@ public class AdminLectureseriesInputModel extends AdminLectureseriesModel implem
 	/**
 	 * Sets the coordinator.
 	 *
-	 * @param coordinator the coordinator
+	 * @param coordinator the new coordinator
 	 */
 	public void setCoordinator(Coordinator coordinator) {
 		this.coordinator = coordinator;
@@ -96,7 +96,7 @@ public class AdminLectureseriesInputModel extends AdminLectureseriesModel implem
 	/**
 	 * Checks if is coordinator.
 	 *
-	 * @return true, if checks if is coordinator
+	 * @return true, if is coordinator
 	 */
 	public boolean isCoordinator() {
 		return roleCoordinator;
@@ -105,7 +105,7 @@ public class AdminLectureseriesInputModel extends AdminLectureseriesModel implem
 	/**
 	 * Sets the coordinator.
 	 *
-	 * @param roleCoordinator the coordinator
+	 * @param roleCoordinator the new coordinator
 	 */
 	public void setCoordinator(boolean roleCoordinator) {
 		this.roleCoordinator = roleCoordinator;
@@ -123,14 +123,14 @@ public class AdminLectureseriesInputModel extends AdminLectureseriesModel implem
 	/**
 	 * Sets the facility name.
 	 *
-	 * @param facilityName the facility name
+	 * @param facilityName the new facility name
 	 */
 	public void setFacilityName(String facilityName) {
 		this.facilityName = facilityName;
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new admin lectureseries input model.
 	 */
 	public AdminLectureseriesInputModel() {
 		super();
@@ -170,7 +170,7 @@ public class AdminLectureseriesInputModel extends AdminLectureseriesModel implem
 	/**
 	 * Sets the event type list.
 	 *
-	 * @param eventTypeList the event type list
+	 * @param eventTypeList the new event type list
 	 */
 	public void setEventTypeList(List<String> eventTypeList) {
 		this.eventTypeList = eventTypeList;
@@ -215,7 +215,7 @@ public class AdminLectureseriesInputModel extends AdminLectureseriesModel implem
 	/**
 	 * Sets the all event categories.
 	 *
-	 * @param allEventCategories the all event categories
+	 * @param allEventCategories the new all event categories
 	 */
 	public void setAllEventCategories(List<String> allEventCategories) {
 		this.allEventCategories = allEventCategories;
@@ -251,7 +251,7 @@ public class AdminLectureseriesInputModel extends AdminLectureseriesModel implem
 	/**
 	 * Sets the all semesters.
 	 *
-	 * @param allSemesters the all semesters
+	 * @param allSemesters the new all semesters
 	 */
 	public void setAllSemesters(List<String> allSemesters) {
 		this.allSemesters = allSemesters;

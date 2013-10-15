@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -39,13 +39,13 @@ package de.uhh.l2g.beans;
 public class Segment {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new segment.
 	 */
 	public Segment() {
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new segment.
 	 *
 	 * @param id the id
 	 * @param userId the user id
@@ -79,7 +79,7 @@ public class Segment {
 	/**
 	 * Sets the user id.
 	 *
-	 * @param userId the user id
+	 * @param userId the new user id
 	 */
 	public void setUserId(int userId) {
 		this.userId = userId;
@@ -100,7 +100,7 @@ public class Segment {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -121,7 +121,7 @@ public class Segment {
 	/**
 	 * Sets the start.
 	 *
-	 * @param start the start
+	 * @param start the new start
 	 */
 	public void setStart(String start) {
 		this.start = start;
@@ -142,7 +142,7 @@ public class Segment {
 	/**
 	 * Sets the end.
 	 *
-	 * @param end the end
+	 * @param end the new end
 	 */
 	public void setEnd(String end) {
 		this.end = end;
@@ -163,7 +163,7 @@ public class Segment {
 	/**
 	 * Sets the video id.
 	 *
-	 * @param videoId the video id
+	 * @param videoId the new video id
 	 */
 	public void setVideoId(int videoId) {
 		this.videoId = videoId;
@@ -184,7 +184,7 @@ public class Segment {
 	/**
 	 * Sets the image.
 	 *
-	 * @param image the image
+	 * @param image the new image
 	 */
 	public void setImage(String image) {
 		this.image = image;

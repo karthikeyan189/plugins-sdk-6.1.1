@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -73,7 +73,7 @@ public class AdminApprovalCoordinator extends SimpleFormController implements In
 	/**
 	 * Sets the l2go coordinator role id.
 	 *
-	 * @param l2goCoordinatorRoleId the l2go coordinator role id
+	 * @param l2goCoordinatorRoleId the new l2go coordinator role id
 	 */
 	public void setL2goCoordinatorRoleId(int l2goCoordinatorRoleId) {
 		this.l2goCoordinatorRoleId = l2goCoordinatorRoleId;
@@ -81,6 +81,15 @@ public class AdminApprovalCoordinator extends SimpleFormController implements In
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#onSubmitAction(javax.portlet.ActionRequest, javax.portlet.ActionResponse, java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * On submit action.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
+	 * @throws Exception the exception
 	 */
 	protected void onSubmitAction(ActionRequest request, ActionResponse response, Object command, BindException errors) throws Exception {
 		AdminUserManagementModel model = (AdminUserManagementModel)command;
@@ -102,6 +111,13 @@ public class AdminApprovalCoordinator extends SimpleFormController implements In
 	
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#formBackingObject(javax.portlet.PortletRequest)
+	 */
+	/**
+	 * Form backing object.
+	 *
+	 * @param request the request
+	 * @return the object
+	 * @throws Exception the exception
 	 */
 	protected Object formBackingObject(PortletRequest request) throws Exception {
 		AdminUserManagementModel model = new AdminUserManagementModel();
@@ -154,12 +170,22 @@ public class AdminApprovalCoordinator extends SimpleFormController implements In
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.beans.IFactory#setDaoBeanFactory(org.springframework.beans.factory.xml.XmlBeanFactory)
 	 */
+	/**
+	 * Sets the dao bean factory.
+	 *
+	 * @param beanFactory the new dao bean factory
+	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
 	}
 	
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.beans.IFactory#getUtilityBeanFactory()
+	 */
+	/**
+	 * Gets the utility bean factory.
+	 *
+	 * @return the utility bean factory
 	 */
 	public XmlBeanFactory getUtilityBeanFactory() {
 		return utilityBeanFactory;
@@ -168,12 +194,22 @@ public class AdminApprovalCoordinator extends SimpleFormController implements In
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.beans.IFactory#setUtilityBeanFactory(org.springframework.beans.factory.xml.XmlBeanFactory)
 	 */
+	/**
+	 * Sets the utility bean factory.
+	 *
+	 * @param utilityBeanFactory the new utility bean factory
+	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory) {
 		this.utilityBeanFactory = utilityBeanFactory;
 	}
 
 	/* (non-Javadoc)
 	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet()
+	 */
+	/**
+	 * After properties set.
+	 *
+	 * @throws Exception the exception
 	 */
 	public void afterPropertiesSet() throws Exception {
 		Assert.notNull(daoBeanFactory, "DaoBeanFactory not null required");

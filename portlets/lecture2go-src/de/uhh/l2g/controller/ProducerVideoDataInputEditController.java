@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -96,7 +96,7 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 	/**
 	 * Sets the my commons portlet multipart resolver.
 	 *
-	 * @param myCommonsPortletMultipartResolver the my commons portlet multipart resolver
+	 * @param myCommonsPortletMultipartResolver the new my commons portlet multipart resolver
 	 */
 	public void setMyCommonsPortletMultipartResolver(MyCommonsPortletMultipartResolver myCommonsPortletMultipartResolver) {
 		this.myCommonsPortletMultipartResolver = myCommonsPortletMultipartResolver;
@@ -117,7 +117,7 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 	/**
 	 * Sets the utility bean factory.
 	 *
-	 * @param utilityBeanFactory the utility bean factory
+	 * @param utilityBeanFactory the new utility bean factory
 	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory) {
 		this.utilityBeanFactory = utilityBeanFactory;
@@ -138,7 +138,7 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -146,6 +146,14 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 	
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#onSubmitAction(javax.portlet.ActionRequest, javax.portlet.ActionResponse, java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * On submit action.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
 	 */
 	@Override
 	protected void onSubmitAction(ActionRequest request, ActionResponse response, Object command, BindException errors) {
@@ -219,7 +227,7 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 	 *
 	 * @param video the video
 	 * @param model the model
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	private void updateFfmpegMetadata(Video video, ProducerVideoDataInputEditModel model) throws IOException {
 		Host host = model.getHost();
@@ -568,7 +576,7 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 	 *
 	 * @param arg the arg
 	 * @param video the video
-	 * @return true, if import xml to database
+	 * @return true, if successful
 	 */
 	private boolean importXmlToDatabase(String[] arg, Video video) {
 		boolean ret = false;
@@ -778,6 +786,12 @@ public class ProducerVideoDataInputEditController extends SimpleFormController {
 	 * @see
 	 * org.springframework.web.portlet.mvc.AbstractFormController#formBackingObject
 	 * (javax.portlet.PortletRequest)
+	 */
+	/**
+	 * Form backing object.
+	 *
+	 * @param request the request
+	 * @return the object
 	 */
 	@Override
 	protected Object formBackingObject(PortletRequest request) {

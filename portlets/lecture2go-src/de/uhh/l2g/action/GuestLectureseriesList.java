@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -50,6 +50,12 @@ public final class GuestLectureseriesList extends AbstractGuestCommand{
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.action.AbstractGuestCommand#execute(javax.portlet.ActionRequest, de.uhh.l2g.model.GuestModel)
 	 */
+	/**
+	 * Execute.
+	 *
+	 * @param request the request
+	 * @param model the model
+	 */
 	@Override
 	public void execute(ActionRequest request, GuestModel model) {
 		try{model.setFacultyId(new Integer(request.getParameter("facultyId")));}catch(NumberFormatException nfe){}
@@ -74,6 +80,12 @@ public final class GuestLectureseriesList extends AbstractGuestCommand{
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.action.AbstractGuestCommand#execute(javax.portlet.PortletRequest, de.uhh.l2g.model.GuestModel)
+	 */
+	/**
+	 * Execute.
+	 *
+	 * @param request the request
+	 * @param model the model
 	 */
 	@Override
 	public void execute(PortletRequest request, GuestModel model) {

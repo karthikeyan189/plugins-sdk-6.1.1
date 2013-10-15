@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -38,14 +38,14 @@ package de.uhh.l2g.beans;
 public class Chapter extends Segment {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new chapter.
 	 */
 	public Chapter() {
 
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new chapter.
 	 *
 	 * @param id the id
 	 * @param userId the user id
@@ -79,7 +79,7 @@ public class Chapter extends Segment {
 	/**
 	 * Sets the title.
 	 *
-	 * @param title the title
+	 * @param title the new title
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -100,7 +100,7 @@ public class Chapter extends Segment {
 	/**
 	 * Sets the seconds.
 	 *
-	 * @param seconds the seconds
+	 * @param seconds the new seconds
 	 */
 	public void setSeconds(int seconds) {
 		this.seconds = seconds;
@@ -121,7 +121,7 @@ public class Chapter extends Segment {
 	/**
 	 * Sets the number.
 	 *
-	 * @param number the number
+	 * @param number the new number
 	 */
 	public void setNumber(int number) {
 		this.number = number;

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -61,7 +61,7 @@ public abstract class PaginationResult{
 	/**
 	 * Sets the number pages.
 	 *
-	 * @param n the number pages
+	 * @param n the new number pages
 	 */
 	public void setNumberPages(int n) {
 		numberAllPages = n;

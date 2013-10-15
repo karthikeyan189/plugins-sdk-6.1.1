@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -66,7 +66,7 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	/**
 	 * Sets the facility dao.
 	 *
-	 * @param facilityDao the facility dao
+	 * @param facilityDao the new facility dao
 	 */
 	public void setFacilityDao(FacilityDao facilityDao) {
 		this.facilityDao = facilityDao;
@@ -74,6 +74,16 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IProducerDao#create(int, int, int, int, java.lang.String, java.lang.String)
+	 */
+	/**
+	 * Creates the.
+	 *
+	 * @param userId the user id
+	 * @param hostId the host id
+	 * @param facilityId the facility id
+	 * @param numberOfProductions the number of productions
+	 * @param screenName the screen name
+	 * @param homeDir the home dir
 	 */
 	public void create(int userId, int hostId, int facilityId, int numberOfProductions, String screenName, String homeDir) {
 		JdbcTemplate update = new JdbcTemplate(this.getDataSource());
@@ -95,7 +105,7 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	 * Checks for lecture series.
 	 *
 	 * @param userId the user id
-	 * @return true, if checks for lecture series
+	 * @return true, if successful
 	 */
 	public boolean hasLectureSeries(int userId) {
 		JdbcTemplate template = new JdbcTemplate(this.getDataSource());
@@ -104,6 +114,9 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	/*
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IProducerDao#deleteAll()
+	 */
+	/**
+	 * Delete all.
 	 */
 	public void deleteAll() {
 		// TODO Auto-generated method stub
@@ -114,6 +127,11 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IProducerDao#deleteById(int)
 	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
+	 */
 	public void deleteById(int id) {
 		JdbcTemplate update = new JdbcTemplate(this.getDataSource());
 		update.update("DELETE FROM producer WHERE id = ?;", new Object[] { id });
@@ -121,6 +139,11 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IProducerDao#getAll()
+	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Producer> getAll() {
@@ -217,6 +240,12 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IProducerDao#getById(int)
 	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param l the l
+	 * @return the by id
+	 */
 	public List<Producer> getById(long l) {
 		return this.getByUserId(l);
 	}
@@ -224,7 +253,7 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	/**
 	 * Gets the producer lr info by id.
 	 *
-	 * @param l the id
+	 * @param l the l
 	 * @return the producer lr info by id
 	 */
 	@SuppressWarnings("unchecked")
@@ -239,8 +268,8 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	/**
 	 * Checks if is producer.
 	 *
-	 * @param l the id
-	 * @return true, if checks if is producer
+	 * @param l the l
+	 * @return true, if is producer
 	 */
 	public boolean isProducer(long l) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -328,7 +357,7 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	/**
 	 * Gets the by user id.
 	 *
-	 * @param l the user id
+	 * @param l the l
 	 * @return the by user id
 	 */
 	@SuppressWarnings("unchecked")
@@ -338,10 +367,10 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	}
 
 	/**
-	 * Gets the by user id.
+	 * Gets the by user id and is approved.
 	 *
-	 * @param l the user id
-	 * @return the by user id
+	 * @param l the l
+	 * @return the by user id and is approved
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Producer> getByUserIdAndIsApproved(long l) {
@@ -350,10 +379,10 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	}
 	
 	/**
-	 * Gets the producer lr info by id.
+	 * Gets the producer lr info by id and is approved.
 	 *
-	 * @param l the id
-	 * @return the producer lr info by id
+	 * @param l the l
+	 * @return the producer lr info by id and is approved
 	 */
 	@SuppressWarnings("unchecked")
 	public List<ProducerLRInfo> getProducerLRInfoByIdAndIsApproved(long l) {
@@ -391,6 +420,12 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IProducerDao#getFromLectureseriesId(int)
 	 */
+	/**
+	 * Gets the from lectureseries id.
+	 *
+	 * @param id the id
+	 * @return the from lectureseries id
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Producer> getFromLectureseriesId(int id) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -404,7 +439,7 @@ public class ProducerDao extends JdbcDaoSupport implements IProducerDao {
 	 * Fill producer list with properties.
 	 *
 	 * @param producerList the producer list
-	 * @return the list< producer>
+	 * @return the list
 	 */
 	public List<Producer> fillProducerListWithProperties(List<Producer> producerList) {
 		ListIterator<Producer> it = producerList.listIterator();

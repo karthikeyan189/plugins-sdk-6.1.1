@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -58,6 +58,14 @@ public class ProducerLectureseriesManagementController extends AbstractControlle
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractController#handleRenderRequestInternal(javax.portlet.RenderRequest, javax.portlet.RenderResponse)
+	 */
+	/**
+	 * Handle render request internal.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @return the model and view
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected ModelAndView handleRenderRequestInternal(RenderRequest request, RenderResponse response) throws Exception {
@@ -136,7 +144,7 @@ public class ProducerLectureseriesManagementController extends AbstractControlle
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;

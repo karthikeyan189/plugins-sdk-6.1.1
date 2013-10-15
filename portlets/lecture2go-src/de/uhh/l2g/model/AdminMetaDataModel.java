@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -43,6 +43,11 @@ public class AdminMetaDataModel extends AdminModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getVideoStream()
 	 */
+	/**
+	 * Gets the video stream.
+	 *
+	 * @return the video stream
+	 */
 	@Override
 	public String getVideoStream() {
 		return videoStream;
@@ -51,13 +56,18 @@ public class AdminMetaDataModel extends AdminModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setVideoStream(java.lang.String)
 	 */
+	/**
+	 * Sets the video stream.
+	 *
+	 * @param videoStream the new video stream
+	 */
 	@Override
 	public void setVideoStream(String videoStream) {
 		this.videoStream = videoStream;
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new admin meta data model.
 	 */
 	public AdminMetaDataModel() {}
 	

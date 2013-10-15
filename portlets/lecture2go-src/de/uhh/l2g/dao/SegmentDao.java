@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -72,7 +72,7 @@ public class SegmentDao extends JdbcDaoSupport implements ISegmentDao {
 	/**
 	 * Sets the utility bean factory.
 	 *
-	 * @param utilityBeanFactory the utility bean factory
+	 * @param utilityBeanFactory the new utility bean factory
 	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory) {
 		this.utilityBeanFactory = utilityBeanFactory;
@@ -93,7 +93,7 @@ public class SegmentDao extends JdbcDaoSupport implements ISegmentDao {
 	/**
 	 * Sets the video dao.
 	 *
-	 * @param videoDao the video dao
+	 * @param videoDao the new video dao
 	 */
 	public void setVideoDao(VideoDao videoDao) {
 		this.videoDao = videoDao;
@@ -103,11 +103,19 @@ public class SegmentDao extends JdbcDaoSupport implements ISegmentDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ISegmentDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 	}
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ISegmentDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
 	 */
 	public void deleteById(int id) {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -245,6 +253,12 @@ public class SegmentDao extends JdbcDaoSupport implements ISegmentDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ISegmentDao#getById(int)
 	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
+	 */
 	public List<Mark> getById(int id) {
 		return this.getMarkById(id);
 	}
@@ -307,6 +321,11 @@ public class SegmentDao extends JdbcDaoSupport implements ISegmentDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ISegmentDao#getAll()
+	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
 	 */
 	public List<Segment> getAll() {
 		return null;

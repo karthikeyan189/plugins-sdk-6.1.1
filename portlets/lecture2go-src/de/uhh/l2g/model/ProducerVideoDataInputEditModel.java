@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -39,7 +39,7 @@ package de.uhh.l2g.model;
 public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new producer video data input edit model.
 	 */
 	public ProducerVideoDataInputEditModel() {
 
@@ -51,6 +51,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getMp3File()
 	 */
+	/**
+	 * Gets the mp3 file.
+	 *
+	 * @return the mp3 file
+	 */
 	@Override
 	public String getMp3File() {
 		return mp3File;
@@ -58,6 +63,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setMp3File(java.lang.String)
+	 */
+	/**
+	 * Sets the mp3 file.
+	 *
+	 * @param mp3File the new mp3 file
 	 */
 	@Override
 	public void setMp3File(String mp3File) {
@@ -70,6 +80,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getPdfFile()
 	 */
+	/**
+	 * Gets the pdf file.
+	 *
+	 * @return the pdf file
+	 */
 	@Override
 	public String getPdfFile() {
 		return pdfFile;
@@ -77,6 +92,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setPdfFile(java.lang.String)
+	 */
+	/**
+	 * Sets the pdf file.
+	 *
+	 * @param pdfFile the new pdf file
 	 */
 	@Override
 	public void setPdfFile(String pdfFile) {
@@ -89,6 +109,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getM4vFile()
 	 */
+	/**
+	 * Gets the m4v file.
+	 *
+	 * @return the m4v file
+	 */
 	@Override
 	public String getM4vFile() {
 		return file;
@@ -96,6 +121,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setM4vFile(java.lang.String)
+	 */
+	/**
+	 * Sets the m4v file.
+	 *
+	 * @param file the new m4v file
 	 */
 	@Override
 	public void setM4vFile(String file) {
@@ -108,7 +138,7 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/**
 	 * Checks if is open access.
 	 *
-	 * @return true, if checks if is open access
+	 * @return true, if is open access
 	 */
 	public boolean isOpenAccess() {
 		return openAccess;
@@ -117,7 +147,7 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/**
 	 * Sets the open access.
 	 *
-	 * @param openAccess the open access
+	 * @param openAccess the new open access
 	 */
 	public void setOpenAccess(boolean openAccess) {
 		this.openAccess = openAccess;
@@ -129,6 +159,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.StudentModel#getSecureUrl()
 	 */
+	/**
+	 * Gets the secure url.
+	 *
+	 * @return the secure url
+	 */
 	@Override
 	public String getSecureUrl() {
 		return secureUrl;
@@ -136,6 +171,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.StudentModel#setSecureUrl(java.lang.String)
+	 */
+	/**
+	 * Sets the secure url.
+	 *
+	 * @param secureUrl the new secure url
 	 */
 	@Override
 	public void setSecureUrl(String secureUrl) {
@@ -149,6 +189,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getM4aFile()
 	 */
+	/**
+	 * Gets the m4a file.
+	 *
+	 * @return the m4a file
+	 */
 	@Override
 	public String getM4aFile() {
 		return file1;
@@ -156,6 +201,11 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setM4aFile(java.lang.String)
+	 */
+	/**
+	 * Sets the m4a file.
+	 *
+	 * @param file the new m4a file
 	 */
 	@Override
 	public void setM4aFile(String file) {
@@ -168,7 +218,7 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/**
 	 * Checks if is delete video request.
 	 *
-	 * @return true, if checks if is delete video request
+	 * @return true, if is delete video request
 	 */
 	public boolean isDeleteVideoRequest() {
 		return deleteVideoRequest;
@@ -177,7 +227,7 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/**
 	 * Sets the delete video request.
 	 *
-	 * @param deleteVideoRequest the delete video request
+	 * @param deleteVideoRequest the new delete video request
 	 */
 	public void setDeleteVideoRequest(boolean deleteVideoRequest) {
 		this.deleteVideoRequest = deleteVideoRequest;
@@ -189,7 +239,7 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/**
 	 * Checks if is first video upload.
 	 *
-	 * @return true, if checks if is first video upload
+	 * @return true, if is first video upload
 	 */
 	public boolean isFirstVideoUpload() {
 		return firstVideoUpload;
@@ -198,7 +248,7 @@ public class ProducerVideoDataInputEditModel extends ProducerMetaDataModel {
 	/**
 	 * Sets the first video upload.
 	 *
-	 * @param firstVideoUpload the first video upload
+	 * @param firstVideoUpload the new first video upload
 	 */
 	public void setFirstVideoUpload(boolean firstVideoUpload) {
 		this.firstVideoUpload = firstVideoUpload;

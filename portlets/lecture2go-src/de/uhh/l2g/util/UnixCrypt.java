@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -40,7 +40,7 @@ public class UnixCrypt extends Object {
 	//
 	// Null constructor - can't instantiate class
 	/**
-	 * The Constructor.
+	 * Instantiates a new unix crypt.
 	 */
 	private UnixCrypt() {
 	}
@@ -265,8 +265,8 @@ public class UnixCrypt extends Object {
 	 * @param L the l
 	 * @param R the r
 	 * @param S the s
-	 * @param E0 the E0
-	 * @param E1 the E1
+	 * @param E0 the e0
+	 * @param E1 the e1
 	 * @param s the s
 	 * @return the int
 	 */
@@ -289,8 +289,8 @@ public class UnixCrypt extends Object {
 	 * Body.
 	 *
 	 * @param schedule the schedule
-	 * @param Eswap0 the Eswap0
-	 * @param Eswap1 the Eswap1
+	 * @param Eswap0 the eswap0
+	 * @param Eswap1 the eswap1
 	 * @return the int[]
 	 */
 	private static final int[] body(int schedule[], int Eswap0, int Eswap1) {
@@ -427,7 +427,7 @@ public class UnixCrypt extends Object {
 	 *
 	 * @param encryptedPassword the encrypted password
 	 * @param enteredPassword the entered password
-	 * @return true, if matches
+	 * @return true, if successful
 	 */
 	public final static boolean matches(String encryptedPassword, String enteredPassword) {
 		String salt = encryptedPassword.substring(0, 3);

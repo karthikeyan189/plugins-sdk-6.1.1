@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -59,7 +59,7 @@ public class AdminUserManagementModel extends AdminModel {
 	/**
 	 * Sets the coordinator.
 	 *
-	 * @param coordinator the coordinator
+	 * @param coordinator the new coordinator
 	 */
 	public void setCoordinator(Coordinator coordinator) {
 		this.coordinator = coordinator;
@@ -77,7 +77,7 @@ public class AdminUserManagementModel extends AdminModel {
 	/**
 	 * Sets the user list.
 	 *
-	 * @param userList the user list
+	 * @param userList the new user list
 	 */
 	public void setUserList(List<User> userList) {
 		this.userList = userList;
@@ -101,7 +101,7 @@ public class AdminUserManagementModel extends AdminModel {
 	/**
 	 * Sets the facilities list.
 	 *
-	 * @param facilitiesList the facilities list
+	 * @param facilitiesList the new facilities list
 	 */
 	public void setFacilitiesList(List<Facility> facilitiesList) {
 		this.facilitiesList = facilitiesList;
@@ -122,7 +122,7 @@ public class AdminUserManagementModel extends AdminModel {
 	/**
 	 * Sets the role.
 	 *
-	 * @param role the role
+	 * @param role the new role
 	 */
 	public void setRole(String role) {
 		this.role = role;
@@ -143,7 +143,7 @@ public class AdminUserManagementModel extends AdminModel {
 	/**
 	 * Sets the role id.
 	 *
-	 * @param roleId the role id
+	 * @param roleId the new role id
 	 */
 	public void setRoleId(int roleId) {
 		this.roleId = roleId;

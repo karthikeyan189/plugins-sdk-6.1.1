@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -81,7 +81,7 @@ public class ProzessManager {
 	/**
 	 * Sets the htaccess.
 	 *
-	 * @param htaccess the htaccess
+	 * @param htaccess the new htaccess
 	 */
 	public void setHtaccess(Htaccess htaccess) {
 		this.htaccess = htaccess;
@@ -99,7 +99,7 @@ public class ProzessManager {
 	/**
 	 * Sets the rss manager.
 	 *
-	 * @param rssManager the rss manager
+	 * @param rssManager the new rss manager
 	 */
 	public void setRssManager(RSSManager rssManager) {
 		this.rssManager = rssManager;
@@ -120,7 +120,7 @@ public class ProzessManager {
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -691,7 +691,7 @@ public class ProzessManager {
 	 *
 	 * @param host the host
 	 * @param producer the producer
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public void addNewMediaDirectoryForProducer(Host host, Producer producer) throws IOException{
 		File folder = new File(L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir() + "/");

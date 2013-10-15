@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -53,7 +53,7 @@ public class Metadata {
 	/**
 	 * Sets the url id.
 	 *
-	 * @param urlid the url id
+	 * @param urlid the new url id
 	 */
 	public void setUrlId(String urlid) {
 		this.urlid = urlid;
@@ -74,7 +74,7 @@ public class Metadata {
 	/**
 	 * Sets the format.
 	 *
-	 * @param format the format
+	 * @param format the new format
 	 */
 	public void setFormat(String format) {
 		this.format = format;
@@ -95,7 +95,7 @@ public class Metadata {
 	/**
 	 * Sets the type.
 	 *
-	 * @param type the type
+	 * @param type the new type
 	 */
 	public void setType(String type) {
 		this.type = type;
@@ -116,7 +116,7 @@ public class Metadata {
 	/**
 	 * Sets the language.
 	 *
-	 * @param language the language
+	 * @param language the new language
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
@@ -137,7 +137,7 @@ public class Metadata {
 	/**
 	 * Sets the title.
 	 *
-	 * @param title the title
+	 * @param title the new title
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -158,7 +158,7 @@ public class Metadata {
 	/**
 	 * Sets the subject.
 	 *
-	 * @param subject the subject
+	 * @param subject the new subject
 	 */
 	public void setSubject(String subject) {
 		this.subject = subject;
@@ -179,7 +179,7 @@ public class Metadata {
 	/**
 	 * Sets the coverage.
 	 *
-	 * @param coverage the coverage
+	 * @param coverage the new coverage
 	 */
 	public void setCoverage(String coverage) {
 		this.coverage = coverage;
@@ -200,7 +200,7 @@ public class Metadata {
 	/**
 	 * Sets the description.
 	 *
-	 * @param description the description
+	 * @param description the new description
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -221,7 +221,7 @@ public class Metadata {
 	/**
 	 * Sets the long description.
 	 *
-	 * @param longdescription the long description
+	 * @param longdescription the new long description
 	 */
 	public void setLongDescription(String longdescription) {
 		this.longDescription = longdescription;
@@ -242,7 +242,7 @@ public class Metadata {
 	/**
 	 * Sets the creator.
 	 *
-	 * @param creator the creator
+	 * @param creator the new creator
 	 */
 	public void setCreator(String creator) {
 		this.creator = creator;
@@ -263,7 +263,7 @@ public class Metadata {
 	/**
 	 * Sets the publisher.
 	 *
-	 * @param publisher the publisher
+	 * @param publisher the new publisher
 	 */
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
@@ -284,7 +284,7 @@ public class Metadata {
 	/**
 	 * Sets the contributor.
 	 *
-	 * @param contributor the contributor
+	 * @param contributor the new contributor
 	 */
 	public void setContributor(String contributor) {
 		this.contributor = contributor;
@@ -305,7 +305,7 @@ public class Metadata {
 	/**
 	 * Sets the rights holder.
 	 *
-	 * @param rightsHolder the rights holder
+	 * @param rightsHolder the new rights holder
 	 */
 	public void setRightsHolder(String rightsHolder) {
 		this.rightsHolder = rightsHolder;
@@ -326,7 +326,7 @@ public class Metadata {
 	/**
 	 * Sets the rights.
 	 *
-	 * @param rights the rights
+	 * @param rights the new rights
 	 */
 	public void setRights(String rights) {
 		this.rights = rights;
@@ -347,7 +347,7 @@ public class Metadata {
 	/**
 	 * Sets the provenance.
 	 *
-	 * @param provenance the provenance
+	 * @param provenance the new provenance
 	 */
 	public void setProvenance(String provenance) {
 		this.provenance = provenance;
@@ -368,7 +368,7 @@ public class Metadata {
 	/**
 	 * Sets the source.
 	 *
-	 * @param source the source
+	 * @param source the new source
 	 */
 	public void setSource(String source) {
 		this.source = source;
@@ -389,7 +389,7 @@ public class Metadata {
 	/**
 	 * Sets the relation.
 	 *
-	 * @param relation the relation
+	 * @param relation the new relation
 	 */
 	public void setRelation(String relation) {
 		this.relation = relation;
@@ -410,7 +410,7 @@ public class Metadata {
 	/**
 	 * Sets the audience.
 	 *
-	 * @param audience the audience
+	 * @param audience the new audience
 	 */
 	public void setAudience(String audience) {
 		this.audience = audience;
@@ -431,7 +431,7 @@ public class Metadata {
 	/**
 	 * Sets the instructional method.
 	 *
-	 * @param instructionalMethod the instructional method
+	 * @param instructionalMethod the new instructional method
 	 */
 	public void setInstructionalMethod(String instructionalMethod) {
 		this.instructionalMethod = instructionalMethod;
@@ -452,7 +452,7 @@ public class Metadata {
 	/**
 	 * Sets the date.
 	 *
-	 * @param string the date
+	 * @param string the new date
 	 */
 	public void setDate(String string) {
 		this.date = string;
@@ -473,7 +473,7 @@ public class Metadata {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;

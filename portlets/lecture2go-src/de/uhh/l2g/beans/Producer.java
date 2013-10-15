@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -42,7 +42,7 @@ public class Producer extends Student {
 	private boolean hasLectureseries;
 	
 	/**
-	 * Gets the has lectureseries.
+	 * Gets the checks for lectureseries.
 	 *
 	 * @return the checks for lectureseries
 	 */
@@ -51,9 +51,9 @@ public class Producer extends Student {
 	}
 
 	/**
-	 * Sets the has lectureseries.
+	 * Sets the checks for lectureseries.
 	 *
-	 * @param hasLectureseries the checks for lectureseries
+	 * @param hasLectureseries the new checks for lectureseries
 	 */
 	public void setHasLectureseries(boolean hasLectureseries) {
 		this.hasLectureseries = hasLectureseries;
@@ -74,7 +74,7 @@ public class Producer extends Student {
 	/**
 	 * Sets the host id.
 	 *
-	 * @param hostId the host id
+	 * @param hostId the new host id
 	 */
 	public void setHostId(int hostId) {
 		this.hostId = hostId;
@@ -95,7 +95,7 @@ public class Producer extends Student {
 	/**
 	 * Sets the number of productions.
 	 *
-	 * @param numberOfProductions the number of productions
+	 * @param numberOfProductions the new number of productions
 	 */
 	public void setNumberOfProductions(int numberOfProductions) {
 		this.numberOfProductions = numberOfProductions;
@@ -116,7 +116,7 @@ public class Producer extends Student {
 	/**
 	 * Sets the home dir.
 	 *
-	 * @param homeDir the home dir
+	 * @param homeDir the new home dir
 	 */
 	public void setHomeDir(String homeDir) {
 		this.homeDir = homeDir;
@@ -128,7 +128,7 @@ public class Producer extends Student {
 	/**
 	 * Checks if is approved.
 	 *
-	 * @return true, if checks if is approved
+	 * @return true, if is approved
 	 */
 	public boolean isApproved() {
 		return approved;
@@ -137,7 +137,7 @@ public class Producer extends Student {
 	/**
 	 * Sets the approved.
 	 *
-	 * @param approved the approved
+	 * @param approved the new approved
 	 */
 	public void setApproved(boolean approved) {
 		this.approved = approved;

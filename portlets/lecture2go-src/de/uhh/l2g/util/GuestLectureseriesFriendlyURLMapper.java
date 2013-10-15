@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -54,6 +54,11 @@ public class GuestLectureseriesFriendlyURLMapper extends BaseFriendlyURLMapper {
 	/* (non-Javadoc)
 	 * @see com.liferay.portal.kernel.portlet.BaseFriendlyURLMapper#getPortletId()
 	 */
+	/**
+	 * Gets the portlet id.
+	 *
+	 * @return the portlet id
+	 */
 	@Override
 	public String getPortletId() {
 		return _PORTLET_ID;
@@ -61,6 +66,12 @@ public class GuestLectureseriesFriendlyURLMapper extends BaseFriendlyURLMapper {
 
 	/* (non-Javadoc)
 	 * @see com.liferay.portal.kernel.portlet.FriendlyURLMapper#buildPath(com.liferay.portal.kernel.portlet.LiferayPortletURL)
+	 */
+	/**
+	 * Builds the path.
+	 *
+	 * @param portletURL the portlet url
+	 * @return the string
 	 */
 	public String buildPath(LiferayPortletURL portletURL) {
 		String friendlyURLPath = null;
@@ -95,12 +106,24 @@ public class GuestLectureseriesFriendlyURLMapper extends BaseFriendlyURLMapper {
 	/* (non-Javadoc)
 	 * @see com.liferay.portal.kernel.portlet.BaseFriendlyURLMapper#getMapping()
 	 */
+	/**
+	 * Gets the mapping.
+	 *
+	 * @return the mapping
+	 */
 	public String getMapping() {
 		return _MAPPING;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.liferay.portal.kernel.portlet.FriendlyURLMapper#populateParams(java.lang.String, java.util.Map, java.util.Map)
+	 */
+	/**
+	 * Populate params.
+	 *
+	 * @param friendlyURLPath the friendly url path
+	 * @param params the params
+	 * @param arg2 the arg2
 	 */
 	public void populateParams(String friendlyURLPath, Map<String, String[]> params,  Map<String, Object> arg2) {
 		String[] s = friendlyURLPath.split("/");

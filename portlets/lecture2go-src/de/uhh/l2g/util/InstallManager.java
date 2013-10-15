@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -48,7 +48,7 @@ public class InstallManager extends Factory {
 	/**
 	 * L2go setup.
 	 *
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public void l2goSetup() throws IOException{
 		L2gSystemDao l2gSysDao = (L2gSystemDao)getDaoBeanFactory().getBean("l2gSysDao");

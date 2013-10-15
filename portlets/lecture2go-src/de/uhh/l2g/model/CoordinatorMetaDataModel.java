@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -42,7 +42,7 @@ import de.uhh.l2g.beans.ProducerLRInfo;
 public class CoordinatorMetaDataModel extends CoordinatorModel {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new coordinator meta data model.
 	 */
 	public CoordinatorMetaDataModel() {
 
@@ -63,7 +63,7 @@ public class CoordinatorMetaDataModel extends CoordinatorModel {
 	/**
 	 * Sets the producer lr list.
 	 *
-	 * @param producerLRList the producer lr list
+	 * @param producerLRList the new producer lr list
 	 */
 	public void setProducerLRList(List<ProducerLRInfo> producerLRList) {
 		this.producerLRList = producerLRList;

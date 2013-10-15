@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -89,7 +89,7 @@ public class ProducerLectureseriesInputController extends SimpleFormController i
 	/**
 	 * Sets the utility bean factory.
 	 *
-	 * @param utilityBeanFactory the utility bean factory
+	 * @param utilityBeanFactory the new utility bean factory
 	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory) {
 		this.utilityBeanFactory = utilityBeanFactory;
@@ -110,7 +110,7 @@ public class ProducerLectureseriesInputController extends SimpleFormController i
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -122,6 +122,15 @@ public class ProducerLectureseriesInputController extends SimpleFormController i
 	 * org.springframework.web.portlet.mvc.SimpleFormController#onSubmitAction
 	 * (javax.portlet.ActionRequest, javax.portlet.ActionResponse,
 	 * java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * On submit action.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected void onSubmitAction(ActionRequest request, ActionResponse response, Object command, BindException errors) throws Exception {
@@ -187,7 +196,7 @@ public class ProducerLectureseriesInputController extends SimpleFormController i
 	 *
 	 * @param model the model
 	 * @param producerId the producer id
-	 * @return the int
+	 * @return the long
 	 * @throws Exception the exception
 	 */
 	private long doMySubmitAction(AdminLectureseriesInputModel model, String producerId) throws Exception {
@@ -265,6 +274,13 @@ public class ProducerLectureseriesInputController extends SimpleFormController i
 	 * org.springframework.web.portlet.mvc.AbstractFormController#formBackingObject
 	 * (javax.portlet.PortletRequest)
 	 */
+	/**
+	 * Form backing object.
+	 *
+	 * @param request the request
+	 * @return the object
+	 * @throws Exception the exception
+	 */
 	@Override
 	protected Object formBackingObject(PortletRequest request) throws Exception {
 
@@ -335,6 +351,11 @@ public class ProducerLectureseriesInputController extends SimpleFormController i
 	 * (non-Javadoc)
 	 * @see
 	 * org.springframework.beans.factory.InitializingBean#afterPropertiesSet()
+	 */
+	/**
+	 * After properties set.
+	 *
+	 * @throws Exception the exception
 	 */
 	public void afterPropertiesSet() throws Exception {
 		Assert.notNull(daoBeanFactory, "DaoBeanFactory not null required");

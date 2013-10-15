@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -53,7 +53,7 @@ public class Upload {
 	/**
 	 * Sets the user id.
 	 *
-	 * @param userId the user id
+	 * @param userId the new user id
 	 */
 	public void setUserId(int userId) {
 		this.userId = userId;
@@ -74,7 +74,7 @@ public class Upload {
 	/**
 	 * Sets the content length.
 	 *
-	 * @param contentLength the content length
+	 * @param contentLength the new content length
 	 */
 	public void setContentLength(Long contentLength) {
 		this.contentLength = contentLength;
@@ -107,7 +107,7 @@ public class Upload {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -128,7 +128,7 @@ public class Upload {
 	/**
 	 * Sets the status.
 	 *
-	 * @param status the status
+	 * @param status the new status
 	 */
 	public void setStatus(int status) {
 		this.status = status;
@@ -137,7 +137,7 @@ public class Upload {
 	/**
 	 * Sets the timestamp.
 	 *
-	 * @param timestamp the timestamp
+	 * @param timestamp the new timestamp
 	 */
 	public void setTimestamp(String timestamp) {
 		this.timestamp = timestamp;
@@ -158,7 +158,7 @@ public class Upload {
 	/**
 	 * Sets the video id.
 	 *
-	 * @param videoId the video id
+	 * @param videoId the new video id
 	 */
 	public void setVideoId(int videoId) {
 		this.videoId = videoId;

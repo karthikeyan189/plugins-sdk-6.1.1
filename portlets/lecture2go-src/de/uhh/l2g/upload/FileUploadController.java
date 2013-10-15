@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -53,6 +53,14 @@ public class FileUploadController extends SimpleFormController {
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#onSubmitAction(javax.portlet.ActionRequest, javax.portlet.ActionResponse, java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * On submit action.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
 	 */
 	@Override
 	protected void onSubmitAction(ActionRequest request, ActionResponse response, Object command, BindException errors) {
@@ -108,6 +116,13 @@ public class FileUploadController extends SimpleFormController {
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#formBackingObject(javax.portlet.PortletRequest)
+	 */
+	/**
+	 * Form backing object.
+	 *
+	 * @param request the request
+	 * @return the object
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected Object formBackingObject(PortletRequest request) throws Exception {

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -56,7 +56,7 @@ public class CoordinatorFacilitiesModel extends CoordinatorModel {
 	/**
 	 * Sets the facilities list.
 	 *
-	 * @param facilitiesList the facilities list
+	 * @param facilitiesList the new facilities list
 	 */
 	public void setFacilitiesList(List<Facility> facilitiesList) {
 		this.facilitiesList = facilitiesList;
@@ -74,7 +74,7 @@ public class CoordinatorFacilitiesModel extends CoordinatorModel {
 	/**
 	 * Sets the facility.
 	 *
-	 * @param facility the facility
+	 * @param facility the new facility
 	 */
 	public void setFacility(Facility facility) {
 		this.facility = facility;
@@ -98,7 +98,7 @@ public class CoordinatorFacilitiesModel extends CoordinatorModel {
 	/**
 	 * Sets the list facilities size.
 	 *
-	 * @param listFacilitiesSize the list facilities size
+	 * @param listFacilitiesSize the new list facilities size
 	 */
 	public void setListFacilitiesSize(int listFacilitiesSize) {
 		this.listFacilitiesSize = listFacilitiesSize;

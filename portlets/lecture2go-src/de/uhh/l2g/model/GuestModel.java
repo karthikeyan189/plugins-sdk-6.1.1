@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -44,13 +44,24 @@ import de.uhh.l2g.util.L2goPropsUtil;
  */
 public class GuestModel extends Page {
 
+	/** The liferay user. */
 	private User liferayUser;
 	
 
+	/**
+	 * Gets the liferay user.
+	 *
+	 * @return the liferay user
+	 */
 	public User getLiferayUser() {
 		return liferayUser;
 	}
 
+	/**
+	 * Sets the liferay user.
+	 *
+	 * @param liferayUser the new liferay user
+	 */
 	public void setLiferayUser(User liferayUser) {
 		this.liferayUser = liferayUser;
 	}
@@ -71,7 +82,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the citation2go view.
 	 *
-	 * @param citation2goView the citation2go view
+	 * @param citation2goView the new citation2go view
 	 */
 	public void setCitation2goView(int citation2goView) {
 		this.citation2goView = citation2goView;
@@ -89,7 +100,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the clip start time.
 	 *
-	 * @param clipStartTime the clip start time
+	 * @param clipStartTime the new clip start time
 	 */
 	public void setClipStartTime(Integer clipStartTime) {
 		this.clipStartTime = clipStartTime;
@@ -107,7 +118,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the clip end time.
 	 *
-	 * @param clipEndTime the clip end time
+	 * @param clipEndTime the new clip end time
 	 */
 	public void setClipEndTime(Integer clipEndTime) {
 		this.clipEndTime = clipEndTime;
@@ -134,7 +145,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the web root.
 	 *
-	 * @param webRoot the web root
+	 * @param webRoot the new web root
 	 */
 	public void setWebRoot(String webRoot) {
 		this.webRoot = webRoot;
@@ -155,7 +166,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the faculty id.
 	 *
-	 * @param facultyId the faculty id
+	 * @param facultyId the new faculty id
 	 */
 	public void setFacultyId(int facultyId) {
 		this.facultyId = facultyId;
@@ -176,7 +187,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the tree.
 	 *
-	 * @param tree the tree
+	 * @param tree the new tree
 	 */
 	public void setTree(String tree) {
 		this.tree = tree;
@@ -199,7 +210,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the license.
 	 *
-	 * @param license the license
+	 * @param license the new license
 	 */
 	public void setLicense(String license) {
 		this.license = license;
@@ -217,7 +228,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the license uhh l2go.
 	 *
-	 * @param licenseUhhL2go the license uhh l2go
+	 * @param licenseUhhL2go the new license uhh l2go
 	 */
 	public void setLicenseUhhL2go(String licenseUhhL2go) {
 		this.licenseUhhL2go = licenseUhhL2go;
@@ -235,7 +246,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the license by nc sa.
 	 *
-	 * @param licenseByNcSa the license by nc sa
+	 * @param licenseByNcSa the new license by nc sa
 	 */
 	public void setLicenseByNcSa(String licenseByNcSa) {
 		this.licenseByNcSa = licenseByNcSa;
@@ -253,7 +264,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the license by nc nd.
 	 *
-	 * @param licenseByNcNd the license by nc nd
+	 * @param licenseByNcNd the new license by nc nd
 	 */
 	public void setLicenseByNcNd(String licenseByNcNd) {
 		this.licenseByNcNd = licenseByNcNd;
@@ -283,7 +294,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the user agent.
 	 *
-	 * @param userAgent the user agent
+	 * @param userAgent the new user agent
 	 */
 	public void setUserAgent(String userAgent) {
 		this.userAgent = userAgent;
@@ -304,7 +315,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the mp3 download.
 	 *
-	 * @param mp3Download the mp3 download
+	 * @param mp3Download the new mp3 download
 	 */
 	public void setMp3Download(String mp3Download) {
 		this.mp3Download = mp3Download;
@@ -322,7 +333,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the video download.
 	 *
-	 * @param videoDownload the video download
+	 * @param videoDownload the new video download
 	 */
 	public void setVideoDownload(String videoDownload) {
 		this.videoDownload = videoDownload;
@@ -340,7 +351,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the audio download.
 	 *
-	 * @param audioDownload the audio download
+	 * @param audioDownload the new audio download
 	 */
 	public void setAudioDownload(String audioDownload) {
 		this.audioDownload = audioDownload;
@@ -358,7 +369,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the pdf download.
 	 *
-	 * @param pdfDownload the pdf download
+	 * @param pdfDownload the new pdf download
 	 */
 	public void setPdfDownload(String pdfDownload) {
 		this.pdfDownload = pdfDownload;
@@ -376,7 +387,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the m4v download.
 	 *
-	 * @param download the m4v download
+	 * @param download the new m4v download
 	 */
 	public void setM4vDownload(String download) {
 		m4vDownload = download;
@@ -394,7 +405,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the m4a download.
 	 *
-	 * @param download the m4a download
+	 * @param download the new m4a download
 	 */
 	public void setM4aDownload(String download) {
 		m4aDownload = download;
@@ -415,7 +426,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the video stream.
 	 *
-	 * @param videoStream the video stream
+	 * @param videoStream the new video stream
 	 */
 	public void setVideoStream(String videoStream) {
 		this.videoStream = videoStream;
@@ -451,7 +462,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the mp4 download.
 	 *
-	 * @param mp4Download the mp4 download
+	 * @param mp4Download the new mp4 download
 	 */
 	public void setMp4Download(String mp4Download) {
 		this.mp4Download = mp4Download;
@@ -463,7 +474,7 @@ public class GuestModel extends Page {
 	/**
 	 * Checks if is mobile device.
 	 *
-	 * @return true, if checks if is mobile device
+	 * @return true, if is mobile device
 	 */
 	public boolean isMobileDevice() {
 		return mobileDevice;
@@ -472,7 +483,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the mobile device.
 	 *
-	 * @param mobileDevice the mobile device
+	 * @param mobileDevice the new mobile device
 	 */
 	public void setMobileDevice(boolean mobileDevice) {
 		this.mobileDevice = mobileDevice;
@@ -484,7 +495,7 @@ public class GuestModel extends Page {
 	/**
 	 * Checks if is download allawed.
 	 *
-	 * @return true, if checks if is download allawed
+	 * @return true, if is download allawed
 	 */
 	public boolean isDownloadAllawed() {
 		return downloadAllawed;
@@ -493,7 +504,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the download allawed.
 	 *
-	 * @param downloadAllawed the download allawed
+	 * @param downloadAllawed the new download allawed
 	 */
 	public void setDownloadAllawed(boolean downloadAllawed) {
 		this.downloadAllawed = downloadAllawed;
@@ -514,7 +525,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the video id.
 	 *
-	 * @param videoId the video id
+	 * @param videoId the new video id
 	 */
 	public void setVideoId(int videoId) {
 		this.videoId = videoId;
@@ -526,7 +537,7 @@ public class GuestModel extends Page {
 	/**
 	 * Checks if is success.
 	 *
-	 * @return true, if checks if is success
+	 * @return true, if is success
 	 */
 	public boolean isSuccess() {
 		return success;
@@ -535,7 +546,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the success.
 	 *
-	 * @param success the success
+	 * @param success the new success
 	 */
 	public void setSuccess(boolean success) {
 		this.success = success;
@@ -560,7 +571,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the mp4 file.
 	 *
-	 * @param mp4File the mp4 file
+	 * @param mp4File the new mp4 file
 	 */
 	public void setMp4File(String mp4File) {
 		this.mp4File = mp4File;
@@ -578,7 +589,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the mp3 file.
 	 *
-	 * @param mp3File the mp3 file
+	 * @param mp3File the new mp3 file
 	 */
 	public void setMp3File(String mp3File) {
 		this.mp3File = mp3File;
@@ -599,7 +610,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the pdf file.
 	 *
-	 * @param pdfFile the pdf file
+	 * @param pdfFile the new pdf file
 	 */
 	public void setPdfFile(String pdfFile) {
 		this.pdfFile = pdfFile;
@@ -620,7 +631,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the m4v file.
 	 *
-	 * @param m4vFile the m4v file
+	 * @param m4vFile the new m4v file
 	 */
 	public void setM4vFile(String m4vFile) {
 		this.m4vFile = m4vFile;
@@ -641,7 +652,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the url.
 	 *
-	 * @param url the url
+	 * @param url the new url
 	 */
 	public void setURL(String url) {
 		this.url = url;
@@ -662,7 +673,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the video seiten.
 	 *
-	 * @param videoSeiten the video seiten
+	 * @param videoSeiten the new video seiten
 	 */
 	public void setVideoSeiten(int videoSeiten) {
 		this.videoSeiten = videoSeiten;
@@ -674,7 +685,7 @@ public class GuestModel extends Page {
 	/**
 	 * Checks if is commsy embed.
 	 *
-	 * @return true, if checks if is commsy embed
+	 * @return true, if is commsy embed
 	 */
 	public boolean isCommsyEmbed() {
 		return commsyEmbed;
@@ -683,7 +694,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the commsy embed.
 	 *
-	 * @param commsyEmbed the commsy embed
+	 * @param commsyEmbed the new commsy embed
 	 */
 	public void setCommsyEmbed(boolean commsyEmbed) {
 		this.commsyEmbed = commsyEmbed;
@@ -704,7 +715,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the m4a file.
 	 *
-	 * @param file the m4a file
+	 * @param file the new m4a file
 	 */
 	public void setM4aFile(String file) {
 		this.file = file;
@@ -725,7 +736,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the domain url.
 	 *
-	 * @param domainURL the domain url
+	 * @param domainURL the new domain url
 	 */
 	public void setDomainURL(String domainURL) {
 		this.domainURL = domainURL;
@@ -746,7 +757,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the download server url.
 	 *
-	 * @param downloadServerURL the download server url
+	 * @param downloadServerURL the new download server url
 	 */
 	public void setDownloadServerURL(String downloadServerURL) {
 		this.downloadServerURL = downloadServerURL;
@@ -767,7 +778,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the action.
 	 *
-	 * @param action the action
+	 * @param action the new action
 	 */
 	public void setAction(String action) {
 		this.action = action;
@@ -776,7 +787,7 @@ public class GuestModel extends Page {
 	/**
 	 * Checks if is user is student.
 	 *
-	 * @return true, if checks if is user is student
+	 * @return true, if is user is student
 	 */
 	public boolean isUserIsStudent() {
 		return userIsStudent;
@@ -785,7 +796,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the user is student.
 	 *
-	 * @param userIsStudent the user is student
+	 * @param userIsStudent the new user is student
 	 */
 	public void setUserIsStudent(boolean userIsStudent) {
 		this.userIsStudent = userIsStudent;
@@ -809,7 +820,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the lectureseries id.
 	 *
-	 * @param lectureseriesId the lectureseries id
+	 * @param lectureseriesId the new lectureseries id
 	 */
 	public void setLectureseriesId(int lectureseriesId) {
 		this.lectureseriesId = lectureseriesId;
@@ -830,7 +841,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the facility id.
 	 *
-	 * @param facilityId the facility id
+	 * @param facilityId the new facility id
 	 */
 	public void setFacilityId(int facilityId) {
 		this.facilityId = facilityId;
@@ -851,7 +862,7 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the lectureseries number.
 	 *
-	 * @param number the lectureseries number
+	 * @param number the new lectureseries number
 	 */
 	public void setLectureseriesNumber(String number) {
 		this.number = number;
@@ -872,32 +883,51 @@ public class GuestModel extends Page {
 	/**
 	 * Sets the path.
 	 *
-	 * @param path the path
+	 * @param path the new path
 	 */
 	public void setPath(String path) {
 		this.path = path;
 	}
 
-	/**
-	 * 
-	 */
+	/** The coordinator. */
 	private Coordinator coordinator;
 
 
+	/**
+	 * Gets the coordinator.
+	 *
+	 * @return the coordinator
+	 */
 	public Coordinator getCoordinator() {
 		return coordinator;
 	}
 
+	/**
+	 * Sets the coordinator.
+	 *
+	 * @param coordinator the new coordinator
+	 */
 	public void setCoordinator(Coordinator coordinator) {
 		this.coordinator = coordinator;
 	}
 	
+	/** The email to. */
 	private String emailTo;
 	
+	/**
+	 * Gets the email to.
+	 *
+	 * @return the email to
+	 */
 	public String getEmailTo() {
 		return emailTo;
 	}
 
+	/**
+	 * Sets the email to.
+	 *
+	 * @param emailTo the new email to
+	 */
 	public void setEmailTo(String emailTo) {
 		this.emailTo = emailTo;
 	}

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -41,12 +41,23 @@ import java.util.List;
  */
 public class Student extends Guest {
 
+	/** The user id. */
 	private long userId;
 	
+	/**
+	 * Gets the user id.
+	 *
+	 * @return the user id
+	 */
 	public long getUserId() {
 		return userId;
 	}
 
+	/**
+	 * Sets the user id.
+	 *
+	 * @param userId the new user id
+	 */
 	public void setUserId(long userId) {
 		this.userId = userId;
 	}
@@ -66,7 +77,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the id num.
 	 *
-	 * @param idNum the id num
+	 * @param idNum the new id num
 	 */
 	public void setIdNum(String idNum) {
 		this.idNum = idNum;
@@ -87,7 +98,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -108,14 +119,14 @@ public class Student extends Guest {
 	/**
 	 * Sets the facility id.
 	 *
-	 * @param facilityId the facility id
+	 * @param facilityId the new facility id
 	 */
 	public void setFacilityId(int facilityId) {
 		this.facilityId = facilityId;
 	}
 	
 	/**
-	 * Gets the create date.
+	 * Gets the creates the date.
 	 *
 	 * @return the creates the date
 	 */
@@ -124,9 +135,9 @@ public class Student extends Guest {
 	}
 
 	/**
-	 * Sets the create date.
+	 * Sets the creates the date.
 	 *
-	 * @param date the creates the date
+	 * @param date the new creates the date
 	 */
 	public void setCreateDate(Date date) {
 		this.createDate = date;
@@ -144,7 +155,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the last login date.
 	 *
-	 * @param date the last login date
+	 * @param date the new last login date
 	 */
 	public void setLastLoginDate(Date date) {
 		this.lastLoginDate = date;
@@ -165,7 +176,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the facility list.
 	 *
-	 * @param facilityList the facility list
+	 * @param facilityList the new facility list
 	 */
 	public void setFacilityList(List<Facility> facilityList) {
 		this.facilityList = facilityList;
@@ -192,7 +203,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the email address.
 	 *
-	 * @param emailAddress the email address
+	 * @param emailAddress the new email address
 	 */
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
@@ -210,7 +221,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the screen name.
 	 *
-	 * @param screenName the screen name
+	 * @param screenName the new screen name
 	 */
 	public void setScreenName(String screenName) {
 		this.screenName = screenName;
@@ -228,7 +239,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the last name.
 	 *
-	 * @param lastName the last name
+	 * @param lastName the new last name
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
@@ -246,7 +257,7 @@ public class Student extends Guest {
 	/**
 	 * Sets the first name.
 	 *
-	 * @param firstName the first name
+	 * @param firstName the new first name
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;

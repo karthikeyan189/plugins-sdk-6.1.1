@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -47,14 +47,14 @@ public class ProducerRowMapper implements RowMapper {
 	private boolean withLRInfo;
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new producer row mapper.
 	 */
 	public ProducerRowMapper() {
 		withLRInfo = false;
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new producer row mapper.
 	 *
 	 * @param withLRInfo the with lr info
 	 */
@@ -65,6 +65,14 @@ public class ProducerRowMapper implements RowMapper {
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.core.RowMapper#mapRow(java.sql.ResultSet, int)
 	 */
+	/**
+	 * Map row.
+	 *
+	 * @param rs the rs
+	 * @param line the line
+	 * @return the object
+	 * @throws SQLException the sQL exception
+	 */
 	public Object mapRow(ResultSet rs, int line) throws SQLException {
 		ResultSetExtractor extractor = withLRInfo ? new ProducerLRInfoResultSetExtractor()
 				: new ProducerResultSetExtractor();
@@ -74,7 +82,7 @@ public class ProducerRowMapper implements RowMapper {
 	/**
 	 * Sets the with lr info.
 	 *
-	 * @param withLRInfo the with lr info
+	 * @param withLRInfo the new with lr info
 	 */
 	public void setWithLRInfo(boolean withLRInfo) {
 		this.withLRInfo = withLRInfo;
@@ -83,7 +91,7 @@ public class ProducerRowMapper implements RowMapper {
 	/**
 	 * Checks if is with lr info.
 	 *
-	 * @return true, if checks if is with lr info
+	 * @return true, if is with lr info
 	 */
 	public boolean isWithLRInfo() {
 		return withLRInfo;

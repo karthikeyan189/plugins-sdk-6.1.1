@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -68,7 +68,7 @@ public class FacilityDao extends JdbcDaoSupport implements IFacilityDao {
 	/**
 	 * Sets the host dao.
 	 *
-	 * @param hostDao the host dao
+	 * @param hostDao the new host dao
 	 */
 	public void setHostDao(HostDao hostDao) {
 		this.hostDao = hostDao;
@@ -89,7 +89,7 @@ public class FacilityDao extends JdbcDaoSupport implements IFacilityDao {
 	/**
 	 * Sets the lectureseries dao.
 	 *
-	 * @param lectureseriesDao the lectureseries dao
+	 * @param lectureseriesDao the new lectureseries dao
 	 */
 	public void setLectureseriesDao(LectureseriesDao lectureseriesDao) {
 		this.lectureseriesDao = lectureseriesDao;
@@ -101,6 +101,9 @@ public class FacilityDao extends JdbcDaoSupport implements IFacilityDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IFacilityDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
 		delete.update("DELETE from facility");
@@ -111,6 +114,11 @@ public class FacilityDao extends JdbcDaoSupport implements IFacilityDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IFacilityDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
 	 */
 	public void deleteById(int id) {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -154,6 +162,11 @@ public class FacilityDao extends JdbcDaoSupport implements IFacilityDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IFacilityDao#getAll()
+	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Facility> getAll() {
@@ -304,6 +317,12 @@ public class FacilityDao extends JdbcDaoSupport implements IFacilityDao {
 	
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IFacilityDao#getById(int)
+	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Facility> getById(int id) {
@@ -589,7 +608,7 @@ public class FacilityDao extends JdbcDaoSupport implements IFacilityDao {
 	 * Fill facility list with properties.
 	 *
 	 * @param ei the ei
-	 * @return the list< facility>
+	 * @return the list
 	 */
 	public List<Facility> fillFacilityListWithProperties(List<Facility> ei) {
 		ListIterator<Facility> it = ei.listIterator();

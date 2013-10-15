@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -88,7 +88,7 @@ public class CoordinatorLectureseriesManagementController extends AbstractContro
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -96,6 +96,14 @@ public class CoordinatorLectureseriesManagementController extends AbstractContro
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractController#handleRenderRequestInternal(javax.portlet.RenderRequest, javax.portlet.RenderResponse)
+	 */
+	/**
+	 * Handle render request internal.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @return the model and view
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected ModelAndView handleRenderRequestInternal(RenderRequest request, RenderResponse response) throws Exception {
@@ -256,7 +264,7 @@ public class CoordinatorLectureseriesManagementController extends AbstractContro
 	/**
 	 * Sets the list view.
 	 *
-	 * @param listView the list view
+	 * @param listView the new list view
 	 */
 	public void setListView(String listView) {
 		this.listView = listView;
@@ -265,7 +273,7 @@ public class CoordinatorLectureseriesManagementController extends AbstractContro
 	/**
 	 * Sets the detail view.
 	 *
-	 * @param detailView the detail view
+	 * @param detailView the new detail view
 	 */
 	public void setDetailView(String detailView) {
 		this.detailView = detailView;

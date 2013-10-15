@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -46,7 +46,7 @@ import javax.xml.transform.stream.StreamSource;
 public class StaxToXPathProperties {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new stax to x path properties.
 	 */
 	public StaxToXPathProperties() {
 		// TODO Auto-generated constructor stub
@@ -57,7 +57,7 @@ public class StaxToXPathProperties {
 	 *
 	 * @param args the args
 	 * @return the string[][]
-	 * @throws XMLStreamException the XML stream exception
+	 * @throws XMLStreamException the xML stream exception
 	 */
 	public String[][] xml2array(String[] args) throws XMLStreamException {
 		XMLInputFactory inputFactory = XMLInputFactory.newInstance();

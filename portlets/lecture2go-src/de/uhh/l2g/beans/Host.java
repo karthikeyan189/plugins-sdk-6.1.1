@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -55,7 +55,7 @@ public class Host {
 	/**
 	 * Sets the facilities list.
 	 *
-	 * @param facilitiesList the facilities list
+	 * @param facilitiesList the new facilities list
 	 */
 	public void setFacilitiesList(List<Facility> facilitiesList) {
 		this.facilitiesList = facilitiesList;
@@ -67,7 +67,7 @@ public class Host {
 	/**
 	 * Checks if is deletable.
 	 *
-	 * @return true, if checks if is deletable
+	 * @return true, if is deletable
 	 */
 	public boolean isDeletable() {
 		return deletable;
@@ -76,7 +76,7 @@ public class Host {
 	/**
 	 * Sets the deletable.
 	 *
-	 * @param deletable the deletable
+	 * @param deletable the new deletable
 	 */
 	public void setDeletable(boolean deletable) {
 		this.deletable = deletable;
@@ -98,7 +98,7 @@ public class Host {
 	/**
 	 * Sets the facility id.
 	 *
-	 * @param facilityId the facility id
+	 * @param facilityId the new facility id
 	 */
 	public void setFacilityId(int facilityId) {
 		this.facilityId = facilityId;
@@ -119,7 +119,7 @@ public class Host {
 	/**
 	 * Sets the protokoll.
 	 *
-	 * @param protokoll the protokoll
+	 * @param protokoll the new protokoll
 	 */
 	public void setProtokoll(String protokoll) {
 		this.protokoll = protokoll;
@@ -140,7 +140,7 @@ public class Host {
 	/**
 	 * Sets the streamer.
 	 *
-	 * @param streamer the streamer
+	 * @param streamer the new streamer
 	 */
 	public void setStreamer(String streamer) {
 		this.streamer = streamer;
@@ -158,7 +158,7 @@ public class Host {
 	/**
 	 * Sets the port.
 	 *
-	 * @param port the port
+	 * @param port the new port
 	 */
 	public void setPort(int port) {
 		this.port = port;
@@ -179,7 +179,7 @@ public class Host {
 	/**
 	 * Sets the server root.
 	 *
-	 * @param serverRoot the server root
+	 * @param serverRoot the new server root
 	 */
 	public void setServerRoot(String serverRoot) {
 		this.serverRoot = serverRoot;
@@ -200,7 +200,7 @@ public class Host {
 	/**
 	 * Sets the name.
 	 *
-	 * @param name the name
+	 * @param name the new name
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -224,7 +224,7 @@ public class Host {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;

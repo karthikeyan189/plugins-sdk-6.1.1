@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -54,7 +54,7 @@ public class GuestSearchModel extends GuestModel {
 	/**
 	 * Sets the number of search results.
 	 *
-	 * @param numberOfSearchResults the number of search results
+	 * @param numberOfSearchResults the new number of search results
 	 */
 	public void setNumberOfSearchResults(int numberOfSearchResults) {
 		this.numberOfSearchResults = numberOfSearchResults;
@@ -75,7 +75,7 @@ public class GuestSearchModel extends GuestModel {
 	/**
 	 * Sets the number of search results2.
 	 *
-	 * @param numberOfSearchResults2 the number of search results2
+	 * @param numberOfSearchResults2 the new number of search results2
 	 */
 	public void setNumberOfSearchResults2(int numberOfSearchResults2) {
 		this.numberOfSearchResults2 = numberOfSearchResults2;
@@ -96,7 +96,7 @@ public class GuestSearchModel extends GuestModel {
 	/**
 	 * Sets the more video search results.
 	 *
-	 * @param moreVideoSearchResults the more video search results
+	 * @param moreVideoSearchResults the new more video search results
 	 */
 	public void setMoreVideoSearchResults(List<?> moreVideoSearchResults) {
 		this.moreVideoSearchResults = moreVideoSearchResults;
@@ -117,7 +117,7 @@ public class GuestSearchModel extends GuestModel {
 	/**
 	 * Sets the search results limit.
 	 *
-	 * @param searchResultsLimit the search results limit
+	 * @param searchResultsLimit the new search results limit
 	 */
 	public void setSearchResultsLimit(int searchResultsLimit) {
 		this.searchResultsLimit = searchResultsLimit;

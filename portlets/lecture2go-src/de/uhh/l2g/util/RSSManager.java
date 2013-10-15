@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -72,7 +72,7 @@ public class RSSManager {
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param daoBeanFactory the dao bean factory
+	 * @param daoBeanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory daoBeanFactory) {
 		this.daoBeanFactory = daoBeanFactory;
@@ -93,7 +93,7 @@ public class RSSManager {
 	/**
 	 * Sets the title.
 	 *
-	 * @param title the title
+	 * @param title the new title
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -114,7 +114,7 @@ public class RSSManager {
 	/**
 	 * Sets the description.
 	 *
-	 * @param description the description
+	 * @param description the new description
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -135,7 +135,7 @@ public class RSSManager {
 	/**
 	 * Sets the language.
 	 *
-	 * @param language the language
+	 * @param language the new language
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
@@ -156,7 +156,7 @@ public class RSSManager {
 	/**
 	 * Sets the pub date.
 	 *
-	 * @param pubDate the pub date
+	 * @param pubDate the new pub date
 	 */
 	public void setPubDate(String pubDate) {
 		this.pubDate = pubDate;
@@ -177,7 +177,7 @@ public class RSSManager {
 	/**
 	 * Sets the last build date.
 	 *
-	 * @param lastBuildDate the last build date
+	 * @param lastBuildDate the new last build date
 	 */
 	public void setLastBuildDate(String lastBuildDate) {
 		this.lastBuildDate = lastBuildDate;
@@ -198,7 +198,7 @@ public class RSSManager {
 	/**
 	 * Sets the image title.
 	 *
-	 * @param imageTitle the image title
+	 * @param imageTitle the new image title
 	 */
 	public void setImageTitle(String imageTitle) {
 		this.imageTitle = imageTitle;
@@ -223,7 +223,7 @@ public class RSSManager {
 	 *
 	 * @param videoList the video list
 	 * @param type the type
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public void createRssFile(List<Video> videoList, String type) throws IOException {
 		try {
@@ -486,7 +486,7 @@ public class RSSManager {
 	/**
 	 * Sets the rss filename.
 	 *
-	 * @param rssFilename the rss filename
+	 * @param rssFilename the new rss filename
 	 */
 	public void setRssFilename(String rssFilename) {
 		this.rssFilename = rssFilename;
@@ -508,7 +508,7 @@ public class RSSManager {
 	 * Checks if is konferenz video.
 	 *
 	 * @param id the id
-	 * @return true, if checks if is konferenz video
+	 * @return true, if is konferenz video
 	 */
 	public boolean isKonferenzVideo(int id) {
 		boolean retur = false;
@@ -523,14 +523,14 @@ public class RSSManager {
 	/**
 	 * Sets the rss inhalt.
 	 *
-	 * @param rssInhalt the rss inhalt
+	 * @param rssInhalt the new rss inhalt
 	 */
 	public void setRssInhalt(String rssInhalt) {
 		this.rssInhalt = rssInhalt;
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new rSS manager.
 	 */
 	public RSSManager() {
 		//

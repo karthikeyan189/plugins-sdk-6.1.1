@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -49,6 +49,9 @@ public class LicenseDao extends JdbcDaoSupport implements ILicenseDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILicenseDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
 		delete.update("DELETE * from license");
@@ -56,6 +59,11 @@ public class LicenseDao extends JdbcDaoSupport implements ILicenseDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILicenseDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
 	 */
 	public void deleteById(int id) {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -65,6 +73,11 @@ public class LicenseDao extends JdbcDaoSupport implements ILicenseDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILicenseDao#getAll()
 	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
+	 */
 	@SuppressWarnings("unchecked")
 	public List<License> getAll() {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -73,6 +86,12 @@ public class LicenseDao extends JdbcDaoSupport implements ILicenseDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILicenseDao#getById(int)
+	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
 	 */
 	@SuppressWarnings("unchecked")
 	public List<License> getById(int id) {
@@ -114,6 +133,18 @@ public class LicenseDao extends JdbcDaoSupport implements ILicenseDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILicenseDao#create(int, boolean, boolean, boolean,
 	 * boolean, boolean, boolean, boolean)
+	 */
+	/**
+	 * Creates the.
+	 *
+	 * @param videoId the video id
+	 * @param ccby the ccby
+	 * @param ccbybc the ccbybc
+	 * @param ccbyncnd the ccbyncnd
+	 * @param ccbyncsa the ccbyncsa
+	 * @param ccbysa the ccbysa
+	 * @param ccbync the ccbync
+	 * @param l2go the l2go
 	 */
 	public void create(int videoId, boolean ccby, boolean ccbybc, boolean ccbyncnd, boolean ccbyncsa, boolean ccbysa, boolean ccbync, boolean l2go) {
 		JdbcTemplate insert = new JdbcTemplate(this.getDataSource());

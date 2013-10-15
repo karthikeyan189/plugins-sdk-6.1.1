@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -68,7 +68,7 @@ public abstract class AbstractGuestCommand extends Factory {
 	/**
 	 * Sets the line break.
 	 *
-	 * @param lineBreak the line break
+	 * @param lineBreak the new line break
 	 */
 	public void setLineBreak(Integer lineBreak) {
 		this.lineBreak = lineBreak;
@@ -89,7 +89,7 @@ public abstract class AbstractGuestCommand extends Factory {
 	/**
 	 * Sets the videos per site.
 	 *
-	 * @param videosPerSite the videos per site
+	 * @param videosPerSite the new videos per site
 	 */
 	public void setVideosPerSite(Integer videosPerSite) {
 		this.videosPerSite = videosPerSite;
@@ -114,7 +114,7 @@ public abstract class AbstractGuestCommand extends Factory {
 	/**
 	 * Sets the licenze.
 	 *
-	 * @param model the licenze
+	 * @param model the new licenze
 	 */
 	public void setLicenze(GuestModel model){
 		try {
@@ -138,7 +138,7 @@ public abstract class AbstractGuestCommand extends Factory {
 	/**
 	 * Sets the subfacilities.
 	 *
-	 * @param model the subfacilities
+	 * @param model the new subfacilities
 	 */
 	public void setSubfacilities(GuestModel model){
 		if(model.getTree().equals("tree1"))_setLectureseriesSubfacilities(model);

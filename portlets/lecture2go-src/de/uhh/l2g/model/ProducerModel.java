@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -57,7 +57,7 @@ public class ProducerModel extends StudentModel {
 	/**
 	 * Sets the number productions.
 	 *
-	 * @param numberProductions the number productions
+	 * @param numberProductions the new number productions
 	 */
 	public void setNumberProductions(int numberProductions) {
 		this.numberProductions = numberProductions;
@@ -66,7 +66,7 @@ public class ProducerModel extends StudentModel {
 	/**
 	 * Sets the approved.
 	 *
-	 * @param approved the approved
+	 * @param approved the new approved
 	 */
 	public void setApproved(boolean approved) {
 		this.approved = approved;
@@ -75,7 +75,7 @@ public class ProducerModel extends StudentModel {
 	/**
 	 * Checks if is approved.
 	 *
-	 * @return true, if checks if is approved
+	 * @return true, if is approved
 	 */
 	public boolean isApproved() {
 		return approved;
@@ -96,7 +96,7 @@ public class ProducerModel extends StudentModel {
 	/**
 	 * Sets the producer id.
 	 *
-	 * @param producerId the producer id
+	 * @param producerId the new producer id
 	 */
 	public void setProducerId(int producerId) {
 		this.producerId = producerId;
@@ -117,7 +117,7 @@ public class ProducerModel extends StudentModel {
 	/**
 	 * Sets the host id.
 	 *
-	 * @param hostId the host id
+	 * @param hostId the new host id
 	 */
 	public void setHostId(Integer hostId) {
 		this.hostId = hostId;
@@ -138,7 +138,7 @@ public class ProducerModel extends StudentModel {
 	/**
 	 * Sets the metadata id.
 	 *
-	 * @param metadataId the metadata id
+	 * @param metadataId the new metadata id
 	 */
 	public void setMetadataId(Integer metadataId) {
 		this.metadataId = metadataId;

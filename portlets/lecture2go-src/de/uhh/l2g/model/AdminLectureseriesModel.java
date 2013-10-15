@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -52,12 +52,22 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getLectureseriesNumber()
 	 */
+	/**
+	 * Gets the lectureseries number.
+	 *
+	 * @return the lectureseries number
+	 */
 	public String getLectureseriesNumber() {
 		return lectureseriesNumber;
 	}
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setLectureseriesNumber(java.lang.String)
+	 */
+	/**
+	 * Sets the lectureseries number.
+	 *
+	 * @param lectureseriesNumber the new lectureseries number
 	 */
 	public void setLectureseriesNumber(String lectureseriesNumber) {
 		this.lectureseriesNumber = lectureseriesNumber;
@@ -106,7 +116,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	private boolean success = false;
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new admin lectureseries model.
 	 */
 	public AdminLectureseriesModel() {
 		super();
@@ -127,6 +137,11 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#isSuccess()
 	 */
+	/**
+	 * Checks if is success.
+	 *
+	 * @return true, if is success
+	 */
 	@Override
 	public boolean isSuccess() {
 		return success;
@@ -134,6 +149,11 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setSuccess(boolean)
+	 */
+	/**
+	 * Sets the success.
+	 *
+	 * @param success the new success
 	 */
 	@Override
 	public void setSuccess(boolean success) {
@@ -152,7 +172,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the lectureseries name.
 	 *
-	 * @param lectureseriesName the lectureseries name
+	 * @param lectureseriesName the new lectureseries name
 	 */
 	public void setLectureseriesName(String lectureseriesName) {
 		this.lectureseriesName = lectureseriesName;
@@ -170,7 +190,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the event type.
 	 *
-	 * @param eventType the event type
+	 * @param eventType the new event type
 	 */
 	public void setEventType(String eventType) {
 		this.eventType = eventType;
@@ -188,7 +208,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the event category.
 	 *
-	 * @param eventCategory the event category
+	 * @param eventCategory the new event category
 	 */
 	public void setEventCategory(String eventCategory) {
 		this.eventCategory = eventCategory;
@@ -206,7 +226,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the short description.
 	 *
-	 * @param shortDescription the short description
+	 * @param shortDescription the new short description
 	 */
 	public void setShortDescription(String shortDescription) {
 		this.shortDescription = shortDescription;
@@ -215,6 +235,11 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.ProducerMetaDataModel#getLongDescription()
 	 */
+	/**
+	 * Gets the long description.
+	 *
+	 * @return the long description
+	 */
 	@Override
 	public String getLongDescription() {
 		return longDescription;
@@ -222,6 +247,11 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.ProducerMetaDataModel#setLongDescription(java.lang.String)
+	 */
+	/**
+	 * Sets the long description.
+	 *
+	 * @param longDescription the new long description
 	 */
 	@Override
 	public void setLongDescription(String longDescription) {
@@ -240,7 +270,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the semester name.
 	 *
-	 * @param semesterName the semester name
+	 * @param semesterName the new semester name
 	 */
 	public void setSemesterName(String semesterName) {
 		this.semesterName = semesterName;
@@ -258,7 +288,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the lectureseries language.
 	 *
-	 * @param language the lectureseries language
+	 * @param language the new lectureseries language
 	 */
 	public void setLectureseriesLanguage(String language) {
 		this.language = language;
@@ -276,7 +306,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the faculty name.
 	 *
-	 * @param facultyName the faculty name
+	 * @param facultyName the new faculty name
 	 */
 	public void setFacultyName(String facultyName) {
 		this.facultyName = facultyName;
@@ -294,7 +324,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the instructor names.
 	 *
-	 * @param instructorNames the instructor names
+	 * @param instructorNames the new instructor names
 	 */
 	public void setInstructorNames(String instructorNames) {
 		this.instructorNames = instructorNames;
@@ -312,7 +342,7 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/**
 	 * Sets the password.
 	 *
-	 * @param password the password
+	 * @param password the new password
 	 */
 	public void setPassword(String password) {
 		this.password = password;
@@ -376,6 +406,11 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.ProducerModel#isApproved()
 	 */
+	/**
+	 * Checks if is approved.
+	 *
+	 * @return true, if is approved
+	 */
 	@Override
 	public boolean isApproved() {
 		return approved;
@@ -383,6 +418,11 @@ public class AdminLectureseriesModel extends AdminModel implements Serializable 
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.ProducerModel#setApproved(boolean)
+	 */
+	/**
+	 * Sets the approved.
+	 *
+	 * @param approved the new approved
 	 */
 	@Override
 	public void setApproved(boolean approved) {

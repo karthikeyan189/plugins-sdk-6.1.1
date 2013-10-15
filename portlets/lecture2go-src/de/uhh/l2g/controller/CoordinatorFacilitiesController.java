@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -70,7 +70,7 @@ public class CoordinatorFacilitiesController extends AbstractFormController{
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -78,6 +78,15 @@ public class CoordinatorFacilitiesController extends AbstractFormController{
 	
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#processFormSubmission(javax.portlet.ActionRequest, javax.portlet.ActionResponse, java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Process form submission.
+	 *
+	 * @param ar the ar
+	 * @param arg1 the arg1
+	 * @param arg2 the arg2
+	 * @param arg3 the arg3
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected void processFormSubmission(ActionRequest ar, ActionResponse arg1, Object arg2, BindException arg3) throws Exception {
@@ -159,6 +168,16 @@ public class CoordinatorFacilitiesController extends AbstractFormController{
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#renderFormSubmission(javax.portlet.RenderRequest, javax.portlet.RenderResponse, java.lang.Object, org.springframework.validation.BindException)
 	 */
+	/**
+	 * Render form submission.
+	 *
+	 * @param req the req
+	 * @param arg1 the arg1
+	 * @param command the command
+	 * @param arg3 the arg3
+	 * @return the model and view
+	 * @throws Exception the exception
+	 */
 	@Override
 	protected ModelAndView renderFormSubmission(RenderRequest req, RenderResponse arg1, Object command, BindException arg3) throws Exception {
 		ModelAndView mv = new ModelAndView();
@@ -188,6 +207,15 @@ public class CoordinatorFacilitiesController extends AbstractFormController{
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#showForm(javax.portlet.RenderRequest, javax.portlet.RenderResponse, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Show form.
+	 *
+	 * @param req the req
+	 * @param arg1 the arg1
+	 * @param arg2 the arg2
+	 * @return the model and view
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected ModelAndView showForm(RenderRequest req, RenderResponse arg1, BindException arg2) throws Exception {

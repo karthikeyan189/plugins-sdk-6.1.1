@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -43,7 +43,7 @@ public class ProducerLectureseriesModel extends ProducerModel {
 	/**
 	 * Checks if is openaccess.
 	 *
-	 * @return true, if checks if is openaccess
+	 * @return true, if is openaccess
 	 */
 	public boolean isOpenaccess() {
 		return openaccess;
@@ -52,7 +52,7 @@ public class ProducerLectureseriesModel extends ProducerModel {
 	/**
 	 * Sets the openaccess.
 	 *
-	 * @param openaccess the openaccess
+	 * @param openaccess the new openaccess
 	 */
 	public void setOpenaccess(boolean openaccess) {
 		this.openaccess = openaccess;
@@ -64,7 +64,7 @@ public class ProducerLectureseriesModel extends ProducerModel {
 	/**
 	 * Checks if is video list empty.
 	 *
-	 * @return true, if checks if is video list empty
+	 * @return true, if is video list empty
 	 */
 	public boolean isVideoListEmpty() {
 		return videoListEmpty;
@@ -73,7 +73,7 @@ public class ProducerLectureseriesModel extends ProducerModel {
 	/**
 	 * Sets the video list empty.
 	 *
-	 * @param videoListEmpty the video list empty
+	 * @param videoListEmpty the new video list empty
 	 */
 	public void setVideoListEmpty(boolean videoListEmpty) {
 		this.videoListEmpty = videoListEmpty;

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -69,7 +69,7 @@ public class StudentMetaDataController extends SimpleFormController{
 	/**
 	 * Sets the command bean factory.
 	 *
-	 * @param commandBeanFactory the command bean factory
+	 * @param commandBeanFactory the new command bean factory
 	 */
 	public void setCommandBeanFactory(XmlBeanFactory commandBeanFactory) {
 		this.commandBeanFactory = commandBeanFactory;
@@ -77,6 +77,14 @@ public class StudentMetaDataController extends SimpleFormController{
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#processFormSubmission(javax.portlet.ActionRequest, javax.portlet.ActionResponse, java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Process form submission.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
 	 */
 	@Override
 	protected void processFormSubmission(ActionRequest request, ActionResponse response, Object command, BindException errors) {
@@ -104,6 +112,15 @@ public class StudentMetaDataController extends SimpleFormController{
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#renderFormSubmission(javax.portlet.RenderRequest, javax.portlet.RenderResponse, java.lang.Object, org.springframework.validation.BindException)
 	 */
+	/**
+	 * Render form submission.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
+	 * @return the model and view
+	 */
 	@Override
 	protected ModelAndView renderFormSubmission(RenderRequest request, RenderResponse response, Object command, BindException errors) {
 		ModelAndView mv = new ModelAndView();
@@ -120,6 +137,14 @@ public class StudentMetaDataController extends SimpleFormController{
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#showForm(javax.portlet.RenderRequest, javax.portlet.RenderResponse, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Show form.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param errors the errors
+	 * @return the model and view
 	 */
 	@Override
 	protected ModelAndView showForm(RenderRequest request, RenderResponse response, BindException errors) {

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -46,7 +46,7 @@ public class UserProducerFacilityInputModel extends ProducerFacilityModel {
 	/**
 	 * Sets the id num.
 	 *
-	 * @param idNum the id num
+	 * @param idNum the new id num
 	 */
 	public void setIdNum(String idNum) {
 		this.idNum = idNum;
@@ -64,7 +64,7 @@ public class UserProducerFacilityInputModel extends ProducerFacilityModel {
 	/**
 	 * Sets the facility id.
 	 *
-	 * @param facilityId the facility id
+	 * @param facilityId the new facility id
 	 */
 	public void setFacilityId(String facilityId) {
 		this.facilityId = facilityId;

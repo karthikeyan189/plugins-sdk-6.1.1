@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -44,6 +44,12 @@ public class MyCommonsFileUploadSupport extends CommonsFileUploadSupport {
 	/* (non-Javadoc)
 	 * @see org.springframework.web.multipart.commons.CommonsFileUploadSupport#newFileUpload(org.apache.commons.fileupload.FileItemFactory)
 	 */
+	/**
+	 * New file upload.
+	 *
+	 * @param fileItemFactory the file item factory
+	 * @return the file upload
+	 */
 	@Override
 	protected FileUpload newFileUpload(FileItemFactory fileItemFactory) {
 		// TODO Auto-generated method stub
@@ -52,6 +58,12 @@ public class MyCommonsFileUploadSupport extends CommonsFileUploadSupport {
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.multipart.commons.CommonsFileUploadSupport#prepareFileUpload(java.lang.String)
+	 */
+	/**
+	 * Prepare file upload.
+	 *
+	 * @param encoding the encoding
+	 * @return the file upload
 	 */
 	@Override
 	protected FileUpload prepareFileUpload(String encoding) {

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -39,6 +39,7 @@ import java.util.List;
  */
 public class User extends Coordinator{
 
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 
 	/** The object coordinator. */
@@ -62,7 +63,7 @@ public class User extends Coordinator{
 	/**
 	 * Sets the object coordinator.
 	 *
-	 * @param objectCoordinator the object coordinator
+	 * @param objectCoordinator the new object coordinator
 	 */
 	public void setObjectCoordinator(Coordinator objectCoordinator) {
 		this.objectCoordinator = objectCoordinator;
@@ -80,7 +81,7 @@ public class User extends Coordinator{
 	/**
 	 * Sets the object producer.
 	 *
-	 * @param objectProducer the object producer
+	 * @param objectProducer the new object producer
 	 */
 	public void setObjectProducer(Producer objectProducer) {
 		this.objectProducer = objectProducer;
@@ -98,7 +99,7 @@ public class User extends Coordinator{
 	/**
 	 * Sets the object student.
 	 *
-	 * @param objectStudent the object student
+	 * @param objectStudent the new object student
 	 */
 	public void setObjectStudent(Student objectStudent) {
 		this.objectStudent = objectStudent;
@@ -110,12 +111,22 @@ public class User extends Coordinator{
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.beans.Student#getFirstName()
 	 */
+	/**
+	 * Gets the first name.
+	 *
+	 * @return the first name
+	 */
 	public String getFirstName() {
 		return firstName;
 	}
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.beans.Student#setFirstName(java.lang.String)
+	 */
+	/**
+	 * Sets the first name.
+	 *
+	 * @param firstName the new first name
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -136,7 +147,7 @@ public class User extends Coordinator{
 	/**
 	 * Sets the mittel name.
 	 *
-	 * @param middleName the mittel name
+	 * @param middleName the new mittel name
 	 */
 	public void setMittelName(String middleName) {
 		this.middleName = middleName;
@@ -157,7 +168,7 @@ public class User extends Coordinator{
 	/**
 	 * Sets the nachname.
 	 *
-	 * @param familyName the nachname
+	 * @param familyName the new nachname
 	 */
 	public void setNachname(String familyName) {
 		this.familyName = familyName;
@@ -178,7 +189,7 @@ public class User extends Coordinator{
 	/**
 	 * Sets the user roles.
 	 *
-	 * @param userRoles the user roles
+	 * @param userRoles the new user roles
 	 */
 	public void setUserRoles(List<String> userRoles) {
 		this.userRoles = userRoles;
@@ -197,7 +208,7 @@ public class User extends Coordinator{
     private boolean isL2goadmin = false;
 
 	/**
-	 * Gets the is l2goadmin.
+	 * Gets the checks if is l2goadmin.
 	 *
 	 * @return the checks if is l2goadmin
 	 */
@@ -208,14 +219,14 @@ public class User extends Coordinator{
 	/**
 	 * Sets the l2goadmin.
 	 *
-	 * @param isL2goadmin the l2goadmin
+	 * @param isL2goadmin the new l2goadmin
 	 */
 	public void setL2goadmin(boolean isL2goadmin) {
 		this.isL2goadmin = isL2goadmin;
 	}
 
 	/**
-	 * Gets the is student.
+	 * Gets the checks if is student.
 	 *
 	 * @return the checks if is student
 	 */
@@ -226,14 +237,14 @@ public class User extends Coordinator{
 	/**
 	 * Sets the student.
 	 *
-	 * @param isStudent the student
+	 * @param isStudent the new student
 	 */
 	public void setStudent(boolean isStudent) {
 		this.isStudent = isStudent;
 	}
 
 	/**
-	 * Gets the is coordinator.
+	 * Gets the checks if is coordinator.
 	 *
 	 * @return the checks if is coordinator
 	 */
@@ -244,14 +255,14 @@ public class User extends Coordinator{
 	/**
 	 * Sets the coordinator.
 	 *
-	 * @param isCoordinator the coordinator
+	 * @param isCoordinator the new coordinator
 	 */
 	public void setCoordinator(boolean isCoordinator) {
 		this.isCoordinator = isCoordinator;
 	}
 
 	/**
-	 * Gets the is producer.
+	 * Gets the checks if is producer.
 	 *
 	 * @return the checks if is producer
 	 */
@@ -262,7 +273,7 @@ public class User extends Coordinator{
 	/**
 	 * Sets the producer.
 	 *
-	 * @param isProducer the producer
+	 * @param isProducer the new producer
 	 */
 	public void setProducer(boolean isProducer) {
 		this.isProducer = isProducer;

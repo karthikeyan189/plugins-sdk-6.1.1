@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -56,7 +56,7 @@ public class HtmlManager {
 	/**
 	 * Sets the html.
 	 *
-	 * @param html the html
+	 * @param html the new html
 	 */
 	public void setHtml(String html) {
 		this.html = html;
@@ -100,6 +100,13 @@ public class HtmlManager {
 		return clean;
 	}
 	
+	/**
+	 * Checks if is o88591to ut f8.
+	 *
+	 * @param text the text
+	 * @return the string
+	 * @throws UnsupportedEncodingException the unsupported encoding exception
+	 */
 	public static String ISO88591toUTF8(String text) throws UnsupportedEncodingException{
 		return new String(text.getBytes("ISO-8859-1"),"UTF-8");
 	}

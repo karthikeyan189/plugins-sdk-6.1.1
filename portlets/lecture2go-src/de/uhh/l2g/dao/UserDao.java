@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -75,7 +75,7 @@ public class UserDao extends JdbcDaoSupport {
 	/**
 	 * Sets the student dao.
 	 *
-	 * @param studentDao the student dao
+	 * @param studentDao the new student dao
 	 */
 	public void setStudentDao(StudentDao studentDao) {
 		this.studentDao = studentDao;
@@ -93,7 +93,7 @@ public class UserDao extends JdbcDaoSupport {
 	/**
 	 * Sets the producer dao.
 	 *
-	 * @param producerDao the producer dao
+	 * @param producerDao the new producer dao
 	 */
 	public void setProducerDao(ProducerDao producerDao) {
 		this.producerDao = producerDao;
@@ -111,7 +111,7 @@ public class UserDao extends JdbcDaoSupport {
 	/**
 	 * Sets the coordinator dao.
 	 *
-	 * @param coordinatorDao the coordinator dao
+	 * @param coordinatorDao the new coordinator dao
 	 */
 	public void setCoordinatorDao(CoordinatorDao coordinatorDao) {
 		this.coordinatorDao = coordinatorDao;
@@ -200,7 +200,7 @@ public class UserDao extends JdbcDaoSupport {
 	 * Fill user list with properties.
 	 *
 	 * @param userList the user list
-	 * @return the list< user>
+	 * @return the list
 	 */
 	public List<User> fillUserListWithProperties(List<User> userList) {
 		ListIterator<User> it = userList.listIterator();

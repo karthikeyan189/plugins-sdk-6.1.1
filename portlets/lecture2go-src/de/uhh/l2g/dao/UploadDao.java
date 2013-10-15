@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -50,6 +50,12 @@ public class UploadDao extends JdbcDaoSupport implements IUploadDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IUploadDao#create(int, long)
 	 */
+	/**
+	 * Creates the.
+	 *
+	 * @param userId the user id
+	 * @param contentLength the content length
+	 */
 	public void create(int userId, long contentLength) {
 		JdbcTemplate insert = new JdbcTemplate(this.getDataSource());
 		insert.update("INSERT INTO upload (userId, contentLength) VALUES(?,?)", new Object[] { userId, contentLength });
@@ -58,6 +64,9 @@ public class UploadDao extends JdbcDaoSupport implements IUploadDao {
 	/*
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IUploadDao#deleteAll()
+	 */
+	/**
+	 * Delete all.
 	 */
 	public void deleteAll() {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -88,6 +97,11 @@ public class UploadDao extends JdbcDaoSupport implements IUploadDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IUploadDao#deleteById(int)
 	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
+	 */
 	public void deleteById(int id) {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
 		delete.update("DELETE from upload where id=" + id);
@@ -112,6 +126,11 @@ public class UploadDao extends JdbcDaoSupport implements IUploadDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IUploadDao#getAll()
 	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Upload> getAll() {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -121,6 +140,12 @@ public class UploadDao extends JdbcDaoSupport implements IUploadDao {
 	/*
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IUploadDao#getById(int)
+	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Upload> getById(int id) {

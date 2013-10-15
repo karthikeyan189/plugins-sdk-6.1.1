@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -63,7 +63,7 @@ public class CoordinatorDao extends JdbcDaoSupport implements ICoordinatorDao {
 	/**
 	 * Sets the facility dao.
 	 *
-	 * @param facilityDao the facility dao
+	 * @param facilityDao the new facility dao
 	 */
 	public void setFacilityDao(FacilityDao facilityDao) {
 		this.facilityDao = facilityDao;
@@ -109,6 +109,12 @@ public class CoordinatorDao extends JdbcDaoSupport implements ICoordinatorDao {
 	 * @see de.uhh.l2g.dao.ICoordinatorDao#create(int, int, int, int,
 	 * java.lang.String, java.lang.String, java.lang.String)
 	 */
+	/**
+	 * Creates the.
+	 *
+	 * @param userId the user id
+	 * @param facilityId the facility id
+	 */
 	public void create(int userId, int facilityId) {
 		JdbcTemplate insert = new JdbcTemplate(this.getDataSource());
 		insert.update("INSERT INTO coordinator (userId, facilityId) VALUES(?,?)", new Object[] { userId, facilityId });
@@ -118,6 +124,9 @@ public class CoordinatorDao extends JdbcDaoSupport implements ICoordinatorDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ICoordinatorDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 		// TODO Auto-generated method stub
 	}
@@ -125,6 +134,11 @@ public class CoordinatorDao extends JdbcDaoSupport implements ICoordinatorDao {
 	/*
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ICoordinatorDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param userId the user id
 	 */
 	public void deleteById(int userId) {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -148,6 +162,12 @@ public class CoordinatorDao extends JdbcDaoSupport implements ICoordinatorDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ICoordinatorDao#getById(int)
 	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param l the l
+	 * @return the by id
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Coordinator> getById(long l) {
 		long cId = l+1;
@@ -160,6 +180,11 @@ public class CoordinatorDao extends JdbcDaoSupport implements ICoordinatorDao {
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ICoordinatorDao#getAll()
 	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
+	 */
 	public List<Coordinator> getAll() {
 		// TODO Auto-generated method stub
 		return null;
@@ -169,7 +194,7 @@ public class CoordinatorDao extends JdbcDaoSupport implements ICoordinatorDao {
 	 * Fill coordinator list with properties.
 	 *
 	 * @param coordinatorList the coordinator list
-	 * @return the list< coordinator>
+	 * @return the list
 	 */
 	public List<Coordinator> fillCoordinatorListWithProperties(List<Coordinator> coordinatorList) {
 		ListIterator<Coordinator> it = coordinatorList.listIterator();

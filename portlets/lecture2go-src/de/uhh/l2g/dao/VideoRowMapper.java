@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -46,6 +46,14 @@ public class VideoRowMapper implements RowMapper {
 
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.core.RowMapper#mapRow(java.sql.ResultSet, int)
+	 */
+	/**
+	 * Map row.
+	 *
+	 * @param rs the rs
+	 * @param line the line
+	 * @return the object
+	 * @throws SQLException the sQL exception
 	 */
 	public Object mapRow(ResultSet rs, int line) throws SQLException {
 		VideoResultSetExtractor extractor = new VideoResultSetExtractor();

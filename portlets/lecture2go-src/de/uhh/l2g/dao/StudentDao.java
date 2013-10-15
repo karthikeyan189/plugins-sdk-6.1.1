@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -63,7 +63,7 @@ public class StudentDao extends JdbcDaoSupport implements IStudentDao {
 	/**
 	 * Sets the factory.
 	 *
-	 * @param factory the factory
+	 * @param factory the new factory
 	 */
 	public void setFactory(XmlBeanFactory factory) {
 		this.factory = factory;
@@ -72,7 +72,7 @@ public class StudentDao extends JdbcDaoSupport implements IStudentDao {
 	/**
 	 * Gets the by user id.
 	 *
-	 * @param l the user id
+	 * @param l the l
 	 * @return the by user id
 	 */
 	@SuppressWarnings("unchecked")
@@ -108,12 +108,20 @@ public class StudentDao extends JdbcDaoSupport implements IStudentDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IStudentDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 		// TODO Auto-generated method stub
 	}
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IStudentDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
 	 */
 	public void deleteById(int id) {
 		// TODO Auto-generated method stub
@@ -122,6 +130,11 @@ public class StudentDao extends JdbcDaoSupport implements IStudentDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IStudentDao#getAll()
 	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
+	 */
 	public List<Student> getAll() {
 		// TODO Auto-generated method stub
 		return null;
@@ -129,6 +142,12 @@ public class StudentDao extends JdbcDaoSupport implements IStudentDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IStudentDao#getById(int)
+	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param l the l
+	 * @return the by id
 	 */
 	public List<Student> getById(long l) {
 		return getByUserId(l);

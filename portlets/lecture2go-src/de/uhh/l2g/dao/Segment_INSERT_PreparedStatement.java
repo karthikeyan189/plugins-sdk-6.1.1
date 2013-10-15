@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -57,11 +57,11 @@ public class Segment_INSERT_PreparedStatement implements PreparedStatementCreato
 	private String[] parameter;
 	
 	/**
-	 * The Constructor.
+	 * Instantiates a new segment_ inser t_ prepared statement.
 	 *
 	 * @param jdbcTemplate the jdbc template
 	 * @param parameter the parameter
-	 * @throws SQLException the SQL exception
+	 * @throws SQLException the sQL exception
 	 */
 	public Segment_INSERT_PreparedStatement(JdbcTemplate jdbcTemplate, String[] parameter) throws SQLException{
 		this.jdbcTemplate = jdbcTemplate;
@@ -71,6 +71,13 @@ public class Segment_INSERT_PreparedStatement implements PreparedStatementCreato
 
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.core.PreparedStatementCreator#createPreparedStatement(java.sql.Connection)
+	 */
+	/**
+	 * Creates the prepared statement.
+	 *
+	 * @param connection the connection
+	 * @return the prepared statement
+	 * @throws SQLException the sQL exception
 	 */
 	public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
 		PreparedStatement ps = this.connection.prepareStatement(INSERT_SQL, new String[] {"id"});

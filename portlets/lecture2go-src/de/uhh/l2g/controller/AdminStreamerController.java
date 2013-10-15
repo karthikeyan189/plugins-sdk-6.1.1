@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -78,7 +78,7 @@ public class AdminStreamerController extends SimpleFormController{
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -86,6 +86,15 @@ public class AdminStreamerController extends SimpleFormController{
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#processFormSubmission(javax.portlet.ActionRequest, javax.portlet.ActionResponse, java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Process form submission.
+	 *
+	 * @param request the request
+	 * @param arg1 the arg1
+	 * @param command the command
+	 * @param errors the errors
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected void processFormSubmission(ActionRequest request, ActionResponse arg1, Object command, BindException errors) throws Exception {
@@ -145,6 +154,16 @@ public class AdminStreamerController extends SimpleFormController{
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#renderFormSubmission(javax.portlet.RenderRequest, javax.portlet.RenderResponse, java.lang.Object, org.springframework.validation.BindException)
 	 */
+	/**
+	 * Render form submission.
+	 *
+	 * @param req the req
+	 * @param arg1 the arg1
+	 * @param command the command
+	 * @param errors the errors
+	 * @return the model and view
+	 * @throws Exception the exception
+	 */
 	@Override
 	protected ModelAndView renderFormSubmission(RenderRequest req, RenderResponse arg1, Object command, BindException errors) throws Exception {
 		ModelAndView mv = new ModelAndView();
@@ -168,6 +187,15 @@ public class AdminStreamerController extends SimpleFormController{
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.SimpleFormController#showForm(javax.portlet.RenderRequest, javax.portlet.RenderResponse, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Show form.
+	 *
+	 * @param req the req
+	 * @param arg1 the arg1
+	 * @param errors the errors
+	 * @return the model and view
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected ModelAndView showForm(RenderRequest req, RenderResponse arg1, BindException errors) throws Exception {

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -39,18 +39,18 @@ import com.liferay.util.mail.MailEngine;
 import com.liferay.util.mail.MailEngineException;
 
 /**
- * The Class MailManager.
+ * The Class EmailManager.
  */
 public class EmailManager extends MailEngine {
 	
 	/**
-	 * Send mail.
+	 * Send email.
 	 *
 	 * @param from the from
-	 * @param to comma separated email address list
+	 * @param to the to
 	 * @param subject the subject
 	 * @param body the body
-	 * @return true, if send mail
+	 * @return true, if successful
 	 */
 	public boolean sendEmail(String from, String to, String subject, String body){
 		boolean ret = false;

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -44,6 +44,11 @@ public class StudentMetaDataModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Page#getRemoteUserId()
 	 */
+	/**
+	 * Gets the remote user id.
+	 *
+	 * @return the remote user id
+	 */
 	@Override
 	public Integer getRemoteUserId() {
 		return remoteUserId;
@@ -51,6 +56,11 @@ public class StudentMetaDataModel extends ProducerMetaDataModel {
 	
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Page#setRemoteUserId(java.lang.Integer)
+	 */
+	/**
+	 * Sets the remote user id.
+	 *
+	 * @param remoteUserId the new remote user id
 	 */
 	@Override
 	public void setRemoteUserId(Integer remoteUserId) {
@@ -60,6 +70,11 @@ public class StudentMetaDataModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getAction()
 	 */
+	/**
+	 * Gets the action.
+	 *
+	 * @return the action
+	 */
 	@Override
 	public String getAction() {
 		return action;
@@ -67,6 +82,11 @@ public class StudentMetaDataModel extends ProducerMetaDataModel {
 	
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setAction(java.lang.String)
+	 */
+	/**
+	 * Sets the action.
+	 *
+	 * @param action the new action
 	 */
 	@Override
 	public void setAction(String action) {
@@ -76,6 +96,11 @@ public class StudentMetaDataModel extends ProducerMetaDataModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Objects#getLectureseriesList()
 	 */
+	/**
+	 * Gets the lectureseries list.
+	 *
+	 * @return the lectureseries list
+	 */
 	@Override
 	public List<Lectureseries> getLectureseriesList() {
 		return lectureseriesList;
@@ -83,6 +108,11 @@ public class StudentMetaDataModel extends ProducerMetaDataModel {
 	
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.Objects#setLectureseriesList(java.util.List)
+	 */
+	/**
+	 * Sets the lectureseries list.
+	 *
+	 * @param lectureseriesList the new lectureseries list
 	 */
 	@Override
 	public void setLectureseriesList(List<Lectureseries> lectureseriesList) {

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -58,7 +58,7 @@ public class VideoResultSearch extends Video {
 	/**
 	 * Sets the img url.
 	 *
-	 * @param imgURL the img url
+	 * @param imgURL the new img url
 	 */
 	public void setImgURL(String imgURL) {
 		this.imgURL = imgURL;
@@ -76,7 +76,7 @@ public class VideoResultSearch extends Video {
 	/**
 	 * Sets the lecturer name.
 	 *
-	 * @param lecturerName the lecturer name
+	 * @param lecturerName the new lecturer name
 	 */
 	public void setLecturerName(String lecturerName) {
 		this.lecturerName = lecturerName;
@@ -94,7 +94,7 @@ public class VideoResultSearch extends Video {
 	/**
 	 * Sets the lectureserie name.
 	 *
-	 * @param lectureserieName the lectureserie name
+	 * @param lectureserieName the new lectureserie name
 	 */
 	public void setLectureserieName(String lectureserieName) {
 		this.lectureserieName = lectureserieName;

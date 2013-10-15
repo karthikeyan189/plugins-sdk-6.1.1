@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -56,6 +56,13 @@ public class ProducerMetaDataList extends AbstractProducerMetaDataController{
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.action.AbstractProducerMetaDataController#execute(javax.portlet.ActionRequest, de.uhh.l2g.model.ProducerMetaDataModel, org.springframework.validation.BindException)
 	 */
+	/**
+	 * Execute.
+	 *
+	 * @param request the request
+	 * @param model the model
+	 * @param errors the errors
+	 */
 	@Override
 	public void execute(ActionRequest request, ProducerMetaDataModel model, BindException errors) {
 		//initialization for required model-objects
@@ -79,6 +86,13 @@ public class ProducerMetaDataList extends AbstractProducerMetaDataController{
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.action.AbstractProducerMetaDataController#execute(javax.portlet.RenderRequest, de.uhh.l2g.model.ProducerMetaDataModel, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Execute.
+	 *
+	 * @param request the request
+	 * @param model the model
+	 * @param errors the errors
 	 */
 	@Override
 	public void execute(RenderRequest request, ProducerMetaDataModel model, BindException errors) {

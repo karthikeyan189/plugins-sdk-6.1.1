@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -42,7 +42,7 @@ import java.util.LinkedHashMap;
 public class AdminLectureseriesManagementModel extends AdminLectureseriesInputModel implements Serializable {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new admin lectureseries management model.
 	 */
 	public AdminLectureseriesManagementModel() {
 		super();

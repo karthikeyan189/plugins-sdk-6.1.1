@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -56,7 +56,7 @@ public class Video {
 	/**
 	 * Sets the stream android url.
 	 *
-	 * @param streamAndroidUrl the stream android url
+	 * @param streamAndroidUrl the new stream android url
 	 */
 	public void setStreamAndroidUrl(String streamAndroidUrl) {
 		this.streamAndroidUrl = streamAndroidUrl;
@@ -77,7 +77,7 @@ public class Video {
 	/**
 	 * Sets the stream ios url.
 	 *
-	 * @param streamIosUrl the stream ios url
+	 * @param streamIosUrl the new stream ios url
 	 */
 	public void setStreamIosUrl(String streamIosUrl) {
 		this.streamIosUrl = streamIosUrl;
@@ -98,7 +98,7 @@ public class Video {
 	/**
 	 * Sets the citation2go.
 	 *
-	 * @param citation2go the citation2go
+	 * @param citation2go the new citation2go
 	 */
 	public void setCitation2go(int citation2go) {
 		this.citation2go = citation2go;
@@ -119,7 +119,7 @@ public class Video {
 	/**
 	 * Sets the stream url.
 	 *
-	 * @param streamUrl the stream url
+	 * @param streamUrl the new stream url
 	 */
 	public void setStreamUrl(String streamUrl) {
 		this.streamUrl = streamUrl;
@@ -140,7 +140,7 @@ public class Video {
 	/**
 	 * Sets the facility id.
 	 *
-	 * @param facilityId the facility id
+	 * @param facilityId the new facility id
 	 */
 	public void setFacilityId(int facilityId) {
 		this.facilityId = facilityId;
@@ -161,7 +161,7 @@ public class Video {
 	/**
 	 * Sets the stream type.
 	 *
-	 * @param streamType the stream type
+	 * @param streamType the new stream type
 	 */
 	public void setStreamType(String streamType) {
 		this.streamType = streamType;
@@ -182,7 +182,7 @@ public class Video {
 	/**
 	 * Sets the secure filename.
 	 *
-	 * @param secureFilename the secure filename
+	 * @param secureFilename the new secure filename
 	 */
 	public void setSecureFilename(String secureFilename) {
 		this.secureFilename = secureFilename;
@@ -203,7 +203,7 @@ public class Video {
 	/**
 	 * Sets the url.
 	 *
-	 * @param url the url
+	 * @param url the new url
 	 */
 	public void setUrl(String url) {
 		this.url = url;
@@ -224,7 +224,7 @@ public class Video {
 	/**
 	 * Sets the upload date.
 	 *
-	 * @param uploadDate the upload date
+	 * @param uploadDate the new upload date
 	 */
 	public void setUploadDate(String uploadDate) {
 		this.uploadDate = uploadDate;
@@ -246,7 +246,7 @@ public class Video {
 	/**
 	 * Sets the upload type.
 	 *
-	 * @param uploadType the upload type
+	 * @param uploadType the new upload type
 	 */
 	public void setUploadType(String uploadType) {
 		this.uploadType = uploadType;
@@ -267,7 +267,7 @@ public class Video {
 	/**
 	 * Sets the short name.
 	 *
-	 * @param shortName the short name
+	 * @param shortName the new short name
 	 */
 	public void setShortName(String shortName) {
 		this.shortName = shortName;
@@ -288,7 +288,7 @@ public class Video {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -309,7 +309,7 @@ public class Video {
 	/**
 	 * Sets the title.
 	 *
-	 * @param title the title
+	 * @param title the new title
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -330,7 +330,7 @@ public class Video {
 	/**
 	 * Sets the tags.
 	 *
-	 * @param tags the tags
+	 * @param tags the new tags
 	 */
 	public void setTags(String tags) {
 		this.tags = tags;
@@ -351,7 +351,7 @@ public class Video {
 	/**
 	 * Sets the container format.
 	 *
-	 * @param containerFormat the container format
+	 * @param containerFormat the new container format
 	 */
 	public void setContainerFormat(String containerFormat) {
 		this.containerFormat = containerFormat;
@@ -372,7 +372,7 @@ public class Video {
 	/**
 	 * Sets the filename.
 	 *
-	 * @param filename the filename
+	 * @param filename the new filename
 	 */
 	public void setFilename(String filename) {
 		this.filename = filename;
@@ -393,7 +393,7 @@ public class Video {
 	/**
 	 * Sets the resolution.
 	 *
-	 * @param resolution the resolution
+	 * @param resolution the new resolution
 	 */
 	public void setResolution(String resolution) {
 		this.resolution = resolution;
@@ -438,7 +438,7 @@ public class Video {
 	/**
 	 * Sets the codec.
 	 *
-	 * @param codec the codec
+	 * @param codec the new codec
 	 */
 	public void setCodec(String codec) {
 		this.codec = codec;
@@ -459,7 +459,7 @@ public class Video {
 	/**
 	 * Sets the lectureseries id.
 	 *
-	 * @param lectureseriesId the lectureseries id
+	 * @param lectureseriesId the new lectureseries id
 	 */
 	public void setLectureseriesId(int lectureseriesId) {
 		this.lectureseriesId = lectureseriesId;
@@ -480,7 +480,7 @@ public class Video {
 	/**
 	 * Sets the eigentuemer id.
 	 *
-	 * @param ownerId the eigentuemer id
+	 * @param ownerId the new eigentuemer id
 	 */
 	public void setEigentuemerId(int ownerId) {
 		this.ownerId = ownerId;
@@ -501,7 +501,7 @@ public class Video {
 	/**
 	 * Sets the producer id.
 	 *
-	 * @param producerId the producer id
+	 * @param producerId the new producer id
 	 */
 	public void setProducerId(int producerId) {
 		this.producerId = producerId;
@@ -522,7 +522,7 @@ public class Video {
 	/**
 	 * Sets the streamer.
 	 *
-	 * @param string the streamer
+	 * @param string the new streamer
 	 */
 	public void setStreamer(String string) {
 		this.streamer = string;
@@ -543,7 +543,7 @@ public class Video {
 	/**
 	 * Sets the generation date.
 	 *
-	 * @param generationDate the generation date
+	 * @param generationDate the new generation date
 	 */
 	public void setGenerationDate(String generationDate) {
 		this.generationDate = generationDate;
@@ -564,7 +564,7 @@ public class Video {
 	/**
 	 * Sets the host id.
 	 *
-	 * @param hostId the host id
+	 * @param hostId the new host id
 	 */
 	public void setHostId(int hostId) {
 		this.hostId = hostId;
@@ -585,7 +585,7 @@ public class Video {
 	/**
 	 * Sets the metadata id.
 	 *
-	 * @param metadataId the metadata id
+	 * @param metadataId the new metadata id
 	 */
 	public void setMetadataId(int metadataId) {
 		this.metadataId = metadataId;
@@ -606,7 +606,7 @@ public class Video {
 	/**
 	 * Sets the text id.
 	 *
-	 * @param textId the text id
+	 * @param textId the new text id
 	 */
 	public void setTextId(int textId) {
 		this.textId = textId;
@@ -630,7 +630,7 @@ public class Video {
 	/**
 	 * Checks if is openaccess.
 	 *
-	 * @return true, if checks if is openaccess
+	 * @return true, if is openaccess
 	 */
 	public boolean isOpenaccess() {
 		return openaccess;
@@ -639,7 +639,7 @@ public class Video {
 	/**
 	 * Sets the openaccess.
 	 *
-	 * @param openaccess the openaccess
+	 * @param openaccess the new openaccess
 	 */
 	public void setOpenaccess(boolean openaccess) {
 		this.openaccess = openaccess;
@@ -651,7 +651,7 @@ public class Video {
 	/**
 	 * Checks if is download allawed.
 	 *
-	 * @return true, if checks if is download allawed
+	 * @return true, if is download allawed
 	 */
 	public boolean isDownloadAllawed() {
 		return downloadAllawed;
@@ -660,7 +660,7 @@ public class Video {
 	/**
 	 * Sets the download allawed.
 	 *
-	 * @param downloadAllawed the download allawed
+	 * @param downloadAllawed the new download allawed
 	 */
 	public void setDownloadAllawed(boolean downloadAllawed) {
 		this.downloadAllawed = downloadAllawed;
@@ -681,7 +681,7 @@ public class Video {
 	/**
 	 * Sets the counter.
 	 *
-	 * @param counter the counter
+	 * @param counter the new counter
 	 */
 	public void setCounter(int counter) {
 		this.counter = counter;
@@ -702,7 +702,7 @@ public class Video {
 	/**
 	 * Sets the home dir.
 	 *
-	 * @param homeDir the home dir
+	 * @param homeDir the new home dir
 	 */
 	public void setHomeDir(String homeDir) {
 		this.homeDir = homeDir;
@@ -723,7 +723,7 @@ public class Video {
 	/**
 	 * Sets the host.
 	 *
-	 * @param host the host
+	 * @param host the new host
 	 */
 	public void setHost(String host) {
 		this.host = host;
@@ -744,7 +744,7 @@ public class Video {
 	/**
 	 * Sets the protokoll.
 	 *
-	 * @param protokoll the protokoll
+	 * @param protokoll the new protokoll
 	 */
 	public void setProtokoll(String protokoll) {
 		this.protokoll = protokoll;
@@ -765,7 +765,7 @@ public class Video {
 	/**
 	 * Sets the port.
 	 *
-	 * @param port the port
+	 * @param port the new port
 	 */
 	public void setPort(String port) {
 		this.port = port;
@@ -786,7 +786,7 @@ public class Video {
 	/**
 	 * Sets the object host.
 	 *
-	 * @param objectHost the object host
+	 * @param objectHost the new object host
 	 */
 	public void setObjectHost(Host objectHost) {
 		this.objectHost = objectHost;
@@ -807,7 +807,7 @@ public class Video {
 	/**
 	 * Sets the object producer.
 	 *
-	 * @param objectProducer the object producer
+	 * @param objectProducer the new object producer
 	 */
 	public void setObjectProducer(Producer objectProducer) {
 		this.objectProducer = objectProducer;
@@ -828,7 +828,7 @@ public class Video {
 	/**
 	 * Sets the short title.
 	 *
-	 * @param shortTitle the short title
+	 * @param shortTitle the new short title
 	 */
 	public void setShortTitle(String shortTitle) {
 		this.shortTitle = shortTitle;
@@ -849,7 +849,7 @@ public class Video {
 	/**
 	 * Sets the object metadata.
 	 *
-	 * @param objectMetadata the object metadata
+	 * @param objectMetadata the new object metadata
 	 */
 	public void setObjectMetadata(Metadata objectMetadata) {
 		this.objectMetadata = objectMetadata;
@@ -870,7 +870,7 @@ public class Video {
 	/**
 	 * Sets the object lectureseries.
 	 *
-	 * @param objectLectureseries the object lectureseries
+	 * @param objectLectureseries the new object lectureseries
 	 */
 	public void setObjectLectureseries(Lectureseries objectLectureseries) {
 		this.objectLectureseries = objectLectureseries;
@@ -891,7 +891,7 @@ public class Video {
 	/**
 	 * Sets the image.
 	 *
-	 * @param image the image
+	 * @param image the new image
 	 */
 	public void setImage(String image) {
 		this.image = image;
@@ -912,7 +912,7 @@ public class Video {
 	/**
 	 * Sets the simple date.
 	 *
-	 * @param simpleDate the simple date
+	 * @param simpleDate the new simple date
 	 */
 	public void setSimpleDate(String simpleDate) {
 		this.simpleDate = simpleDate;
@@ -933,7 +933,7 @@ public class Video {
 	/**
 	 * Sets the date.
 	 *
-	 * @param date the date
+	 * @param date the new date
 	 */
 	public void setDate(String date) {
 		this.date = date;
@@ -977,18 +977,18 @@ public class Video {
 	private boolean hasMp4File;
 
 	/**
-	 * Checks if is has mp4 file.
+	 * Checks if is checks for mp4 file.
 	 *
-	 * @return true, if checks if is has mp4 file
+	 * @return true, if is checks for mp4 file
 	 */
 	public boolean isHasMp4File() {
 		return hasMp4File;
 	}
 
 	/**
-	 * Sets the has mp4 file.
+	 * Sets the checks for mp4 file.
 	 *
-	 * @param hasMp4File the checks for mp4 file
+	 * @param hasMp4File the new checks for mp4 file
 	 */
 	public void setHasMp4File(boolean hasMp4File) {
 		this.hasMp4File = hasMp4File;
@@ -1009,7 +1009,7 @@ public class Video {
 	/**
 	 * Sets the mp3 file.
 	 *
-	 * @param mp3File the mp3 file
+	 * @param mp3File the new mp3 file
 	 */
 	public void setMp3File(File mp3File) {
 		this.mp3File = mp3File;
@@ -1030,7 +1030,7 @@ public class Video {
 	/**
 	 * Sets the m4v file.
 	 *
-	 * @param file the m4v file
+	 * @param file the new m4v file
 	 */
 	public void setM4vFile(File file) {
 		this.file = file;
@@ -1051,7 +1051,7 @@ public class Video {
 	/**
 	 * Sets the pdf file.
 	 *
-	 * @param pdfFile the pdf file
+	 * @param pdfFile the new pdf file
 	 */
 	public void setPdfFile(File pdfFile) {
 		this.pdfFile = pdfFile;
@@ -1072,7 +1072,7 @@ public class Video {
 	/**
 	 * Sets the mp4 file.
 	 *
-	 * @param mp4File the mp4 file
+	 * @param mp4File the new mp4 file
 	 */
 	public void setMp4File(File mp4File) {
 		this.mp4File = mp4File;
@@ -1093,7 +1093,7 @@ public class Video {
 	/**
 	 * Sets the secure url.
 	 *
-	 * @param secureUrl the secure url
+	 * @param secureUrl the new secure url
 	 */
 	public void setSecureUrl(String secureUrl) {
 		this.secureUrl = secureUrl;
@@ -1102,7 +1102,7 @@ public class Video {
 	/**
 	 * Sets the duration.
 	 *
-	 * @param i the duration
+	 * @param i the new duration
 	 */
 	public void setDuration(String i) {
 		this.duration = i;
@@ -1111,7 +1111,7 @@ public class Video {
 	/**
 	 * Sets the duration min.
 	 *
-	 * @param i the duration min
+	 * @param i the new duration min
 	 */
 	public void setDurationMin(String i) {
 		this.durationMin = i;
@@ -1132,7 +1132,7 @@ public class Video {
 	/**
 	 * Sets the bitrate.
 	 *
-	 * @param bitrate the bitrate
+	 * @param bitrate the new bitrate
 	 */
 	public void setBitrate(String bitrate) {
 		this.bitrate = bitrate;
@@ -1141,7 +1141,7 @@ public class Video {
 	/**
 	 * Sets the file size.
 	 *
-	 * @param fileSize the file size
+	 * @param fileSize the new file size
 	 */
 	public void setFileSize(Long fileSize) {
 		this.fileSize = fileSize;
@@ -1162,7 +1162,7 @@ public class Video {
 	/**
 	 * Sets the segment list.
 	 *
-	 * @param segmentList the segment list
+	 * @param segmentList the new segment list
 	 */
 	public void setSegmentList(List<?> segmentList) {
 		this.segmentList = segmentList;
@@ -1183,7 +1183,7 @@ public class Video {
 	/**
 	 * Sets the file size mb.
 	 *
-	 * @param fileSizeMB the file size mb
+	 * @param fileSizeMB the new file size mb
 	 */
 	public void setFileSizeMB(long fileSizeMB) {
 		this.fileSizeMB = fileSizeMB;
@@ -1204,7 +1204,7 @@ public class Video {
 	/**
 	 * Sets the hits.
 	 *
-	 * @param hits the hits
+	 * @param hits the new hits
 	 */
 	public void setHits(int hits) {
 		this.hits = hits;
@@ -1225,7 +1225,7 @@ public class Video {
 	/**
 	 * Sets the m4a file.
 	 *
-	 * @param file the m4a file
+	 * @param file the new m4a file
 	 */
 	public void setM4aFile(File file) {
 		m4aFile = file;
@@ -1234,7 +1234,7 @@ public class Video {
 	/**
 	 * Checks if is permitted to segment.
 	 *
-	 * @return true, if checks if is permitted to segment
+	 * @return true, if is permitted to segment
 	 */
 	public boolean isPermittedToSegment() {
 		return permittedToSegment;
@@ -1243,7 +1243,7 @@ public class Video {
 	/**
 	 * Sets the permitted to segment.
 	 *
-	 * @param permittedToSegment the permitted to segment
+	 * @param permittedToSegment the new permitted to segment
 	 */
 	public void setPermittedToSegment(boolean permittedToSegment) {
 		this.permittedToSegment = permittedToSegment;

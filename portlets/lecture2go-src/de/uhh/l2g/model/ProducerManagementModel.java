@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -52,7 +52,7 @@ public class ProducerManagementModel extends ProducerModel implements Serializab
 	private List<ProducerLRInfo> producerLRList;
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new producer management model.
 	 */
 	public ProducerManagementModel() {
 		this.setAllFaculties(new LinkedHashMap<String, String>());
@@ -88,7 +88,7 @@ public class ProducerManagementModel extends ProducerModel implements Serializab
 	/**
 	 * Sets the producer lr list.
 	 *
-	 * @param producerLRList the producer lr list
+	 * @param producerLRList the new producer lr list
 	 */
 	public void setProducerLRList(List<ProducerLRInfo> producerLRList) {
 		this.producerLRList = producerLRList;

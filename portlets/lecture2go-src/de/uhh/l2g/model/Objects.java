@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -55,7 +55,7 @@ public class Objects {
 	private Date lastLoginDate;
 
 	/**
-	 * Gets the create date.
+	 * Gets the creates the date.
 	 *
 	 * @return the creates the date
 	 */
@@ -64,9 +64,9 @@ public class Objects {
 	}
 
 	/**
-	 * Sets the create date.
+	 * Sets the creates the date.
 	 *
-	 * @param createDate the creates the date
+	 * @param createDate the new creates the date
 	 */
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
@@ -84,7 +84,7 @@ public class Objects {
 	/**
 	 * Sets the last login date.
 	 *
-	 * @param lastLoginDate the last login date
+	 * @param lastLoginDate the new last login date
 	 */
 	public void setLastLoginDate(Date lastLoginDate) {
 		this.lastLoginDate = lastLoginDate;
@@ -102,7 +102,7 @@ public class Objects {
 	/**
 	 * Sets the faculty.
 	 *
-	 * @param faculty the faculty
+	 * @param faculty the new faculty
 	 */
 	public void setFaculty(Facility faculty) {
 		this.faculty = faculty;
@@ -139,7 +139,7 @@ public class Objects {
 	/**
 	 * Sets the host list.
 	 *
-	 * @param hostList the host list
+	 * @param hostList the new host list
 	 */
 	public void setHostList(List<Host> hostList) {
 		this.hostList = hostList;
@@ -148,7 +148,7 @@ public class Objects {
 	/**
 	 * Sets the lectureseries list.
 	 *
-	 * @param lectureseriesList the lectureseries list
+	 * @param lectureseriesList the new lectureseries list
 	 */
 	public void setLectureseriesList(List<Lectureseries> lectureseriesList) {
 		this.lectureseriesList = lectureseriesList;
@@ -160,7 +160,7 @@ public class Objects {
 	/**
 	 * Sets the video hit list.
 	 *
-	 * @param videoHitList the video hit list
+	 * @param videoHitList the new video hit list
 	 */
 	public void setVideoHitList(List<Video> videoHitList) {
 		this.videoHitList = videoHitList;
@@ -181,7 +181,7 @@ public class Objects {
 	/**
 	 * Sets the video new list.
 	 *
-	 * @param VideoNewList the video new list
+	 * @param VideoNewList the new video new list
 	 */
 	public void setVideoNewList(List<Video> VideoNewList) {
 		this.videoNewList = VideoNewList;
@@ -202,7 +202,7 @@ public class Objects {
 	/**
 	 * Sets the video fav list.
 	 *
-	 * @param videoFavList the video fav list
+	 * @param videoFavList the new video fav list
 	 */
 	public void setVideoFavList(List<Video> videoFavList) {
 		this.videoFavList = videoFavList;
@@ -236,7 +236,7 @@ public class Objects {
 	/**
 	 * Sets the more videos hit list.
 	 *
-	 * @param moreVideosHitList the more videos hit list
+	 * @param moreVideosHitList the new more videos hit list
 	 */
 	public void setMoreVideosHitList(List<?> moreVideosHitList) {
 		this.moreVideosHitList = moreVideosHitList;
@@ -257,7 +257,7 @@ public class Objects {
 	/**
 	 * Sets the video list.
 	 *
-	 * @param videoList the video list
+	 * @param videoList the new video list
 	 */
 	public void setVideoList(List<Video> videoList) {
 		this.videoList = videoList;
@@ -275,7 +275,7 @@ public class Objects {
 	/**
 	 * Sets the related videos list.
 	 *
-	 * @param relatedVideosList the related videos list
+	 * @param relatedVideosList the new related videos list
 	 */
 	public void setRelatedVideosList(List<Video> relatedVideosList) {
 		this.relatedVideosList = relatedVideosList;
@@ -297,7 +297,7 @@ public class Objects {
 	/**
 	 * Sets the university list.
 	 *
-	 * @param universityList the university list
+	 * @param universityList the new university list
 	 */
 	public void setUniversityList(List<Facility> universityList) {
 		this.universityList = universityList;
@@ -318,7 +318,7 @@ public class Objects {
 	/**
 	 * Sets the video.
 	 *
-	 * @param video the video
+	 * @param video the new video
 	 */
 	public void setVideo(Video video) {
 		this.video = video;
@@ -362,7 +362,7 @@ public class Objects {
 	/**
 	 * Sets the sub facility1 id.
 	 *
-	 * @param subFacility1Id the sub facility1 id
+	 * @param subFacility1Id the new sub facility1 id
 	 */
 	public void setSubFacility1Id(Integer subFacility1Id) {
 		this.subFacility1Id = subFacility1Id;
@@ -380,7 +380,7 @@ public class Objects {
 	/**
 	 * Sets the sub facility2 id.
 	 *
-	 * @param subFacility2Id the sub facility2 id
+	 * @param subFacility2Id the new sub facility2 id
 	 */
 	public void setSubFacility2Id(Integer subFacility2Id) {
 		this.subFacility2Id = subFacility2Id;
@@ -389,7 +389,7 @@ public class Objects {
 	/**
 	 * Checks if is sub facility2 list visible.
 	 *
-	 * @return true, if checks if is sub facility2 list visible
+	 * @return true, if is sub facility2 list visible
 	 */
 	public boolean isSubFacility2ListVisible() {
 		return subFacility2ListVisible;
@@ -398,7 +398,7 @@ public class Objects {
 	/**
 	 * Sets the sub facility2 list visible.
 	 *
-	 * @param subFacility2ListVisible the sub facility2 list visible
+	 * @param subFacility2ListVisible the new sub facility2 list visible
 	 */
 	public void setSubFacility2ListVisible(boolean subFacility2ListVisible) {
 		this.subFacility2ListVisible = subFacility2ListVisible;
@@ -407,7 +407,7 @@ public class Objects {
 	/**
 	 * Checks if is sub facility1 list visible.
 	 *
-	 * @return true, if checks if is sub facility1 list visible
+	 * @return true, if is sub facility1 list visible
 	 */
 	public boolean isSubFacility1ListVisible() {
 		return subFacility1ListVisible;
@@ -416,7 +416,7 @@ public class Objects {
 	/**
 	 * Sets the sub facility1 list visible.
 	 *
-	 * @param subFacility1ListVisible the sub facility1 list visible
+	 * @param subFacility1ListVisible the new sub facility1 list visible
 	 */
 	public void setSubFacility1ListVisible(boolean subFacility1ListVisible) {
 		this.subFacility1ListVisible = subFacility1ListVisible;
@@ -446,7 +446,7 @@ public class Objects {
 	/**
 	 * Sets the faculty list.
 	 *
-	 * @param facultyList the faculty list
+	 * @param facultyList the new faculty list
 	 */
 	public void setFacultyList(List<Facility> facultyList) {
 		this.facultyList = facultyList;
@@ -464,7 +464,7 @@ public class Objects {
 	/**
 	 * Sets the host.
 	 *
-	 * @param host the host
+	 * @param host the new host
 	 */
 	public void setHost(Host host) {
 		this.host = host;
@@ -482,7 +482,7 @@ public class Objects {
 	/**
 	 * Sets the mark list.
 	 *
-	 * @param markList the mark list
+	 * @param markList the new mark list
 	 */
 	public void setMarkList(List<Mark> markList) {
 		this.markList = markList;
@@ -500,7 +500,7 @@ public class Objects {
 	/**
 	 * Sets the metadata.
 	 *
-	 * @param metadata the metadata
+	 * @param metadata the new metadata
 	 */
 	public void setMetadata(Metadata metadata) {
 		this.metadata = metadata;
@@ -518,7 +518,7 @@ public class Objects {
 	/**
 	 * Sets the producer.
 	 *
-	 * @param producer the producer
+	 * @param producer the new producer
 	 */
 	public void setProducer(Producer producer) {
 		this.producer = producer;
@@ -536,7 +536,7 @@ public class Objects {
 	/**
 	 * Sets the producer list.
 	 *
-	 * @param producerList the producer list
+	 * @param producerList the new producer list
 	 */
 	public void setProducerList(List<Producer> producerList) {
 		this.producerList = producerList;
@@ -554,7 +554,7 @@ public class Objects {
 	/**
 	 * Sets the segment list.
 	 *
-	 * @param segmentList the segment list
+	 * @param segmentList the new segment list
 	 */
 	public void setSegmentList(List<Mark> segmentList) {
 		this.segmentList = segmentList;
@@ -572,7 +572,7 @@ public class Objects {
 	/**
 	 * Sets the lectureseries.
 	 *
-	 * @param lectureseries the lectureseries
+	 * @param lectureseries the new lectureseries
 	 */
 	public void setLectureseries(Lectureseries lectureseries) {
 		this.lectureseries = lectureseries;
@@ -593,7 +593,7 @@ public class Objects {
 	/**
 	 * Sets the sub facility1 list.
 	 *
-	 * @param subFacility1List the sub facility1 list
+	 * @param subFacility1List the new sub facility1 list
 	 */
 	public void setSubFacility1List(List<Facility> subFacility1List) {
 		this.subFacility1List = subFacility1List;
@@ -614,7 +614,7 @@ public class Objects {
 	/**
 	 * Sets the sub facility2 list.
 	 *
-	 * @param list the sub facility2 list
+	 * @param list the new sub facility2 list
 	 */
 	public void setSubFacility2List(List<Lectureseries> list) {
 		this.subFacility2List = list;

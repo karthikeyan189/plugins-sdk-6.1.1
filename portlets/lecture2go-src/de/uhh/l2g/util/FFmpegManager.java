@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -47,10 +47,10 @@ import de.uhh.l2g.beans.Video;
 public class FFmpegManager {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new f fmpeg manager.
 	 *
 	 * @param filename the filename
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public FFmpegManager(String filename) throws IOException {
 		ProcessBuilder pb = new ProcessBuilder(ffmgegLibPath, "-i", filename);
@@ -96,7 +96,7 @@ public class FFmpegManager {
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new f fmpeg manager.
 	 */
 	public FFmpegManager() {
 
@@ -108,7 +108,7 @@ public class FFmpegManager {
 	 * @param video the video
 	 * @param time the time
 	 * @param thumbnailLocation the thumbnail location
-	 * @return true, if creates the thumbnail
+	 * @return true, if successful
 	 */
 	public boolean createThumbnail(Video video, String time, String thumbnailLocation) {
 		boolean ret = false;
@@ -138,7 +138,7 @@ public class FFmpegManager {
 	 *
 	 * @param fileLocation the file location
 	 * @param thumbnailLocation the thumbnail location
-	 * @return true, if creates the thumbnail
+	 * @return true, if successful
 	 */
 	public boolean createThumbnail(String fileLocation, String thumbnailLocation) {
 		Runtime runCmd = Runtime.getRuntime();
@@ -179,7 +179,7 @@ public class FFmpegManager {
 	/**
 	 * Sets the video resolution.
 	 *
-	 * @param videoResolution the video resolution
+	 * @param videoResolution the new video resolution
 	 */
 	public void setVideoResolution(String videoResolution) {
 		this.videoResolution = videoResolution;
@@ -200,7 +200,7 @@ public class FFmpegManager {
 	/**
 	 * Sets the video bit rate.
 	 *
-	 * @param videoBitRate the video bit rate
+	 * @param videoBitRate the new video bit rate
 	 */
 	public void setVideoBitRate(String videoBitRate) {
 		this.videoBitRate = videoBitRate;
@@ -221,7 +221,7 @@ public class FFmpegManager {
 	/**
 	 * Sets the video metadata.
 	 *
-	 * @param videoMetadata the video metadata
+	 * @param videoMetadata the new video metadata
 	 */
 	public void setVideoMetadata(String[] videoMetadata) {
 		this.videoMetadata = videoMetadata;
@@ -230,7 +230,7 @@ public class FFmpegManager {
 	/**
 	 * Sets the video duration.
 	 *
-	 * @param videoDuration the video duration
+	 * @param videoDuration the new video duration
 	 */
 	public void setVideoDuration(String videoDuration) {
 		this.videoDuration = videoDuration;
@@ -251,7 +251,7 @@ public class FFmpegManager {
 	/**
 	 * Sets the video codec.
 	 *
-	 * @param videoCodec the video codec
+	 * @param videoCodec the new video codec
 	 */
 	public void setVideoCodec(String videoCodec) {
 		this.videoCodec = videoCodec;
@@ -272,7 +272,7 @@ public class FFmpegManager {
 	/**
 	 * Sets the ffmgeg lib path.
 	 *
-	 * @param ffmgegLibPath the ffmgeg lib path
+	 * @param ffmgegLibPath the new ffmgeg lib path
 	 */
 	public void setFfmgegLibPath(String ffmgegLibPath) {
 		this.ffmgegLibPath = ffmgegLibPath;

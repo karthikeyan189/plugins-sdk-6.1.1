@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -52,7 +52,7 @@ public class CoordinatorModel extends ProducerMetaDataModel {
 	/**
 	 * Sets the office id.
 	 *
-	 * @param officeId the office id
+	 * @param officeId the new office id
 	 */
 	public void setOfficeId(int officeId) {
 		this.officeId = officeId;
@@ -73,7 +73,7 @@ public class CoordinatorModel extends ProducerMetaDataModel {
 	/**
 	 * Sets the user id.
 	 *
-	 * @param userId the user id
+	 * @param userId the new user id
 	 */
 	public void setUserId(int userId) {
 		this.userId = userId;

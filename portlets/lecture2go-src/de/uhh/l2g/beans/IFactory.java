@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -35,14 +35,14 @@ package de.uhh.l2g.beans;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 
 /**
- * The Interface IFactory.
+ * A factory for creating I objects.
  */
 public interface IFactory { 
 	
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory);
 
@@ -56,7 +56,7 @@ public interface IFactory {
 	/**
 	 * Sets the utility bean factory.
 	 *
-	 * @param utilityBeanFactory the utility bean factory
+	 * @param utilityBeanFactory the new utility bean factory
 	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory);	
 }

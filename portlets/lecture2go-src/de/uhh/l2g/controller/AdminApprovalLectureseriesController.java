@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -62,7 +62,7 @@ public class AdminApprovalLectureseriesController extends AbstractController {
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -76,6 +76,13 @@ public class AdminApprovalLectureseriesController extends AbstractController {
 	 * @seeorg.springframework.web.portlet.mvc.AbstractController#
 	 * handleActionRequestInternal(javax.portlet.ActionRequest,
 	 * javax.portlet.ActionResponse)
+	 */
+	/**
+	 * Handle action request internal.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected void handleActionRequestInternal(ActionRequest request, ActionResponse response) throws Exception {
@@ -123,7 +130,7 @@ public class AdminApprovalLectureseriesController extends AbstractController {
 	/**
 	 * Sets the success view.
 	 *
-	 * @param successView the success view
+	 * @param successView the new success view
 	 */
 	public void setSuccessView(String successView) {
 		this.successView = successView;

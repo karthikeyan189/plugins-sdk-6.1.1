@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -47,14 +47,14 @@ public class FacilityRowMapper implements RowMapper {
 	private boolean withPath;
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new facility row mapper.
 	 */
 	public FacilityRowMapper() {
 		withPath = false;
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new facility row mapper.
 	 *
 	 * @param withPath the with path
 	 */
@@ -64,6 +64,14 @@ public class FacilityRowMapper implements RowMapper {
 
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.core.RowMapper#mapRow(java.sql.ResultSet, int)
+	 */
+	/**
+	 * Map row.
+	 *
+	 * @param rs the rs
+	 * @param line the line
+	 * @return the object
+	 * @throws SQLException the sQL exception
 	 */
 	public Object mapRow(ResultSet rs, int line) throws SQLException {
 		ResultSetExtractor extractor = withPath ? new FacilityWithPathResultSetExtractor()

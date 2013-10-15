@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -65,14 +65,14 @@ public class Htaccess {
 	/**
 	 * Sets the file ht users.
 	 *
-	 * @param fileHtUsers the file ht users
+	 * @param fileHtUsers the new file ht users
 	 */
 	public void setFileHtUsers(String fileHtUsers) {
 		this.fileHtUsers = fileHtUsers;
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new htaccess.
 	 */
 	public Htaccess() {
 

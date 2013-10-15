@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -53,7 +53,7 @@ public class Facility {
 	/**
 	 * Sets the host.
 	 *
-	 * @param host the host
+	 * @param host the new host
 	 */
 	public void setHost(Host host) {
 		this.host = host;
@@ -65,7 +65,7 @@ public class Facility {
 	/**
 	 * Checks if is deletable.
 	 *
-	 * @return true, if checks if is deletable
+	 * @return true, if is deletable
 	 */
 	public boolean isDeletable() {
 		return deletable;
@@ -74,7 +74,7 @@ public class Facility {
 	/**
 	 * Sets the deletable.
 	 *
-	 * @param deletable the deletable
+	 * @param deletable the new deletable
 	 */
 	public void setDeletable(boolean deletable) {
 		this.deletable = deletable;
@@ -95,7 +95,7 @@ public class Facility {
 	/**
 	 * Sets the sort.
 	 *
-	 * @param i the sort
+	 * @param i the new sort
 	 */
 	public void setSort(int i) {
 		this.sort = i;
@@ -116,7 +116,7 @@ public class Facility {
 	/**
 	 * Sets the name.
 	 *
-	 * @param name the name
+	 * @param name the new name
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -137,7 +137,7 @@ public class Facility {
 	/**
 	 * Sets the level.
 	 *
-	 * @param level the level
+	 * @param level the new level
 	 */
 	public void setLevel(int level) {
 		this.level = level;
@@ -158,7 +158,7 @@ public class Facility {
 	/**
 	 * Sets the www.
 	 *
-	 * @param www the www
+	 * @param www the new www
 	 */
 	public void setWww(String www) {
 		this.www = www;
@@ -179,7 +179,7 @@ public class Facility {
 	/**
 	 * Sets the typ.
 	 *
-	 * @param typ the typ
+	 * @param typ the new typ
 	 */
 	public void setTyp(String typ) {
 		this.typ = typ;
@@ -200,7 +200,7 @@ public class Facility {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -221,7 +221,7 @@ public class Facility {
 	/**
 	 * Sets the parent id.
 	 *
-	 * @param parentId the parent id
+	 * @param parentId the new parent id
 	 */
 	public void setParentId(int parentId) {
 		this.parentId = parentId;
@@ -233,7 +233,7 @@ public class Facility {
 	/**
 	 * Sets the path.
 	 *
-	 * @param path the path
+	 * @param path the new path
 	 */
 	public void setPath(String path) {
 		this.path = path;
@@ -249,7 +249,7 @@ public class Facility {
 	}
 
 	/**
-	 * Gets the has videos.
+	 * Gets the checks for videos.
 	 *
 	 * @return the checks for videos
 	 */
@@ -258,16 +258,16 @@ public class Facility {
 	}
 
 	/**
-	 * Sets the has videos.
+	 * Sets the checks for videos.
 	 *
-	 * @param hasVideos the checks for videos
+	 * @param hasVideos the new checks for videos
 	 */
 	public void setHasVideos(boolean hasVideos) {
 		this.hasVideos = hasVideos;
 	}
 
 	/**
-	 * Gets the has lectureseries.
+	 * Gets the checks for lectureseries.
 	 *
 	 * @return the checks for lectureseries
 	 */
@@ -276,9 +276,9 @@ public class Facility {
 	}
 
 	/**
-	 * Sets the has lectureseries.
+	 * Sets the checks for lectureseries.
 	 *
-	 * @param hasLectureseries the checks for lectureseries
+	 * @param hasLectureseries the new checks for lectureseries
 	 */
 	public void setHasLectureseries(boolean hasLectureseries) {
 		this.hasLectureseries = hasLectureseries;

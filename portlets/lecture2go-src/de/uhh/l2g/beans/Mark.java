@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -39,14 +39,14 @@ package de.uhh.l2g.beans;
 public class Mark extends Chapter {
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new mark.
 	 */
 	public Mark() {
 		//
 	}
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new mark.
 	 *
 	 * @param id the id
 	 * @param userId the user id
@@ -79,7 +79,7 @@ public class Mark extends Chapter {
 	/**
 	 * Sets the description.
 	 *
-	 * @param description the description
+	 * @param description the new description
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -91,7 +91,7 @@ public class Mark extends Chapter {
 	/**
 	 * Checks if is chapter.
 	 *
-	 * @return true, if checks if is chapter
+	 * @return true, if is chapter
 	 */
 	public boolean isChapter() {
 		return chapter;
@@ -100,7 +100,7 @@ public class Mark extends Chapter {
 	/**
 	 * Sets the chapter.
 	 *
-	 * @param chapter the chapter
+	 * @param chapter the new chapter
 	 */
 	public void setChapter(boolean chapter) {
 		this.chapter = chapter;

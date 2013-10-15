@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -78,7 +78,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the l2go roles.
 	 *
-	 * @param l2goRoles the l2go roles
+	 * @param l2goRoles the new l2go roles
 	 */
 	public void setL2goRoles(Properties l2goRoles) {
 		this.l2goRoles = l2goRoles;
@@ -96,7 +96,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the l2go administrator role id.
 	 *
-	 * @param l2goAdministratorRoleId the l2go administrator role id
+	 * @param l2goAdministratorRoleId the new l2go administrator role id
 	 */
 	public void setL2goAdministratorRoleId(int l2goAdministratorRoleId) {
 		this.l2goAdministratorRoleId = l2goAdministratorRoleId;
@@ -114,7 +114,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the l2go student role id.
 	 *
-	 * @param l2goStudentRoleId the l2go student role id
+	 * @param l2goStudentRoleId the new l2go student role id
 	 */
 	public void setL2goStudentRoleId(int l2goStudentRoleId) {
 		this.l2goStudentRoleId = l2goStudentRoleId;
@@ -141,7 +141,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the l2go producer role id.
 	 *
-	 * @param l2goProducerRoleId the l2go producer role id
+	 * @param l2goProducerRoleId the new l2go producer role id
 	 */
 	public void setL2goProducerRoleId(int l2goProducerRoleId) {
 		this.l2goProducerRoleId = l2goProducerRoleId;
@@ -162,7 +162,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the l2go coordinator role id.
 	 *
-	 * @param l2goCoordinatorRoleId the l2go coordinator role id
+	 * @param l2goCoordinatorRoleId the new l2go coordinator role id
 	 */
 	public void setL2goCoordinatorRoleId(int l2goCoordinatorRoleId) {
 		this.l2goCoordinatorRoleId = l2goCoordinatorRoleId;
@@ -183,7 +183,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the utility bean factory.
 	 *
-	 * @param utilityBeanFactory the utility bean factory
+	 * @param utilityBeanFactory the new utility bean factory
 	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory) {
 		this.utilityBeanFactory = utilityBeanFactory;
@@ -205,7 +205,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -213,6 +213,15 @@ public class AdminUserManagementController extends AbstractFormController implem
 	
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#showForm(javax.portlet.RenderRequest, javax.portlet.RenderResponse, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Show form.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param errors the errors
+	 * @return the model and view
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected ModelAndView showForm(RenderRequest request, RenderResponse response, BindException errors) throws Exception {
@@ -247,6 +256,16 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#renderFormSubmission(javax.portlet.RenderRequest, javax.portlet.RenderResponse, java.lang.Object, org.springframework.validation.BindException)
 	 */
+	/**
+	 * Render form submission.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
+	 * @return the model and view
+	 * @throws Exception the exception
+	 */
 	@Override
 	protected ModelAndView renderFormSubmission(RenderRequest request, RenderResponse response, Object command, BindException errors) throws Exception {
 		ModelAndView mv = new ModelAndView();
@@ -264,6 +283,15 @@ public class AdminUserManagementController extends AbstractFormController implem
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.mvc.AbstractFormController#processFormSubmission(javax.portlet.ActionRequest, javax.portlet.ActionResponse, java.lang.Object, org.springframework.validation.BindException)
+	 */
+	/**
+	 * Process form submission.
+	 *
+	 * @param request the request
+	 * @param response the response
+	 * @param command the command
+	 * @param errors the errors
+	 * @throws Exception the exception
 	 */
 	@Override
 	protected void processFormSubmission(ActionRequest request, ActionResponse response, Object command, BindException errors) throws Exception {
@@ -337,7 +365,7 @@ public class AdminUserManagementController extends AbstractFormController implem
 	/**
 	 * Sets the roles.
 	 *
-	 * @param model the roles
+	 * @param model the new roles
 	 */
 	public void setRoles(AdminUserManagementModel model){
 		Map<String, String> lecture2goRoles = new HashMap<String, String>();
@@ -349,6 +377,11 @@ public class AdminUserManagementController extends AbstractFormController implem
 
 	/* (non-Javadoc)
 	 * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet()
+	 */
+	/**
+	 * After properties set.
+	 *
+	 * @throws Exception the exception
 	 */
 	public void afterPropertiesSet() throws Exception {
 		Assert.notNull(daoBeanFactory, "daoBeanFactory not null required");

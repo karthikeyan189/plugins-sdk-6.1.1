@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -91,7 +91,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/**
 	 * Sets the utility bean factory.
 	 *
-	 * @param utilityBeanFactory the utility bean factory
+	 * @param utilityBeanFactory the new utility bean factory
 	 */
 	public void setUtilityBeanFactory(XmlBeanFactory utilityBeanFactory) {
 		this.utilityBeanFactory = utilityBeanFactory;
@@ -115,7 +115,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/**
 	 * Sets the host dao.
 	 *
-	 * @param hostDao the host dao
+	 * @param hostDao the new host dao
 	 */
 	public void setHostDao(HostDao hostDao) {
 		this.hostDao = hostDao;
@@ -133,7 +133,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/**
 	 * Sets the producer dao.
 	 *
-	 * @param producerDao the producer dao
+	 * @param producerDao the new producer dao
 	 */
 	public void setProducerDao(ProducerDao producerDao) {
 		this.producerDao = producerDao;
@@ -151,7 +151,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/**
 	 * Sets the lectureseries dao.
 	 *
-	 * @param lectureseriesDao the lectureseries dao
+	 * @param lectureseriesDao the new lectureseries dao
 	 */
 	public void setLectureseriesDao(LectureseriesDao lectureseriesDao) {
 		this.lectureseriesDao = lectureseriesDao;
@@ -169,7 +169,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/**
 	 * Sets the metadata dao.
 	 *
-	 * @param metadataDao the metadata dao
+	 * @param metadataDao the new metadata dao
 	 */
 	public void setMetadataDao(MetadataDao metadataDao) {
 		this.metadataDao = metadataDao;
@@ -187,7 +187,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/**
 	 * Sets the segment dao.
 	 *
-	 * @param segmentDao the segment dao
+	 * @param segmentDao the new segment dao
 	 */
 	public void setSegmentDao(SegmentDao segmentDao) {
 		this.segmentDao = segmentDao;
@@ -205,7 +205,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/**
 	 * Sets the facility dao.
 	 *
-	 * @param facilityDao the facility dao
+	 * @param facilityDao the new facility dao
 	 */
 	public void setFacilityDao(FacilityDao facilityDao) {
 		this.facilityDao = facilityDao;
@@ -232,6 +232,9 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IVideoDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -241,6 +244,11 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IVideoDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
 	 */
 	public void deleteById(int id) {
 
@@ -252,6 +260,11 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IVideoDao#getAll()
 	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Video> getAll(){
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -262,6 +275,12 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IVideoDao#getById(int)
+	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Video> getById(int id) {
@@ -373,6 +392,23 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IVideoDao#create(java.lang.String, java.lang.String, int, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, int, int, int, int)
+	 */
+	/**
+	 * Creates the.
+	 *
+	 * @param title the title
+	 * @param tags the tags
+	 * @param lectureseriesId the lectureseries id
+	 * @param ownerId the owner id
+	 * @param producerId the producer id
+	 * @param containerFormat the container format
+	 * @param filename the filename
+	 * @param resolution the resolution
+	 * @param duration the duration
+	 * @param hostId the host id
+	 * @param metadataId the metadata id
+	 * @param facilityId the facility id
+	 * @param citation2go the citation2go
 	 */
 	public void create(String title, String tags, int lectureseriesId, int ownerId, int producerId, String containerFormat, String filename, String resolution, String duration, int hostId, int metadataId, int facilityId, int citation2go) {
 
@@ -1007,7 +1043,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	 * Video present in return list.
 	 *
 	 * @param video the video
-	 * @return true, if video present in return list
+	 * @return true, if successful
 	 */
 	private boolean videoPresentInReturnList(Video video) {
 
@@ -1024,7 +1060,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	 * Video present in return list2.
 	 *
 	 * @param video the video
-	 * @return true, if video present in return list2
+	 * @return true, if successful
 	 */
 	private boolean videoPresentInReturnList2(Video video) {
 
@@ -1183,7 +1219,7 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	 * Filename exists.
 	 *
 	 * @param filename the filename
-	 * @return true, if filename exists
+	 * @return true, if successful
 	 */
 	@SuppressWarnings("unchecked")
 	public boolean filenameExists(String filename) {
@@ -1226,8 +1262,8 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 	 * Fill video list with properties.
 	 *
 	 * @param videoList the video list
-	 * @return the list< video>
-	 * @throws IOException the IO exception
+	 * @return the list
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public List<Video> fillVideoListWithProperties(List<Video> videoList) throws IOException {
 		ListIterator<Video> it = videoList.listIterator();

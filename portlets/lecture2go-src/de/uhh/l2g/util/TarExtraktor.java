@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -50,7 +50,7 @@ public class TarExtraktor {
 	 *
 	 * @param tarFileName the tar file name
 	 * @param dest the dest
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void untarFiles(String tarFileName, File dest) throws IOException {
 		// assuming the file you pass in is not a dir

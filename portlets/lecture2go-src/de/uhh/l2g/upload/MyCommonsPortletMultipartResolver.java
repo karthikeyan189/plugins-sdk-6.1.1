@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -68,7 +68,7 @@ public class MyCommonsPortletMultipartResolver extends CommonsPortletMultipartRe
 	/**
 	 * Sets the dao bean factory.
 	 *
-	 * @param beanFactory the dao bean factory
+	 * @param beanFactory the new dao bean factory
 	 */
 	public void setDaoBeanFactory(XmlBeanFactory beanFactory) {
 		this.daoBeanFactory = beanFactory;
@@ -76,6 +76,13 @@ public class MyCommonsPortletMultipartResolver extends CommonsPortletMultipartRe
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.portlet.multipart.CommonsPortletMultipartResolver#parseRequest(javax.portlet.ActionRequest)
+	 */
+	/**
+	 * Parses the request.
+	 *
+	 * @param request the request
+	 * @return the multipart parsing result
+	 * @throws MultipartException the multipart exception
 	 */
 	@Override
 	protected MultipartParsingResult parseRequest(ActionRequest request) throws MultipartException {
@@ -105,6 +112,12 @@ public class MyCommonsPortletMultipartResolver extends CommonsPortletMultipartRe
 
 	/* (non-Javadoc)
 	 * @see org.springframework.web.multipart.commons.CommonsFileUploadSupport#prepareFileUpload(java.lang.String)
+	 */
+	/**
+	 * Prepare file upload.
+	 *
+	 * @param encoding the encoding
+	 * @return the file upload
 	 */
 	@Override
 	protected FileUpload prepareFileUpload(String encoding) {

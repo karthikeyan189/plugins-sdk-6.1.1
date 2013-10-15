@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -53,7 +53,7 @@ public class Lectureseries {
 	/**
 	 * Sets the deleteable.
 	 *
-	 * @param deleteable the deleteable
+	 * @param deleteable the new deleteable
 	 */
 	public void setDeleteable(boolean deleteable) {
 		this.deleteable = deleteable;
@@ -74,7 +74,7 @@ public class Lectureseries {
 	/**
 	 * Sets the number.
 	 *
-	 * @param number the number
+	 * @param number the new number
 	 */
 	public void setNumber(String number) {
 		this.number = number;
@@ -95,7 +95,7 @@ public class Lectureseries {
 	/**
 	 * Sets the event type.
 	 *
-	 * @param eventType the event type
+	 * @param eventType the new event type
 	 */
 	public void setEventType(String eventType) {
 		this.eventType = eventType;
@@ -116,7 +116,7 @@ public class Lectureseries {
 	/**
 	 * Sets the name.
 	 *
-	 * @param name the name
+	 * @param name the new name
 	 */
 	public void setName(String name) {
 		this.name = name;
@@ -137,7 +137,7 @@ public class Lectureseries {
 	/**
 	 * Sets the long desc.
 	 *
-	 * @param longDesc the long desc
+	 * @param longDesc the new long desc
 	 */
 	public void setLongDesc(String longDesc) {
 		this.longDesc = longDesc;
@@ -158,7 +158,7 @@ public class Lectureseries {
 	/**
 	 * Sets the short desc.
 	 *
-	 * @param shortDesc the short desc
+	 * @param shortDesc the new short desc
 	 */
 	public void setShortDesc(String shortDesc) {
 		this.shortDesc = shortDesc;
@@ -179,7 +179,7 @@ public class Lectureseries {
 	/**
 	 * Sets the semester name.
 	 *
-	 * @param semesterName the semester name
+	 * @param semesterName the new semester name
 	 */
 	public void setSemesterName(String semesterName) {
 		this.semesterName = semesterName;
@@ -200,7 +200,7 @@ public class Lectureseries {
 	/**
 	 * Sets the language.
 	 *
-	 * @param language the language
+	 * @param language the new language
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
@@ -221,7 +221,7 @@ public class Lectureseries {
 	/**
 	 * Sets the faculty name.
 	 *
-	 * @param facultyName the faculty name
+	 * @param facultyName the new faculty name
 	 */
 	public void setFacultyName(String facultyName) {
 		this.facultyName = facultyName;
@@ -242,7 +242,7 @@ public class Lectureseries {
 	/**
 	 * Sets the instructors string.
 	 *
-	 * @param instructorsString the instructors string
+	 * @param instructorsString the new instructors string
 	 */
 	public void setInstructorsString(String instructorsString) {
 		this.instructorsString = instructorsString;
@@ -263,7 +263,7 @@ public class Lectureseries {
 	/**
 	 * Sets the facility id.
 	 *
-	 * @param facilityId the facility id
+	 * @param facilityId the new facility id
 	 */
 	public void setFacilityId(int facilityId) {
 		this.facilityId = facilityId;
@@ -284,7 +284,7 @@ public class Lectureseries {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the id
+	 * @param id the new id
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -305,7 +305,7 @@ public class Lectureseries {
 	/**
 	 * Sets the event category.
 	 *
-	 * @param eventCategory the event category
+	 * @param eventCategory the new event category
 	 */
 	public void setEventCategory(String eventCategory) {
 		this.eventCategory = eventCategory;
@@ -326,7 +326,7 @@ public class Lectureseries {
 	/**
 	 * Sets the lectureseries short name.
 	 *
-	 * @param lectureseriesShortName the lectureseries short name
+	 * @param lectureseriesShortName the new lectureseries short name
 	 */
 	public void setLectureseriesShortName(String lectureseriesShortName) {
 		this.lectureseriesShortName = lectureseriesShortName;
@@ -347,7 +347,7 @@ public class Lectureseries {
 	/**
 	 * Sets the number of videos.
 	 *
-	 * @param numberOfVideos the number of videos
+	 * @param numberOfVideos the new number of videos
 	 */
 	public void setNumberOfVideos(int numberOfVideos) {
 		this.numberOfVideos = numberOfVideos;
@@ -368,7 +368,7 @@ public class Lectureseries {
 	/**
 	 * Sets the password.
 	 *
-	 * @param password the password
+	 * @param password the new password
 	 */
 	public void setPassword(String password) {
 		this.password = password;
@@ -380,7 +380,7 @@ public class Lectureseries {
 	/**
 	 * Sets the approved.
 	 *
-	 * @param approved the approved
+	 * @param approved the new approved
 	 */
 	public void setApproved(boolean approved) {
 		this.approved = approved;
@@ -389,7 +389,7 @@ public class Lectureseries {
 	/**
 	 * Checks if is approved.
 	 *
-	 * @return true, if checks if is approved
+	 * @return true, if is approved
 	 */
 	public boolean isApproved() {
 		return approved;

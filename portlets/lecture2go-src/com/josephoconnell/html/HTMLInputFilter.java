@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -119,7 +119,7 @@ public class HTMLInputFilter
 	protected boolean vDebug;
 	
 	/**
-	 * The Constructor.
+	 * Instantiates a new hTML input filter.
 	 */
 	public HTMLInputFilter()
 	{
@@ -127,7 +127,7 @@ public class HTMLInputFilter
 	}
 	
 	/**
-	 * The Constructor.
+	 * Instantiates a new hTML input filter.
 	 *
 	 * @param debug the debug
 	 */
@@ -599,7 +599,7 @@ public class HTMLInputFilter
 	 * Checks if is valid entity.
 	 *
 	 * @param entity the entity
-	 * @return true, if checks if is valid entity
+	 * @return true, if is valid entity
 	 */
 	protected boolean isValidEntity( String entity )
 	{
@@ -611,7 +611,7 @@ public class HTMLInputFilter
 	 *
 	 * @param s the s
 	 * @param array the array
-	 * @return true, if in array
+	 * @return true, if successful
 	 */
 	private boolean inArray( String s, String[] array )
 	{
@@ -635,6 +635,9 @@ public class HTMLInputFilter
 		/* (non-Javadoc)
 		 * @see junit.framework.TestCase#setUp()
 		 */
+		/**
+		 * Sets the up.
+		 */
 		protected void setUp() 
 		{ 
 			vFilter = new HTMLInputFilter( true );
@@ -642,6 +645,9 @@ public class HTMLInputFilter
 		
 		/* (non-Javadoc)
 		 * @see junit.framework.TestCase#tearDown()
+		 */
+		/**
+		 * Tear down.
 		 */
 		protected void tearDown()
 		{

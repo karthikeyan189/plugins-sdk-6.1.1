@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -67,7 +67,7 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 	/**
 	 * Sets the facility dao.
 	 *
-	 * @param facilityDao the facility dao
+	 * @param facilityDao the new facility dao
 	 */
 	public void setFacilityDao(FacilityDao facilityDao) {
 		this.facilityDao = facilityDao;
@@ -118,6 +118,15 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IHostDao#create(java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
 	 */
+	/**
+	 * Creates the.
+	 *
+	 * @param name the name
+	 * @param port the port
+	 * @param protokoll the protokoll
+	 * @param serverRoot the server root
+	 * @param streamer the streamer
+	 */
 	public void create(String name, int port, String protokoll, String serverRoot, String streamer) {
 		JdbcTemplate insert = new JdbcTemplate(this.getDataSource());
 		insert.update("INSERT INTO host (protokoll, streamer, port, serverRoot, name) VALUES(?,?,?,?,?)", new Object[] { protokoll, streamer, port, serverRoot, name });
@@ -125,6 +134,9 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IHostDao#deleteAll()
+	 */
+	/**
+	 * Delete all.
 	 */
 	public void deleteAll() {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
@@ -135,6 +147,11 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IHostDao#deleteById(int)
 	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
+	 */
 	public void deleteById(int id) {
 		JdbcTemplate delete = new JdbcTemplate(this.getDataSource());
 		delete.update("DELETE from host where id=" + id);
@@ -144,6 +161,11 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IHostDao#getAll()
 	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Host> getAll() {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -152,6 +174,12 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.dao.IHostDao#getById(int)
+	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Host> getById(int id) {
@@ -175,7 +203,7 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 	 * Checks if is deletable.
 	 *
 	 * @param id the id
-	 * @return true, if checks if is deletable
+	 * @return true, if is deletable
 	 */
 	public boolean isDeletable(int id){
 		boolean ret = false;
@@ -203,7 +231,7 @@ public class HostDao extends JdbcDaoSupport implements IHostDao {
 	 * Fill video list with properties.
 	 *
 	 * @param hostList the host list
-	 * @return the list< host>
+	 * @return the list
 	 */
 	public List<Host> fillVideoListWithProperties(List<Host> hostList){
 		ListIterator<Host> it = hostList.listIterator();

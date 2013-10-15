@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -54,7 +54,7 @@ public class DatabaseManager extends DriverManagerDataSource {
 	String driver="";
 	
 	/**
-	 * The Constructor.
+	 * Instantiates a new database manager.
 	 */
 	public DatabaseManager(){
 		url = L2goPropsUtil.get("jdbc.default.url");
@@ -71,6 +71,11 @@ public class DatabaseManager extends DriverManagerDataSource {
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.datasource.AbstractDriverBasedDataSource#setUrl(java.lang.String)
 	 */
+	/**
+	 * Sets the url.
+	 *
+	 * @param url the new url
+	 */
 	@Override
 	public void setUrl(String url) {
 		this.url = url;
@@ -79,6 +84,11 @@ public class DatabaseManager extends DriverManagerDataSource {
 	
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.datasource.AbstractDriverBasedDataSource#setUsername(java.lang.String)
+	 */
+	/**
+	 * Sets the username.
+	 *
+	 * @param username the new username
 	 */
 	@Override
 	public void setUsername(String username) {
@@ -89,6 +99,11 @@ public class DatabaseManager extends DriverManagerDataSource {
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.datasource.AbstractDriverBasedDataSource#setPassword(java.lang.String)
 	 */
+	/**
+	 * Sets the password.
+	 *
+	 * @param password the new password
+	 */
 	@Override
 	public void setPassword(String password) {
 		this.password = password;
@@ -97,6 +112,11 @@ public class DatabaseManager extends DriverManagerDataSource {
 	
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.datasource.DriverManagerDataSource#setDriverClassName(java.lang.String)
+	 */
+	/**
+	 * Sets the driver class name.
+	 *
+	 * @param driver the new driver class name
 	 */
 	@Override
 	public void setDriverClassName(String driver){

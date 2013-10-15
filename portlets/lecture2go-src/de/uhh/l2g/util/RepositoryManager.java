@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -57,7 +57,7 @@ public class RepositoryManager extends Factory{
 	 * Creates the forlder.
 	 *
 	 * @param path the path
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void createForlder(String path) throws IOException{
 		File folder = new File(path);
@@ -76,7 +76,7 @@ public class RepositoryManager extends Factory{
 	 *
 	 * @param hostDao the host dao
 	 * @param producerDao the producer dao
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void createRepository(HostDao hostDao, ProducerDao producerDao) throws IOException{
 		File mediaRep = new File(L2goPropsUtil.get("lecture2go.media.repository"));
@@ -95,7 +95,7 @@ public class RepositoryManager extends Factory{
 	/**
 	 * Repository exists.
 	 *
-	 * @return true, if repository exists
+	 * @return true, if successful
 	 */
 	public static boolean repositoryExists(){
 		boolean exists = false;
@@ -153,7 +153,7 @@ public class RepositoryManager extends Factory{
 	 *
 	 * @param hostDao the host dao
 	 * @param producerDao the producer dao
-	 * @throws IOException the IO exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void createVHosts(HostDao hostDao, ProducerDao producerDao) throws IOException{
 		ArrayList<Host> hosts = (ArrayList<Host>) hostDao.getAll();

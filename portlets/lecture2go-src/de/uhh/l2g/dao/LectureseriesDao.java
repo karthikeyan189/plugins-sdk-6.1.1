@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -55,6 +55,9 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILectureseriesDao#deleteAll()
 	 */
+	/**
+	 * Delete all.
+	 */
 	public void deleteAll() {
 		// TODO Auto-generated method stub
 	}
@@ -62,6 +65,11 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	/*
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILectureseriesDao#deleteById(int)
+	 */
+	/**
+	 * Delete by id.
+	 *
+	 * @param id the id
 	 */
 	public void deleteById(int id) {
 		_deleteById(id);
@@ -98,7 +106,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	/**
 	 * _delete by id.
 	 *
-	 * @param l the id
+	 * @param l the l
 	 * @return the int
 	 */
 	private int _deleteById(long l) {
@@ -113,7 +121,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * Contains videos.
 	 *
 	 * @param lectureseriesId the lectureseries id
-	 * @return true, if contains videos
+	 * @return true, if successful
 	 */
 	public boolean containsVideos(int lectureseriesId) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -124,6 +132,11 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	/*
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILectureseriesDao#getAll()
+	 */
+	/**
+	 * Gets the all.
+	 *
+	 * @return the all
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Lectureseries> getAll() {
@@ -147,6 +160,17 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * @see
 	 * de.uhh.l2g.dao.ILectureseriesDao#getFilteredBySemesterFacultyProducer(java
 	 * .lang.String, java.lang.String, int, int, int, int)
+	 */
+	/**
+	 * Gets the filtered by semester faculty producer.
+	 *
+	 * @param approved the approved
+	 * @param semester the semester
+	 * @param facultyId the faculty id
+	 * @param producerId the producer id
+	 * @param pageNumber the page number
+	 * @param pageSize the page size
+	 * @return the filtered by semester faculty producer
 	 */
 	public PaginationResultLectureseries getFilteredBySemesterFacultyProducer(String approved, String semester, int facultyId, int producerId, int pageNumber, int pageSize) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -173,7 +197,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * @param producerId the producer id
 	 * @param pageNumber the page number
 	 * @param pageSize the page size
-	 * @return the list< lectureseries>
+	 * @return the list
 	 */
 	@SuppressWarnings("unchecked")
 	private List<Lectureseries> filterResult(JdbcTemplate select, String approved, String semester, int facultyId, int producerId, int pageNumber, int pageSize) {
@@ -301,6 +325,11 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILectureseriesDao#getEventCategories()
 	 */
+	/**
+	 * Gets the event categories.
+	 *
+	 * @return the event categories
+	 */
 	@SuppressWarnings("unchecked")
 	public List<String> getEventCategories() {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -346,6 +375,12 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * (non-Javadoc)
 	 * @see de.uhh.l2g.dao.ILectureseriesDao#getById(int)
 	 */
+	/**
+	 * Gets the by id.
+	 *
+	 * @param id the id
+	 * @return the by id
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Lectureseries> getById(int id) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -380,9 +415,9 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	/**
 	 * Checks for lectureseries producer.
 	 *
-	 * @param l the lectureseries id
+	 * @param l the l
 	 * @param producerId the producer id
-	 * @return true, if checks for lectureseries producer
+	 * @return true, if successful
 	 */
 	public boolean hasLectureseriesProducer(long l, int producerId) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
@@ -451,7 +486,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * @param approved the approved
 	 * @param facultyKeys the faculty keys
 	 * @param producerKeys the producer keys
-	 * @return the int
+	 * @return the long
 	 */
 	public long createWithId(final int id, final String number, final String eventType, final String eventCategory, final String name, final String shortDesc, final String longDesc, final String semesterName, final String language, final String facultyName, final String instructorsString, final String password, final boolean approved, final String[] facultyKeys, final String[] producerKeys) {
 		return _createWithId(id, number, eventType, eventCategory, name, shortDesc, longDesc, semesterName, language, facultyName, instructorsString, password, approved, facultyKeys, producerKeys);
@@ -473,7 +508,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	/**
 	 * Edits the.
 	 *
-	 * @param l the id
+	 * @param l the l
 	 * @param number the number
 	 * @param eventType the event type
 	 * @param eventCategory the event category
@@ -488,7 +523,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * @param approved the approved
 	 * @param facultyKeys the faculty keys
 	 * @param producerKeys the producer keys
-	 * @return the int
+	 * @return the long
 	 */
 	public long edit(final long l, final String number, final String eventType, final String eventCategory, final String name, final String shortDesc, final String longDesc, final String semesterName, final String language, final String facultyName, final String instructorsString, final String password, final boolean approved, final String[] facultyKeys, final String[] producerKeys) {
 		if (_deleteById(l) > 0) {
@@ -501,7 +536,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	/**
 	 * _create with id.
 	 *
-	 * @param l the id
+	 * @param l the l
 	 * @param number the number
 	 * @param eventType the event type
 	 * @param eventCategory the event category
@@ -516,7 +551,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * @param approved the approved
 	 * @param facultyKeys the faculty keys
 	 * @param producerKeys the producer keys
-	 * @return the int
+	 * @return the long
 	 */
 	private long _createWithId(final long l, final String number, final String eventType, final String eventCategory, final String name, final String shortDesc, final String longDesc, final String semesterName, final String language, final String facultyName, final String instructorsString, final String password, final boolean approved, final String[] facultyKeys, final String[] producerKeys) {
 
@@ -593,7 +628,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	 * Fill lectureseries list with properties.
 	 *
 	 * @param lectureseriesList the lectureseries list
-	 * @return the list< lectureseries>
+	 * @return the list
 	 */
 	public List<Lectureseries> fillLectureseriesListWithProperties(List<Lectureseries> lectureseriesList) {
 		ListIterator<Lectureseries> it = lectureseriesList.listIterator();

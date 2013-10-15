@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -42,7 +42,7 @@ public class Coordinator extends Producer {
 	private String eLearningOffice;
 
 	/**
-	 * Gete learning office.
+	 * Gets the e learning office.
 	 *
 	 * @return the e learning office
 	 */
@@ -51,9 +51,9 @@ public class Coordinator extends Producer {
 	}
 
 	/**
-	 * Sete learning office.
+	 * Sets the e learning office.
 	 *
-	 * @param eLearningOffice the e learning office
+	 * @param eLearningOffice the new e learning office
 	 */
 	public void seteLearningOffice(String eLearningOffice) {
 		this.eLearningOffice = eLearningOffice;

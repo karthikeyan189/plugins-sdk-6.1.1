@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -54,7 +54,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the citation2go.
 	 *
-	 * @param citation2go the citation2go
+	 * @param citation2go the new citation2go
 	 */
 	public void setCitation2go(int citation2go) {
 		this.citation2go = citation2go;
@@ -75,7 +75,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the license cc.
 	 *
-	 * @param licenseCC the license cc
+	 * @param licenseCC the new license cc
 	 */
 	public void setLicenseCC(String licenseCC) {
 		this.licenseCC = licenseCC;
@@ -83,6 +83,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getLicense()
+	 */
+	/**
+	 * Gets the license.
+	 *
+	 * @return the license
 	 */
 	@Override
 	public String getLicense() {
@@ -92,6 +97,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setLicense(java.lang.String)
 	 */
+	/**
+	 * Sets the license.
+	 *
+	 * @param license the new license
+	 */
 	@Override
 	public void setLicense(String license) {
 		this.license = license;
@@ -99,6 +109,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getLicenseUhhL2go()
+	 */
+	/**
+	 * Gets the license uhh l2go.
+	 *
+	 * @return the license uhh l2go
 	 */
 	@Override
 	public String getLicenseUhhL2go() {
@@ -108,6 +123,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setLicenseUhhL2go(java.lang.String)
 	 */
+	/**
+	 * Sets the license uhh l2go.
+	 *
+	 * @param licenseUhhL2go the new license uhh l2go
+	 */
 	@Override
 	public void setLicenseUhhL2go(String licenseUhhL2go) {
 		this.licenseUhhL2go = licenseUhhL2go;
@@ -115,6 +135,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getLicenseByNcSa()
+	 */
+	/**
+	 * Gets the license by nc sa.
+	 *
+	 * @return the license by nc sa
 	 */
 	@Override
 	public String getLicenseByNcSa() {
@@ -124,6 +149,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setLicenseByNcSa(java.lang.String)
 	 */
+	/**
+	 * Sets the license by nc sa.
+	 *
+	 * @param licenseByNcSa the new license by nc sa
+	 */
 	@Override
 	public void setLicenseByNcSa(String licenseByNcSa) {
 		this.licenseByNcSa = licenseByNcSa;
@@ -132,6 +162,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#getLicenseByNcNd()
 	 */
+	/**
+	 * Gets the license by nc nd.
+	 *
+	 * @return the license by nc nd
+	 */
 	@Override
 	public String getLicenseByNcNd() {
 		return licenseByNcNd;
@@ -139,6 +174,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.GuestModel#setLicenseByNcNd(java.lang.String)
+	 */
+	/**
+	 * Sets the license by nc nd.
+	 *
+	 * @param licenseByNcNd the new license by nc nd
 	 */
 	@Override
 	public void setLicenseByNcNd(String licenseByNcNd) {
@@ -173,7 +213,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	private String containerFormat = "";
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new producer meta data model.
 	 */
 	public ProducerMetaDataModel() {
 
@@ -182,7 +222,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the title.
 	 *
-	 * @param title the title
+	 * @param title the new title
 	 */
 	public void setTitle(String title) {
 		this.title = title;
@@ -200,7 +240,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the tags.
 	 *
-	 * @param tags the tags
+	 * @param tags the new tags
 	 */
 	public void setTags(String tags) {
 		this.tags = tags;
@@ -227,7 +267,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the container format.
 	 *
-	 * @param containerFormat the container format
+	 * @param containerFormat the new container format
 	 */
 	public void setContainerFormat(String containerFormat) {
 		this.containerFormat = containerFormat;
@@ -245,7 +285,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the aufloesung.
 	 *
-	 * @param resolution the aufloesung
+	 * @param resolution the new aufloesung
 	 */
 	public void setAufloesung(String resolution) {
 		this.resolution = resolution;
@@ -253,6 +293,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.StudentModel#getDuration()
+	 */
+	/**
+	 * Gets the duration.
+	 *
+	 * @return the duration
 	 */
 	public String getDuration() {
 		return duration;
@@ -285,7 +330,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the format.
 	 *
-	 * @param format the format
+	 * @param format the new format
 	 */
 	public void setFormat(String format) {
 		this.format = format;
@@ -306,7 +351,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the type.
 	 *
-	 * @param type the type
+	 * @param type the new type
 	 */
 	public void setType(String type) {
 		this.type = type;
@@ -327,7 +372,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the language.
 	 *
-	 * @param language the language
+	 * @param language the new language
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
@@ -348,7 +393,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the subject.
 	 *
-	 * @param subject the subject
+	 * @param subject the new subject
 	 */
 	public void setSubject(String subject) {
 		this.subject = subject;
@@ -369,7 +414,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the coverage.
 	 *
-	 * @param coverage the coverage
+	 * @param coverage the new coverage
 	 */
 	public void setCoverage(String coverage) {
 		this.coverage = coverage;
@@ -390,7 +435,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the description.
 	 *
-	 * @param description the description
+	 * @param description the new description
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -411,7 +456,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the long description.
 	 *
-	 * @param longdescription the long description
+	 * @param longdescription the new long description
 	 */
 	public void setLongDescription(String longdescription) {
 		this.longdescription = longdescription;
@@ -432,7 +477,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the creator.
 	 *
-	 * @param creator the creator
+	 * @param creator the new creator
 	 */
 	public void setCreator(String creator) {
 		this.creator = creator;
@@ -453,7 +498,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the publisher.
 	 *
-	 * @param publisher the publisher
+	 * @param publisher the new publisher
 	 */
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
@@ -474,7 +519,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the contributor.
 	 *
-	 * @param contributor the contributor
+	 * @param contributor the new contributor
 	 */
 	public void setContributor(String contributor) {
 		this.contributor = contributor;
@@ -495,7 +540,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the rights holder.
 	 *
-	 * @param rightsHolder the rights holder
+	 * @param rightsHolder the new rights holder
 	 */
 	public void setRightsHolder(String rightsHolder) {
 		this.rightsHolder = rightsHolder;
@@ -516,7 +561,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the rights.
 	 *
-	 * @param rights the rights
+	 * @param rights the new rights
 	 */
 	public void setRights(String rights) {
 		this.rights = rights;
@@ -537,7 +582,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the provenance.
 	 *
-	 * @param provenance the provenance
+	 * @param provenance the new provenance
 	 */
 	public void setProvenance(String provenance) {
 		this.provenance = provenance;
@@ -558,7 +603,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the source.
 	 *
-	 * @param source the source
+	 * @param source the new source
 	 */
 	public void setSource(String source) {
 		this.source = source;
@@ -579,7 +624,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the relation.
 	 *
-	 * @param relation the relation
+	 * @param relation the new relation
 	 */
 	public void setRelation(String relation) {
 		this.relation = relation;
@@ -600,7 +645,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the audience.
 	 *
-	 * @param audience the audience
+	 * @param audience the new audience
 	 */
 	public void setAudience(String audience) {
 		this.audience = audience;
@@ -621,7 +666,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the instructional method.
 	 *
-	 * @param instructionalMethod the instructional method
+	 * @param instructionalMethod the new instructional method
 	 */
 	public void setInstructionalMethod(String instructionalMethod) {
 		this.instructionalMethod = instructionalMethod;
@@ -642,7 +687,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the eigentuemer id.
 	 *
-	 * @param ownerId the eigentuemer id
+	 * @param ownerId the new eigentuemer id
 	 */
 	public void setEigentuemerId(int ownerId) {
 		this.ownerId = ownerId;
@@ -663,7 +708,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the text id.
 	 *
-	 * @param textId the text id
+	 * @param textId the new text id
 	 */
 	public void setTextId(int textId) {
 		this.textId = textId;
@@ -684,7 +729,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the generation date.
 	 *
-	 * @param generationDate the generation date
+	 * @param generationDate the new generation date
 	 */
 	public void setGenerationDate(String generationDate) {
 		this.generationDate = generationDate;
@@ -696,7 +741,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Checks if is openaccess.
 	 *
-	 * @return true, if checks if is openaccess
+	 * @return true, if is openaccess
 	 */
 	public boolean isOpenaccess() {
 		return openaccess;
@@ -705,7 +750,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the openaccess.
 	 *
-	 * @param openaccess the openaccess
+	 * @param openaccess the new openaccess
 	 */
 	public void setOpenaccess(boolean openaccess) {
 		this.openaccess = openaccess;
@@ -738,7 +783,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the date.
 	 *
-	 * @param date the date
+	 * @param date the new date
 	 */
 	public void setDate(String date) {
 		this.date = date;
@@ -759,7 +804,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the url.
 	 *
-	 * @param url the url
+	 * @param url the new url
 	 */
 	public void setUrl(String url) {
 		this.url = url;
@@ -780,7 +825,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the multipart file.
 	 *
-	 * @param multipartFile the multipart file
+	 * @param multipartFile the new multipart file
 	 */
 	public void setMultipartFile(String multipartFile) {
 		this.multipartFile = multipartFile;
@@ -789,7 +834,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the file size.
 	 *
-	 * @param fileSize the file size
+	 * @param fileSize the new file size
 	 */
 	public void setFileSize(long fileSize) {
 		this.fileSize = fileSize;
@@ -799,18 +844,18 @@ public class ProducerMetaDataModel extends ProducerModel {
 	private boolean hasMetadata;
 
 	/**
-	 * Checks if is has metadata.
+	 * Checks if is checks for metadata.
 	 *
-	 * @return true, if checks if is has metadata
+	 * @return true, if is checks for metadata
 	 */
 	public boolean isHasMetadata() {
 		return hasMetadata;
 	}
 
 	/**
-	 * Sets the has metadata.
+	 * Sets the checks for metadata.
 	 *
-	 * @param hasMetadata the checks for metadata
+	 * @param hasMetadata the new checks for metadata
 	 */
 	public void setHasMetadata(boolean hasMetadata) {
 		this.hasMetadata = hasMetadata;
@@ -819,6 +864,11 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.model.StudentModel#setDuration(java.lang.String)
 	 */
+	/**
+	 * Sets the duration.
+	 *
+	 * @param duration the new duration
+	 */
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
@@ -826,7 +876,7 @@ public class ProducerMetaDataModel extends ProducerModel {
 	/**
 	 * Sets the contact file.
 	 *
-	 * @param contactFile the contact file
+	 * @param contactFile the new contact file
 	 */
 	public void setContactFile(CommonsMultipartFile contactFile) {
 		this.contactFile = contactFile;

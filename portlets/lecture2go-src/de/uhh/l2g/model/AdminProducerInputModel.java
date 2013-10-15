@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -47,16 +47,26 @@ public class AdminProducerInputModel extends AdminModel {
 	private Map<String, String> allFaculties; // list of all faculties
 
 	/**
-	 * The Constructor.
+	 * Instantiates a new admin producer input model.
 	 */
 	public AdminProducerInputModel() {
 		this.setAllFaculties(new LinkedHashMap<String, String>());
 	}
 
+	/**
+	 * Sets the id.
+	 *
+	 * @param id the new id
+	 */
 	public void setId(int id) {
 		this.id = id;
 	}
 
+	/**
+	 * Gets the id.
+	 *
+	 * @return the id
+	 */
 	public long getId() {
 		return id;
 	}

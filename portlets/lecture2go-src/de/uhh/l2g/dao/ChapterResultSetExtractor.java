@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -47,6 +47,13 @@ public class ChapterResultSetExtractor implements ResultSetExtractor {
 
 	/* (non-Javadoc)
 	 * @see org.springframework.jdbc.core.ResultSetExtractor#extractData(java.sql.ResultSet)
+	 */
+	/**
+	 * Extract data.
+	 *
+	 * @param rs the rs
+	 * @return the object
+	 * @throws SQLException the sQL exception
 	 */
 	public Object extractData(ResultSet rs) throws SQLException {
 		Chapter chapter = new Chapter();

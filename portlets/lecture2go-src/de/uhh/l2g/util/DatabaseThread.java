@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -45,7 +45,7 @@ public final class DatabaseThread extends Thread {
 	/**
 	 * Should stop.
 	 *
-	 * @return true, if should stop
+	 * @return true, if successful
 	 */
 	public boolean shouldStop() {
 		return shouldStop;
@@ -54,7 +54,7 @@ public final class DatabaseThread extends Thread {
 	/**
 	 * Sets the should stop.
 	 *
-	 * @param shouldStop the should stop
+	 * @param shouldStop the new should stop
 	 */
 	public void setShouldStop(boolean shouldStop) {
 		this.shouldStop = shouldStop;
@@ -78,7 +78,7 @@ public final class DatabaseThread extends Thread {
 	/**
 	 * Sets the time.
 	 *
-	 * @param time the time
+	 * @param time the new time
 	 */
 	public static void setTime(int time) {
 		DatabaseThread.time = time;
@@ -99,16 +99,16 @@ public final class DatabaseThread extends Thread {
 	/**
 	 * Sets the video dao.
 	 *
-	 * @param videoDao the video dao
+	 * @param videoDao the new video dao
 	 */
 	public static void setVideoDao(VideoDao videoDao) {
 		DatabaseThread.videoDao = videoDao;
 	}
 
 	/**
-	 * Gets the instance.
+	 * Gets the single instance of DatabaseThread.
 	 *
-	 * @return the instance
+	 * @return single instance of DatabaseThread
 	 */
 	public static DatabaseThread getInstance() {
 		return INSTANCE;
@@ -116,6 +116,9 @@ public final class DatabaseThread extends Thread {
 
 	/* (non-Javadoc)
 	 * @see java.lang.Thread#run()
+	 */
+	/**
+	 * Run.
 	 */
 	@Override
 	public void run() {

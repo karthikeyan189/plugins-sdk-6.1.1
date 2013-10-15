@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -47,6 +47,12 @@ public class ProducerVideoDataInputEditValidator implements Validator {
 	/* (non-Javadoc)
 	 * @see org.springframework.validation.Validator#supports(java.lang.Class)
 	 */
+	/**
+	 * Supports.
+	 *
+	 * @param c the c
+	 * @return true, if successful
+	 */
 	@SuppressWarnings("rawtypes")
 	public boolean supports(Class c) {
 		return c.equals(ProducerVideoDataInputEditModel.class);
@@ -54,6 +60,12 @@ public class ProducerVideoDataInputEditValidator implements Validator {
 
 	/* (non-Javadoc)
 	 * @see org.springframework.validation.Validator#validate(java.lang.Object, org.springframework.validation.Errors)
+	 */
+	/**
+	 * Validate.
+	 *
+	 * @param o the o
+	 * @param errors the errors
 	 */
 	public void validate(Object o, Errors errors) {
 		ProducerVideoDataInputEditModel hw = (ProducerVideoDataInputEditModel) o;

@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -48,6 +48,11 @@ public class PaginationResultLectureseries extends PaginationResult {
 	/* (non-Javadoc)
 	 * @see de.uhh.l2g.util.PaginationResult#getPaginationResult()
 	 */
+	/**
+	 * Gets the pagination result.
+	 *
+	 * @return the pagination result
+	 */
 	@Override
 	public List<Lectureseries> getPaginationResult() {
 		return result;
@@ -56,7 +61,7 @@ public class PaginationResultLectureseries extends PaginationResult {
 	/**
 	 * Sets the pagination result.
 	 *
-	 * @param r the pagination result
+	 * @param r the new pagination result
 	 */
 	public void setPaginationResult(List<Lectureseries> r) {
 		result = r;

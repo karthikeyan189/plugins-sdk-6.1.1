@@ -9,7 +9,7 @@
  * academic institutions and has to strengthen the blended learning.
  * 
  * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-demo.rrz.uni-hamburg.de>
+ * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
  * 
  * @Autor Lecture2Go Team
  * @Version 1.0
@@ -57,7 +57,7 @@ public class Security {
 	/**
 	 * Sets the tomcat l2 go video repository.
 	 *
-	 * @param tomcatL2GoVideoRepository the tomcat l2 go video repository
+	 * @param tomcatL2GoVideoRepository the new tomcat l2 go video repository
 	 */
 	public void setTomcatL2GoVideoRepository(String tomcatL2GoVideoRepository) {
 		this.tomcatL2GoVideoRepository = tomcatL2GoVideoRepository;
@@ -78,7 +78,7 @@ public class Security {
 	/**
 	 * Sets the fms l2 go video repository.
 	 *
-	 * @param fmsL2GoVideoRepository the fms l2 go video repository
+	 * @param fmsL2GoVideoRepository the new fms l2 go video repository
 	 */
 	public void setFmsL2GoVideoRepository(String fmsL2GoVideoRepository) {
 		this.fmsL2GoVideoRepository = fmsL2GoVideoRepository;
