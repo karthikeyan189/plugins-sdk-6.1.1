@@ -62,10 +62,8 @@ public class AdminProducerInputModel extends AdminModel {
 		this.id = id;
 	}
 
-	/**
-	 * Gets the id.
-	 *
-	 * @return the id
+	/* (non-Javadoc)
+	 * @see de.uhh.l2g.model.StudentModel#getId()
 	 */
 	public long getId() {
 		return id;

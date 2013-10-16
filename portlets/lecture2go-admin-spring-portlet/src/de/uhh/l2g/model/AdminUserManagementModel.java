@@ -47,19 +47,15 @@ public class AdminUserManagementModel extends AdminModel {
 	/** The coordinator. */
 	private Coordinator coordinator;
 	
-	/**
-	 * Gets the coordinator.
-	 *
-	 * @return the coordinator
+	/* (non-Javadoc)
+	 * @see de.uhh.l2g.model.GuestModel#getCoordinator()
 	 */
 	public Coordinator getCoordinator() {
 		return coordinator;
 	}
 
-	/**
-	 * Sets the coordinator.
-	 *
-	 * @param coordinator the new coordinator
+	/* (non-Javadoc)
+	 * @see de.uhh.l2g.model.GuestModel#setCoordinator(de.uhh.l2g.beans.Coordinator)
 	 */
 	public void setCoordinator(Coordinator coordinator) {
 		this.coordinator = coordinator;
