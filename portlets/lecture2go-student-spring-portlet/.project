@@ -33,11 +33,4 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>lecture2go-src</name>
-			<type>2</type>
-			<location>/Users/isturm/Documents/workspace/plugins-sdk-6.1.1/portlets/lecture2go-src</location>
-		</link>
-	</linkedResources>
 </projectDescription>
