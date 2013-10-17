@@ -139,6 +139,7 @@ public class AdminThreadControlController extends SimpleFormController implement
 	 *
 	 * @param model the new parameters
 	 */
+	@SuppressWarnings("static-access")
 	private final void setParameters(AdminThreadControlModel model){
 		DatabaseThread.getInstance();
 		//get resurses to thread

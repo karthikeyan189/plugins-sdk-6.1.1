@@ -878,6 +878,48 @@ public class Video {
 
 	/** The image. */
 	private String image = "";
+	
+	/** The image small. */
+	private String imageSmall = "";
+	
+	/** The image medium. */
+	private String imageMedium = "";
+
+	/**
+	 * Gets the image small.
+	 *
+	 * @return the image small
+	 */
+	public String getImageSmall() {
+		return imageSmall;
+	}
+
+	/**
+	 * Sets the image small.
+	 *
+	 * @param imageSmall the new image small
+	 */
+	public void setImageSmall(String imageSmall) {
+		this.imageSmall = imageSmall;
+	}
+
+	/**
+	 * Gets the image medium.
+	 *
+	 * @return the image medium
+	 */
+	public String getImageMedium() {
+		return imageMedium;
+	}
+
+	/**
+	 * Sets the image medium.
+	 *
+	 * @param imageMedium the new image medium
+	 */
+	public void setImageMedium(String imageMedium) {
+		this.imageMedium = imageMedium;
+	}
 
 	/**
 	 * Gets the image.

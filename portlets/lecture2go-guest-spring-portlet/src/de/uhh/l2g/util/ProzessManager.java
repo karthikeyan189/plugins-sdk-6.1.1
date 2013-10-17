@@ -243,6 +243,8 @@ public class ProzessManager {
 			// then update the filesystem
 			// here rename
 			File fJpg = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoSPreffix + ".jpg");
+			File fJpgm = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoSPreffix + "_m.jpg");
+			File fJpgs = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoSPreffix + "_s.jpg");
 			File fPdf = new File(path + "/" + videoSPreffix + ".pdf");
 			File fMp3 = new File(path + "/" + videoSPreffix + ".mp3");
 			File fM4v = new File(path + "/" + videoSPreffix + ".m4v");
@@ -255,6 +257,8 @@ public class ProzessManager {
 			// if mp4 or mp3 exists
 			if (fMp4.isFile() || fMp3.isFile()) {
 				fJpg.renameTo(new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + ".jpg"));
+				fJpgm.renameTo(new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + "_m.jpg"));
+				fJpgs.renameTo(new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + "_s.jpg"));
 				fPdf.renameTo(new File(path + "/" + videoPreffix + ".pdf"));
 				fMp3.renameTo(new File(path + "/" + videoPreffix + ".mp3"));
 				fM4v.renameTo(new File(path + "/" + videoPreffix + ".m4v"));
@@ -300,6 +304,8 @@ public class ProzessManager {
 
 		// here rename
 		File fJpg = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + ".jpg");
+		File fJpgm = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + "_m.jpg");
+		File fJpgs = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + "_s.jpg");
 		File fPdf = new File(path + "/" + videoPreffix + ".pdf");
 		File fMp3 = new File(path + "/" + videoPreffix + ".mp3");
 		File fM4v = new File(path + "/" + videoPreffix + ".m4v");
@@ -319,6 +325,8 @@ public class ProzessManager {
 
 			// then rename all system files
 			fJpg.renameTo(new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + vidSPreffix + ".jpg"));
+			fJpgm.renameTo(new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + vidSPreffix + "_m.jpg"));
+			fJpgs.renameTo(new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + vidSPreffix + "_s.jpg"));
 			fPdf.renameTo(new File(path + "/" + vidSPreffix + ".pdf"));
 			fMp3.renameTo(new File(path + "/" + vidSPreffix + ".mp3"));
 			fM4v.renameTo(new File(path + "/" + vidSPreffix + ".m4v"));
@@ -365,7 +373,12 @@ public class ProzessManager {
 			else videoPreffix = video.getSPreffix();
 			
 			File jpgFile = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + ".jpg");
-			jpgFile.delete();			
+			File jpgmFile = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + "_m.jpg");
+			File jpgsFile = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + "_s.jpg");
+			
+			jpgFile.delete();	
+			jpgmFile.delete();	
+			jpgsFile.delete();	
 		}catch(NullPointerException npe){}
 	}
 	
@@ -412,7 +425,6 @@ public class ProzessManager {
 				File mp4vFile = new File(L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getName() + "/" + producer.getHomeDir() + "/" + videoPreffix + ".m4v");
 				File pdfFile = new File(L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getName() + "/" + producer.getHomeDir() + "/" + videoPreffix + ".pdf");
 				File mp4File = new File(L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getName() + "/" + producer.getHomeDir() + "/" + videoPreffix + ".mp4");
-				File jpgFile = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + videoPreffix + ".jpg");
 				File tarFile = new File(L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getName() + "/" + producer.getHomeDir() + "/" + videoPreffix + ".tar");
 
 				mp3File.delete();
@@ -420,8 +432,8 @@ public class ProzessManager {
 				mp4vFile.delete();
 				pdfFile.delete();
 				mp4File.delete();
-				jpgFile.delete();
 				tarFile.delete();
+				deleteThumbnails(video);
 			}
 
 			// delete all symbolic links

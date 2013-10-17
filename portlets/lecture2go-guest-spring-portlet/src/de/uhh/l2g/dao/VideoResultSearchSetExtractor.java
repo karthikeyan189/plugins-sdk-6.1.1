@@ -91,7 +91,7 @@ public class VideoResultSearchSetExtractor implements ResultSetExtractor {
 
 		// image
 		String image ="";
-		image = videoResultSearch.getPreffix() + ".jpg";
+		image = videoResultSearch.getPreffix() + "_m.jpg";
 		File im = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + image);
 
 		// set thumbnail

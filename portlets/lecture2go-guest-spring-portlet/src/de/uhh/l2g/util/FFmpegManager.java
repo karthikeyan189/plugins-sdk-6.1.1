@@ -33,6 +33,7 @@
 package de.uhh.l2g.util;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -121,8 +122,8 @@ public class FFmpegManager {
 
 		int sec = new Integer(time.split(":")[0]) * 60 * 60 + new Integer(time.split(":")[1]) * 60 + new Integer(time.split(":")[2]);
 
-		if (video.isOpenaccess()) command = ffmgegLibPath +" -ss " + sec + " -i " + L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir() + "/" + video.getFilename() + " -f image2 -vframes 1 " + thumbnailLocation + "/" + video.getId() + "_" + sec + ".jpg";
-		else command = ffmgegLibPath + " -ss " + sec + " -i " + L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir() + "/" + video.getSecureFilename() + " -f image2 -vframes 1 " + thumbnailLocation + "/" + video.getId() + "_" + sec + ".jpg";
+		if (video.isOpenaccess()) command = ffmgegLibPath +" -ss " + sec + " -i " + L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir() + "/" + video.getFilename() + " -f image2 -vframes 1 -filter:v scale='130:-1' " + thumbnailLocation + "/" + video.getId() + "_" + sec + ".jpg";
+		else command = ffmgegLibPath + " -ss " + sec + " -i " + L2goPropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir() + "/" + video.getSecureFilename() + " -f image2 -vframes 1 -filter:v scale='130:-1' " + thumbnailLocation + "/" + video.getId() + "_" + sec + ".jpg";
 		try {
 			runCmd.exec(command);
 			ret = true;
@@ -142,13 +143,56 @@ public class FFmpegManager {
 	 */
 	public boolean createThumbnail(String fileLocation, String thumbnailLocation) {
 		Runtime runCmd = Runtime.getRuntime();
-		String command = ffmgegLibPath + " -ss 12 -i " + fileLocation + " -f image2 -vframes 1 " + thumbnailLocation;
+		String thumbPreffLoc = thumbnailLocation.split(".jpg")[0];
+		String command = ffmgegLibPath + " -ss 13 -i " + fileLocation + " -f image2 -vframes 1 " + thumbnailLocation;
+		String command1 = ffmgegLibPath + " -ss 13 -i " + fileLocation + " -f image2 -vframes 1 -filter:v scale='130:-1' " + thumbPreffLoc+"_s.jpg";
+		String command2 = ffmgegLibPath + " -ss 13 -i " + fileLocation + " -f image2 -vframes 1 -filter:v scale='300:-1' " + thumbPreffLoc+"_m.jpg";
+
 		boolean ret = true;
+		
 		try {
 			runCmd.exec(command);
-		} catch (IOException e) {
-			ret = false;
-		}
+			File f = new File(thumbnailLocation);
+			if(!f.isFile())ret = false;
+		} catch (IOException e) { ret = false;}
+
+		try {
+			runCmd.exec(command1);
+			File f = new File(thumbPreffLoc+"_s.jpg");
+			if(!f.isFile())ret = false;
+		} catch (IOException e) { ret = false;}
+		
+		try {
+			runCmd.exec(command2);
+			File f = new File(thumbPreffLoc+"_m.jpg");
+			if(!f.isFile())ret = false;
+		} catch (IOException e) { ret = false;}
+		
+		//because of memory limit should close the ffmpeg processes
+		if(ret)try{runCmd.exec("/usr/bin/killall -9 ffmpeg");} catch (IOException e) {e.printStackTrace();}
+				
+		return ret;
+	}
+	
+	/**
+	 * Thumbnails exists.
+	 *
+	 * @param video the video
+	 * @return true, if successful
+	 */
+	public boolean thumbnailsExists(Video video){
+		boolean ret = true;
+		
+		String preffix = "";
+		if(video.isOpenaccess())preffix=video.getPreffix();
+		else preffix=video.getSPreffix();
+		
+		File fJpg = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + preffix + ".jpg");
+		File fJpgm = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + preffix + "_m.jpg");
+		File fJpgs = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + preffix + "_s.jpg");
+		
+		if(!fJpg.isFile() || !fJpgs.isFile() || !fJpgm.isFile()) ret = false;
+		
 		return ret;
 	}
 

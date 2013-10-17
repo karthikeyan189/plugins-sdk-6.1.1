@@ -865,9 +865,9 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 		try {
 			returnList = fillVideoListWithProperties(jdbst.query(sqlquery, new VideoRowMapper()));
 		} catch (DataAccessException e) {
-			//e.printStackTrace();
+			e.printStackTrace();
 		} catch (IOException e1) {
-			//e1.printStackTrace();
+			e1.printStackTrace();
 		}
 		
 		return returnList;
@@ -1298,32 +1298,51 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 			else objectVideo.setSegmentList(null);
 			
 			try{
-				// image
+				// images
 				String image ="";
+				String imageSmall ="";
+				String imageMedium ="";
 				String videoPfad="";
 				
 				if (objectVideo.isOpenaccess()){
 					videoPfad = L2goPropsUtil.get("lecture2go.media.repository") + "/" + objectHost.getServerRoot() + "/" + objectProducer.getHomeDir() + "/" + objectVideo.getFilename();
 					image = objectVideo.getPreffix() + ".jpg";
+					imageSmall = objectVideo.getPreffix() + "_s.jpg";
+					imageMedium = objectVideo.getPreffix() + "_m.jpg";
 				}else{
 					videoPfad = L2goPropsUtil.get("lecture2go.media.repository") + "/" + objectHost.getServerRoot() + "/" + objectProducer.getHomeDir() + "/" +  objectVideo.getSecureFilename();
 					image = objectVideo.getSPreffix()+ ".jpg";
+					imageSmall = objectVideo.getSPreffix() + "_s.jpg";
+					imageMedium = objectVideo.getSPreffix() + "_m.jpg";
 				}
 				
-				File im = new File(L2goPropsUtil.get("lecture2go.images.system.path") + "/" + image);
-				File videoFile = new File(videoPfad);
-				
-				if (!im.isFile() && videoFile.isFile()) {
-					// thumbnail
-					String thumbnailLocation = L2goPropsUtil.get("lecture2go.images.system.path") + "/" + image;
-					((FFmpegManager) getUtilityBeanFactory().getBean("ffmgepManager")).createThumbnail(videoPfad, thumbnailLocation);
-				}
-
+				//thumbnails
 				// set thumbnail
-				if (im.isFile()) objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + image);
-				else {
-					if (objectVideo.getUploadType().equals("audio")) objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_big.png");
-					else objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path")  + "/images/l2go/noimage.jpg");
+				//if audio file
+				if (objectVideo.getUploadType().equals("audio")){
+					objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_big.png");
+					objectVideo.setImageSmall(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_small.png");
+					objectVideo.setImageMedium(L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path") + "/images/l2go/audio_only_medium.png");
+				}
+				
+				//is video
+				if (objectVideo.getUploadType().equals("video")){
+					File videoFile = new File(videoPfad);
+					if (videoFile.isFile()){
+						if(!((FFmpegManager) getUtilityBeanFactory().getBean("ffmgepManager")).thumbnailsExists(objectVideo)){
+							// create thumbnail
+							String thumbnailLocation = L2goPropsUtil.get("lecture2go.images.system.path") + "/" + image;
+							((FFmpegManager) getUtilityBeanFactory().getBean("ffmgepManager")).createThumbnail(videoPfad, thumbnailLocation);							
+						}
+						objectVideo.setImage(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + image);
+						objectVideo.setImageSmall(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + imageSmall);
+						objectVideo.setImageMedium(L2goPropsUtil.get("lecture2go.web.root") + "/images/" + imageMedium);						
+					}else{
+						String img = L2goPropsUtil.get("lecture2go.web.root") + L2goPropsUtil.get("lecture2go.theme.root.path")  + "/images/l2go/noimage.jpg";
+						objectVideo.setImage(img);
+						objectVideo.setImageSmall(img);
+						objectVideo.setImageMedium(img);						
+					}
 				}
 				
 				// date

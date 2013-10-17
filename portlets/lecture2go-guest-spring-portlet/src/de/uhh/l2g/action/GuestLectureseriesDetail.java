@@ -194,8 +194,8 @@ public final class GuestLectureseriesDetail extends AbstractGuestCommand{
 			else model.setSegmentList(segmentList);
 			
 			//prepare zitat2go and set
-			try{model.setClipStartTime(new Integer(request.getParameter("clipStartTime")));}catch(Exception nfe){}
-			try{model.setClipEndTime(new Integer(request.getParameter("clipEndTime")));}catch(Exception nfe){}
+			try{model.setClipStartTime(new Integer(request.getParameter("clipStartTime")));}catch(NumberFormatException nfe){}
+			try{model.setClipEndTime(new Integer(request.getParameter("clipEndTime")));}catch(NumberFormatException nfe){}
 			if(video.getCitation2go()==0 && (model.getClipStartTime()!=null || model.getClipEndTime()!=null) )model.setCitation2goView(0);
 			
 			//downloads

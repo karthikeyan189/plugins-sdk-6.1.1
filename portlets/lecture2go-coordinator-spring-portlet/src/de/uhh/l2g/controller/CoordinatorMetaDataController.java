@@ -52,6 +52,7 @@ import de.uhh.l2g.beans.Coordinator;
 import de.uhh.l2g.beans.Host;
 import de.uhh.l2g.beans.Lectureseries;
 import de.uhh.l2g.beans.Metadata;
+import de.uhh.l2g.beans.License;
 import de.uhh.l2g.beans.Producer;
 import de.uhh.l2g.beans.ProducerLRInfo;
 import de.uhh.l2g.beans.Video;
@@ -61,6 +62,7 @@ import de.uhh.l2g.dao.LectureseriesDao;
 import de.uhh.l2g.dao.MetadataDao;
 import de.uhh.l2g.dao.ProducerDao;
 import de.uhh.l2g.dao.VideoDao;
+import de.uhh.l2g.dao.LicenseDao;
 import de.uhh.l2g.model.CoordinatorMetaDataModel;
 import de.uhh.l2g.util.ProzessManager;
 import de.uhh.l2g.util.VideoGenerationDateComparator;
@@ -272,7 +274,8 @@ public class CoordinatorMetaDataController extends AbstractFormController{
 			int metadataId = video.getMetadataId();
 			List<Metadata> metaDataList = ((MetadataDao)getDaoBeanFactory().getBean("metadataDao")).getById(metadataId);
 			Metadata metadata = metaDataList.iterator().next();
-
+			License license = ((LicenseDao)getDaoBeanFactory().getBean("licenseDao")).getByVideoId(video.getId()).iterator().next();
+			
 			// l2go metadata properties
 			model.setVideoId(videoId);
 			model.setUrlId(metadata.getFilenameID());
@@ -315,6 +318,12 @@ public class CoordinatorMetaDataController extends AbstractFormController{
 			model.setVideoId(video.getId());
 			model.setCurrentSeite(currentSeite);
 			model.setSuccess(false);
+
+			// l2go video license
+			if (license.getType().contains("ccbyncnd") || license.getType().contains("ccbyncsa")) {
+				if (license.getType().contains("ccbyncnd")) model.setLicense("ccbyncnd");
+				if (license.getType().contains("ccbyncsa")) model.setLicense("ccbyncsa");
+			} else model.setLicenseCC("");
 			
 			//
 			model.setVideo(video);
