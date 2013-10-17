@@ -27,7 +27,6 @@
 	
 	function uploadProceed() {
 		$('#up').show(100, show_upload_status);
-		$('#swf').show();
 	}
 	
 	function getExtension(filename) {
@@ -101,8 +100,7 @@
 	<em class="italic">${model.video.title}</em>
 	<br /><br />
 	<div>	
-		<!-- the upload form -->
-		
+		<!-- the upload form -->		
 		<form id="formUp" action="<portlet:actionURL><portlet:param name="action" value="upload"></portlet:param><portlet:param name="videoId" value="${model.video.id}"></portlet:param></portlet:actionURL>" enctype="multipart/form-data" method="post">
 			<spring:bind path="model.contactFile">
 			 <input id="file" type="file" name="contactFile" />
@@ -133,7 +131,7 @@
 			<div>
 				<span id="dataDivId"></span> 
 			</div>
-			
+			<br/>
 			<em>
 				${uploadcantakeawhile}
 			</em>
