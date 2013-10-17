@@ -18,7 +18,7 @@
 	</c:forEach>
 </div>
 
-<c:if test="${model.videoList.isEmpty()}">
+<c:if test="${empty model.videoList}">
 	${noopenaccessvideosyet}
 </c:if>
 

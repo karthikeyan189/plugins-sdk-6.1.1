@@ -8,10 +8,10 @@
 <%@ include file="includeInternationalisation.jsp" %>
 
 <span class="category-heading fat">${neww}</span><br>
-<c:if test="${model.videoList.isEmpty()}">
+<c:if test="${empty model.videoList}">
 	${noopenaccessvideosyet}
 </c:if>
-<c:if test="${!model.videoList.isEmpty()}">
+<c:if test="${!empty model.videoList}">
 	<c:set var="counter" value="0"/>
 	<c:forEach items="${model.videoList}" var="video">
 		<c:set var="counter" value="${counter+1}"/>
@@ -22,10 +22,10 @@
 <div class="tileseparator"></div>
 
 <span class="category-heading fat">${popular}</span><br>
-<c:if test="${model.videoHitList.isEmpty()}">
+<c:if test="${empty model.videoHitList}">
 	${videolistevaluationnotpossible}
 </c:if>
-<c:if test="${!model.videoHitList.isEmpty()}">
+<c:if test="${!empty model.videoHitList}">
 	<c:set var="counter" value="0"/>
 	<c:forEach items="${model.videoHitList}" var="video">
 		<c:set var="counter" value="${counter+1}"/>
@@ -36,10 +36,10 @@
 <div class="tileseparator"></div>
 
 <span class="category-heading fat">${random}</span><br>
-<c:if test="${model.videoFavList.isEmpty()}">
+<c:if test="${empty model.videoFavList}">
 	${randomlistnotavailibleyet}
 </c:if>
-<c:if test="${!model.videoFavList.isEmpty()}">
+<c:if test="${!empty model.videoFavList}">
 	<c:set var="counter" value="0"/>
 	<c:forEach items="${model.videoFavList}" var="video">
 		<c:set var="counter" value="${counter+1}"/>
