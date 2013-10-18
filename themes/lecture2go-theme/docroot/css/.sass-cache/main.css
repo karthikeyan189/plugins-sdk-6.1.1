@@ -3967,6 +3967,9 @@ div.datarow div.formtitle {
   text-align: right;
   display: inline-block; }
 
+div.datarow input#inputSemester {
+  margin-left: 159px; }
+
 div.box {
   float: left;
   margin-right: 15px;
