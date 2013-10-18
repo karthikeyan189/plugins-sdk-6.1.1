@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="portlets/lecture2go-src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/portal-6.1.1-ce-ga2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
