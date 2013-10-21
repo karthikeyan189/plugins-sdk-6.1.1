@@ -602,8 +602,8 @@ a:hover {
 
 #qrcanv {
     position: absolute;
-    width: 96px;
-    height: 96px;
+    width: 136px;
+    height: 136px;
     left: 544px;
     top: 2px;
     -moz-transition: all 0.3s ease 0s;
