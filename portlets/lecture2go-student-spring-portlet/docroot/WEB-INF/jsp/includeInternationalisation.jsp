@@ -33,6 +33,9 @@
 <c:set var="save" value='<%= resource.getString("save") %>'/>
 <c:set var="editthisevent" value='<%= resource.getString("edit-this-event") %>'/>
 <c:set var="chapter" value='<%= resource.getString("chapter") %>'/>
+<c:set var="chapters" value='<%= resource.getString("chapters") %>'/>
+<c:set var="comments" value='<%= resource.getString("comments") %>'/>
+<c:set var="chaptersandcomments" value='<%= resource.getString("chapters-and-comments") %>'/>
 <c:set var="comment" value='<%= resource.getString("comment") %>'/>
 <c:set var="shorttitle" value='<%= resource.getString("short-title") %>'/>
 <c:set var="chapterbeginning" value='<%= resource.getString("chapter-beginning") %>'/>
