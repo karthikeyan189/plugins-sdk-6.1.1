@@ -408,7 +408,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	@SuppressWarnings("unchecked")
 	public List<Lectureseries> getLectureseriesForProducer(Integer producerId) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
-		List<Lectureseries> lectureseries = select.query("SELECT lectureseries.number, lectureseries.eventType, lectureseries.eventCategory, lectureseries.name, lectureseries.shortDesc, lectureseries.longDesc, lectureseries.semesterName, lectureseries.language, lectureseries.facultyName, lectureseries.instructorsString, lectureseries.id, lectureseries.password, lectureseries.approved FROM lectureseries, producer_lectureseries WHERE (producer_lectureseries.producerId=" + producerId + " AND lectureseries.id=producer_lectureseries.lectureseriesId AND approved='1')", new LectureseriesRowMapper());
+		List<Lectureseries> lectureseries = select.query("SELECT lectureseries.number, lectureseries.eventType, lectureseries.eventCategory, lectureseries.name, lectureseries.shortDesc, lectureseries.longDesc, lectureseries.semesterName, lectureseries.language, lectureseries.facultyName, lectureseries.instructorsString, lectureseries.id, lectureseries.password, lectureseries.approved FROM lectureseries, producer_lectureseries WHERE (producer_lectureseries.producerId=" + producerId + " AND lectureseries.id=producer_lectureseries.lectureseriesId AND approved='1') ORDER BY lectureseries.name ASC", new LectureseriesRowMapper());
 		return lectureseries;
 	}
 
