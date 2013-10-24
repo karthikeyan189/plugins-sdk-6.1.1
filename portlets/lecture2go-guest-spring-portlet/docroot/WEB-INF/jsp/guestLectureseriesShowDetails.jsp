@@ -84,9 +84,16 @@
 			</div>
 			
 			<div class="segments">
-				<c:if test="${model.segmentList!=null && model.clipStartTime==null && model.clipEndTime==null}">
-					<em class="italic">${chapters} </em>
-				</c:if> 
+				<c:choose>
+				    <c:when test="${model.video.hasChapters && model.video.hasComments}">
+				        <em class="italic">${chaptersandcomments}</em>
+				    </c:when>
+				    <c:otherwise>
+						<c:if test="${model.video.hasChapters}"><em class="italic">${chapters} </em></c:if>
+						<c:if test="${model.video.hasComments}"><em class="italic">${comments} </em></c:if>
+				    </c:otherwise>
+				</c:choose>
+				
 				<c:if test="${model.segmentList==null}">
 					<em class="italic">${lectureseries}</em>&nbsp;&nbsp;&nbsp;
 				</c:if>

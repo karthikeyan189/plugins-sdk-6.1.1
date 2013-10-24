@@ -110,7 +110,7 @@
 		</copy>
 
 		<if>
-			<available file="../lecture2go-src" />
+			<available file="src" />
 			<then>
 				<if>
 					<available file="tmp" />
@@ -146,7 +146,7 @@
 							fork="${javac.fork}"
 							memoryMaximumSize="${javac.memoryMaximumSize}"
 							nowarn="${javac.nowarn}"
-							srcdir="../lecture2go-src"
+							srcdir="src"
 						/>
 					</then>
 					<else>
@@ -157,13 +157,13 @@
 							deprecation="${javac.deprecation}"
 							destdir="docroot/WEB-INF/classes"
 							nowarn="${javac.nowarn}"
-							srcdir="../lecture2go-src"
+							srcdir="src"
 						/>
 					</else>
 				</if>
 
 				<copy todir="docroot/WEB-INF/classes">
-					<fileset dir="../lecture2go-src" excludes="**/*.java" />
+					<fileset dir="src" excludes="**/*.java" />
 				</copy>
 			</then>
 		</if>
@@ -344,10 +344,10 @@
 		<mkdir dir="docroot/WEB-INF/lib" />
 		<mkdir dir="docroot/WEB-INF/service" />
 		<mkdir dir="docroot/WEB-INF/sql" />
-		<mkdir dir="../lecture2go-src" />
+		<mkdir dir="src" />
 
 		<copy todir="docroot/WEB-INF/classes">
-			<fileset dir="../lecture2go-src" excludes="**/*.java" />
+			<fileset dir="src" excludes="**/*.java" />
 		</copy>
 
 		<path id="service.classpath">
@@ -367,14 +367,14 @@
 			<jvmarg value="-Dexternal-properties=com/liferay/portal/tools/dependencies/portal-tools.properties" />
 			<jvmarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger" />
 			<jvmarg value="-Dservice.input.file=docroot/WEB-INF/service.xml" />
-			<jvmarg value="-Dservice.hbm.file=../lecture2go-src/META-INF/portlet-hbm.xml" />
-			<jvmarg value="-Dservice.model.hints.file=../lecture2go-src/META-INF/portlet-model-hints.xml" />
-			<jvmarg value="-Dservice.spring.file=../lecture2go-src/META-INF/portlet-spring.xml" />
-			<jvmarg value="-Dservice.spring.base.file=../lecture2go-src/META-INF/base-spring.xml" />
-			<jvmarg value="-Dservice.spring.hibernate.file=../lecture2go-src/META-INF/hibernate-spring.xml" />
-			<jvmarg value="-Dservice.spring.infrastructure.file=../lecture2go-src/META-INF/infrastructure-spring.xml" />
+			<jvmarg value="-Dservice.hbm.file=src/META-INF/portlet-hbm.xml" />
+			<jvmarg value="-Dservice.model.hints.file=src/META-INF/portlet-model-hints.xml" />
+			<jvmarg value="-Dservice.spring.file=src/META-INF/portlet-spring.xml" />
+			<jvmarg value="-Dservice.spring.base.file=src/META-INF/base-spring.xml" />
+			<jvmarg value="-Dservice.spring.hibernate.file=src/META-INF/hibernate-spring.xml" />
+			<jvmarg value="-Dservice.spring.infrastructure.file=src/META-INF/infrastructure-spring.xml" />
 			<jvmarg value="-Dservice.api.dir=docroot/WEB-INF/service" />
-			<jvmarg value="-Dservice.impl.dir=../lecture2go-src" />
+			<jvmarg value="-Dservice.impl.dir=src" />
 			<!--<jvmarg value="-Dservice.json.file=docroot/js/service_unpacked.js" />-->
 			<jvmarg value="-Dservice.sql.dir=docroot/WEB-INF/sql" />
 			<jvmarg value="-Dservice.sql.file=tables.sql" />

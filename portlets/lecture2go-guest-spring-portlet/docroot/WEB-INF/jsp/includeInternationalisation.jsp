@@ -19,6 +19,8 @@
 <c:set var="citation2go" value='<%= resource.getString("citation2go") %>'/>
 <c:set var="chapter" value='<%= resource.getString("chapter") %>'/>
 <c:set var="chapters" value='<%= resource.getString("chapters") %>'/>
+<c:set var="comments" value='<%= resource.getString("comments") %>'/>
+<c:set var="chaptersandcomments" value='<%= resource.getString("chapters-and-comments") %>'/>
 <c:set var="duration" value='<%= resource.getString("duration") %>'/>
 <c:set var="min" value='<%= resource.getString("min") %>'/>
 <c:set var="mp4" value='<%= resource.getString("mp4") %>'/>
