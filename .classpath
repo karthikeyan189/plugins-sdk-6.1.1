@@ -9,5 +9,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/lecture2go-coordinator-spring-portlet/docroot/WEB-INF/lib/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="/lecture2go-producer-spring-portlet/docroot/WEB-INF/lib/spring.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/portal-6.1.1-ce-ga2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

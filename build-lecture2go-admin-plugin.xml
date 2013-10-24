@@ -110,7 +110,7 @@
 		</copy>
 
 		<if>
-			<available file="src" />
+			<available file="../lecture2go-src" />
 			<then>
 				<if>
 					<available file="tmp" />
@@ -146,7 +146,7 @@
 							fork="${javac.fork}"
 							memoryMaximumSize="${javac.memoryMaximumSize}"
 							nowarn="${javac.nowarn}"
-							srcdir="src"
+							srcdir="../lecture2go-src"
 						/>
 					</then>
 					<else>
@@ -157,13 +157,13 @@
 							deprecation="${javac.deprecation}"
 							destdir="docroot/WEB-INF/classes"
 							nowarn="${javac.nowarn}"
-							srcdir="src"
+							srcdir="../lecture2go-src"
 						/>
 					</else>
 				</if>
 
 				<copy todir="docroot/WEB-INF/classes">
-					<fileset dir="src" excludes="**/*.java" />
+					<fileset dir="../lecture2go-src" excludes="**/*.java" />
 				</copy>
 			</then>
 		</if>
@@ -344,10 +344,10 @@
 		<mkdir dir="docroot/WEB-INF/lib" />
 		<mkdir dir="docroot/WEB-INF/service" />
 		<mkdir dir="docroot/WEB-INF/sql" />
-		<mkdir dir="src" />
+		<mkdir dir="../lecture2go-src" />
 
 		<copy todir="docroot/WEB-INF/classes">
-			<fileset dir="src" excludes="**/*.java" />
+			<fileset dir="../lecture2go-src" excludes="**/*.java" />
 		</copy>
 
 		<path id="service.classpath">

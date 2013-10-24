@@ -35,9 +35,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src</name>
+			<name>lecture2go-src</name>
 			<type>2</type>
-			<location>/usr/local/l2go/plugins-sdk-6.1.1/src</location>
+			<location>/usr/local/l2go/plugins-sdk-6.1.1/portlets/lecture2go-src</location>
 		</link>
 	</linkedResources>
 </projectDescription>
