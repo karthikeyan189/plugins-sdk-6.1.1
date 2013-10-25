@@ -215,6 +215,7 @@ public class SegmentDao extends JdbcDaoSupport implements ISegmentDao {
 		return select.query("SELECT id, videoId, start, title, description, end, chapter, userId FROM segment WHERE videoId=" + videoId + " ORDER BY start ASC", new MarkRowMapper());
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Mark> getCommentsByVideoId(int videoId) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
 		return select.query("SELECT id, videoId, start, title, description, end, chapter, userId FROM segment WHERE ( videoId=" + videoId + " AND chapter=0) ORDER BY start ASC", new MarkRowMapper());

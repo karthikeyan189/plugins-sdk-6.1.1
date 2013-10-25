@@ -368,7 +368,7 @@ public class LectureseriesDao extends JdbcDaoSupport implements ILectureseriesDa
 	@SuppressWarnings("unchecked")
 	public List<Lectureseries> getByFacilityIdAndOpenaccesVideos(int eirichtungId) {
 		JdbcTemplate select = new JdbcTemplate(this.getDataSource());
-		return select.query("SELECT lectureseries.number, lectureseries.eventType, lectureseries.eventCategory, lectureseries.name, lectureseries.shortDesc, lectureseries.longDesc, lectureseries.semesterName, lectureseries.language, lectureseries.facultyName, lectureseries.instructorsString, lectureseries.id, lectureseries.password, lectureseries.approved FROM lectureseries RIGHT JOIN video ON video.lectureseriesId=lectureseries.id AND video.openAccess='1' LEFT JOIN lectureseries_facility ON lectureseries.id = lectureseries_facility.lectureseriesId WHERE lectureseries_facility.facilityId='" + eirichtungId + "' GROUP BY video.lectureseriesId", new LectureseriesRowMapper());
+		return select.query("SELECT lectureseries.number, lectureseries.eventType, lectureseries.eventCategory, lectureseries.name, lectureseries.shortDesc, lectureseries.longDesc, lectureseries.semesterName, lectureseries.language, lectureseries.facultyName, lectureseries.instructorsString, lectureseries.id, lectureseries.password, lectureseries.approved FROM lectureseries RIGHT JOIN video ON video.lectureseriesId=lectureseries.id AND video.openAccess='1' LEFT JOIN lectureseries_facility ON lectureseries.id = lectureseries_facility.lectureseriesId WHERE lectureseries_facility.facilityId='" + eirichtungId + "' GROUP BY video.lectureseriesId ORDER BY lectureseries.name", new LectureseriesRowMapper());
 	}
 
 	/*

@@ -59,7 +59,7 @@
 					>
 							<OPTION value="<c:out value="" />"><c:out value="-- ${selectlectureseries} --" /></OPTION>
 							<c:forEach items="${model.subFacility2List}" var="subFacility2">
-									<OPTION value="${subFacility2.id}" <c:if test="${subFacility2.id==model.lectureseries.id}"> <c:out value="selected" /> </c:if> > <c:out value="${subFacility2.number} - ${subFacility2.name}" /></OPTION>
+									<OPTION value="${subFacility2.id}" <c:if test="${subFacility2.id==model.lectureseries.id}"> <c:out value="selected" /> </c:if> > <c:out value="${subFacility2.name} ( ${subFacility2.number} - ${subFacility2.semesterName} )" /></OPTION>
 							</c:forEach>
 					</select>
 				</spring:bind>
