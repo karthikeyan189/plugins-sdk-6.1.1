@@ -52,6 +52,7 @@ import java.util.TimeZone;
 import org.apache.commons.collections.map.ListOrderedMap;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
@@ -865,11 +866,14 @@ public class VideoDao extends JdbcDaoSupport implements IVideoDao {
 		
 		try {
 			returnList = fillVideoListWithProperties(jdbst.query(sqlquery, new VideoRowMapper()));
-		} catch (DataAccessException e) {
-			e.printStackTrace();
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
+		} 
+		catch(BadSqlGrammarException e1){
+			//e1.printStackTrace();
+		}catch (DataAccessException e2) {
+			//e2.printStackTrace();
+		} catch (IOException e3) {
+			//e3.printStackTrace();
+		} 
 		
 		return returnList;
 	}
